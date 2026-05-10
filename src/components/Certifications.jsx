@@ -64,14 +64,14 @@ const certificates = [
     detail: 'Software testing engineering training certificate completed.',
     status: 'Completed',
     icon: FiAward,
-    certificate: '/certificates/SoftwareTestEngineer_AmosAnand.pdf'
+    certificate: ''
   },
   {
     title: 'Digital Mitra',
     detail: 'Website Development - 3 months completed.',
     status: 'Completed',
     icon: FiCode,
-    certificate: '/certificates/DigitalMitra_AmosAnand.pdf'
+    certificate: ''
   },
 ];
 
