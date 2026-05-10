@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "https://builtbyamos.netlify.app/*"
+  to = "https://builtbyamos.netlify.app/:splat"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "index, follow"
