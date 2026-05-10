@@ -59,9 +59,20 @@ const certificates = [
     icon: FiShield,
     certificate: '/certificates/CyberSecurity_AmosAnand.pdf'
   },
-  { title: 'Digital Productivity', detail: 'Digital productivity training is currently in progress.', status: 'Running', icon: FiTrendingUp },
-  { title: 'Software Testing Engineering', detail: 'Software testing engineering training is currently in progress.', status: 'Running', icon: FiAward },
-  { title: 'Digital Mintra', detail: 'Website Development - 3 months completed. Certificate image can be added later.', status: 'Completed', icon: FiCode }
+ {
+    title: 'Software Testing Engineering',
+    detail: 'Software testing engineering training certificate completed.',
+    status: 'Completed',
+    icon: FiAward,
+    certificate: '/certificates/SoftwareTestEngineer_AmosAnand.pdf'
+  },
+  {
+    title: 'Digital Mitra',
+    detail: 'Website Development - 3 months completed.',
+    status: 'Completed',
+    icon: FiCode,
+    certificate: '/certificates/DigitalMitra_AmosAnand.pdf'
+  },
 ];
 
 export default function Certifications() {
