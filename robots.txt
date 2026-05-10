@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://builtbyamos.netlify.app/sitemap.xml
