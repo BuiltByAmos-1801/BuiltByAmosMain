@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { FiBarChart2, FiFilm, FiSearch, FiCode, FiPython } from 'react-icons/fi';
+import { FiBarChart2, FiFilm, FiSearch, FiCode } from 'react-icons/fi';
+import { SiPython } from 'react-icons/si';
 import SectionHeader from './SectionHeader.jsx';
 
 const teamMembers = [
