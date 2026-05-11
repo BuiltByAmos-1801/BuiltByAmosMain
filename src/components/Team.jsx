@@ -119,12 +119,12 @@ export default function Team() {
         <SectionHeader
           eyebrow="Our Team"
           title="Meet the BuiltByAmos team"
-          copy="This is my team and this is how we work together to deliver strong results for clients."
+          copy="A team built to turn ideas into growth through web development, marketing, and client success."
         />
 
-        <div className="mt-6 rounded-3xl border border-white/10 bg-white/5 p-6 text-slate-300 shadow-2xl">
+        <div className="mt-6 mb-12 rounded-3xl border border-white/10 bg-white/5 p-6 text-slate-300 shadow-2xl">
           <p className="max-w-4xl text-lg leading-8">
-            Ye hai mera team aur aise hum kam karte hai. Hamare paas web development, client management, lead generation, video editing, SEO, aur advertisement ka strong combination hai. Client projects ke liye hum milke planning, execution, aur follow-up karte hain.
+            Our team brings together web development, client management, lead generation, video editing, SEO, and advertising into one powerful growth engine. For each client project, we collaborate closely on planning, execute with precision, and follow up to turn ideas into measurable results.
           </p>
         </div>
 
