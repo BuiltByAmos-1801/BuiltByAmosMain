@@ -1,43 +1,72 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { FiBarChart2, FiFilm, FiSearch, FiCode } from 'react-icons/fi';
+import { FiBarChart2, FiFilm, FiSearch, FiCode, FiTrendingUp, FiUsers, FiTool } from 'react-icons/fi';
 import { SiPython } from 'react-icons/si';
+import { FaInstagram } from 'react-icons/fa';
 import SectionHeader from './SectionHeader.jsx';
 
 const teamMembers = [
   {
-    name: 'Sadiq Khan',
-    title: 'Creative & Growth Partner',
-    image: '/images/team/sadiq-khan.png',
-    description: 'Sadiq Khan handles video editing, small business social media ads, and SEO work for BuiltByAmos. His role supports clients who need stronger online visibility, sharper content, and better local growth.',
+    name: '★彡[ᴀᴍᴏꜱ]彡★',
+    title: 'Founder & Web Developer',
+    image: '/images/author.webp',
+    description: 'Founder of BuiltByAmos and a web developer who builds modern, scalable websites and web apps. I lead the team, shape the vision, and make sure client projects deliver real value.',
     responsibilities: [
-      { title: 'Video Editing', icon: FiFilm },
-      { title: 'Small Business Ads', icon: FiBarChart2 },
-      { title: 'SEO Support', icon: FiSearch }
+      { title: 'Web Development', icon: FiCode },
+      { title: 'Python Development', icon: SiPython },
+      { title: 'Client Solutions', icon: FiBarChart2 }
+    ],
+    socials: [
+      { label: 'Instagram', href: 'https://www.instagram.com/builtbyamos.0/?__pwa=1', icon: FaInstagram }
     ]
   },
   {
-    name: 'Amos Anand',
-    title: 'Web & Python Developer',
-    image: '/images/team/amos-anand.jpg',
-    description: 'Amos Anand is a Web Developer and Python Developer who builds modern, scalable web applications and provides backend solutions. He focuses on creating robust digital experiences and automating business processes.',
+    name: 'Malik Raza',
+    title: 'Co-founder & Operations Lead',
+    image: '/images/malik.png',
+    description: 'Co-founder of the company who manages operations and supports client outreach. Malik makes sure clients stay connected and project delivery runs smoothly.',
     responsibilities: [
-      { title: 'Web Development', icon: FiCode },
-      { title: 'Python Development', icon: FiPython },
-      { title: 'Full Stack Solutions', icon: FiBarChart2 }
+      { title: 'Operations', icon: FiTool },
+      { title: 'Client Outreach', icon: FiUsers },
+      { title: 'Business Growth', icon: FiTrendingUp }
+    ],
+    socials: [
+      { label: 'Instagram', href: 'https://www.instagram.com/malikraza1621?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: FaInstagram }
+    ]
+  },
+  {
+    name: 'Arnish 🩶',
+    title: 'Lead Generation & Client Manager',
+    image: '/images/arnish.png',
+    description: 'Arnish focuses on lead generation and client management, helping the team find new opportunities and keep clients informed throughout the project lifecycle.',
+    responsibilities: [
+      { title: 'Lead Generation', icon: FiTrendingUp },
+      { title: 'Client Management', icon: FiUsers },
+      { title: 'Client Support', icon: FiTool }
+    ],
+    socials: [
+      { label: 'Instagram', href: 'https://www.instagram.com/arnish_kumar93?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: FaInstagram }
+    ]
+  },
+  {
+    name: 'Sadiq Ali',
+    title: 'Video Editing, SEO & Ads Specialist',
+    image: '/images/sadiq.png',
+    description: 'Sadiq handles video editing, SEO, and advertising for client campaigns. He brings stronger visibility and engagement to client brands across digital channels.',
+    responsibilities: [
+      { title: 'Video Editing', icon: FiFilm },
+      { title: 'SEO', icon: FiSearch },
+      { title: 'Advertising', icon: FiBarChart2 }
+    ],
+    socials: [
+      { label: 'Instagram', href: 'https://www.instagram.com/sadiq__khan0921?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: FaInstagram }
     ]
   }
 ];
 
-const responsibilities = [
-  { title: 'Video Editing', icon: FiFilm },
-  { title: 'Small Business Ads', icon: FiBarChart2 },
-  { title: 'SEO Support', icon: FiSearch }
-];
-
-function TeamImage({ member }) {
+function TeamImage({ member, socials }) {
   const [failed, setFailed] = useState(false);
-  const initials = member.name.split(' ').map(n => n[0]).join('');
+  const initials = member.name.split(' ').map((n) => n[0]).join('');
 
   if (failed) {
     return (
@@ -53,12 +82,30 @@ function TeamImage({ member }) {
   }
 
   return (
-    <img
-      src={member.image}
-      alt={member.name}
-      onError={() => setFailed(true)}
-      className="h-full min-h-[22rem] w-full rounded-[1.5rem] object-cover"
-    />
+    <div>
+      <img
+        src={member.image}
+        alt={member.name}
+        onError={() => setFailed(true)}
+        className="h-full min-h-[22rem] w-full rounded-[1.5rem] object-cover"
+      />
+      {socials && (
+        <div className="mt-6 flex justify-center gap-3">
+          {socials.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={social.label}
+              className="rounded-full border border-white/10 p-3 text-slate-300 transition hover:border-cyan hover:text-cyan"
+            >
+              <social.icon />
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -70,21 +117,27 @@ export default function Team() {
     <section id="team" className="section-padding bg-ink/70">
       <div className="section-shell">
         <SectionHeader
-          eyebrow="Team"
-          title="People behind BuiltByAmos"
-          copy="A growing team focused on websites, content, ads, and digital growth for local businesses."
+          eyebrow="Our Team"
+          title="Meet the BuiltByAmos team"
+          copy="This is my team and this is how we work together to deliver strong results for clients."
         />
 
-        <div ref={ref} className="space-y-12">
+        <div className="mt-6 rounded-3xl border border-white/10 bg-white/5 p-6 text-slate-300 shadow-2xl">
+          <p className="max-w-4xl text-lg leading-8">
+            Ye hai mera team aur aise hum kam karte hai. Hamare paas web development, client management, lead generation, video editing, SEO, aur advertisement ka strong combination hai. Client projects ke liye hum milke planning, execution, aur follow-up karte hain.
+          </p>
+        </div>
+
+        <div ref={ref} className="space-y-16">
           {teamMembers.map((member, index) => (
-            <div key={member.name} className="grid items-center gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+            <div key={member.name} className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr]">
               <motion.div
                 initial={{ opacity: 0, x: index % 2 === 0 ? -34 : 34 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.7, ease: 'easeOut', delay: index * 0.2 }}
                 className={`glass rounded-[2rem] p-5 ${index % 2 === 1 ? 'lg:order-2' : ''}`}
               >
-                <TeamImage member={member} />
+                <TeamImage member={member} socials={member.socials} />
               </motion.div>
 
               <motion.div

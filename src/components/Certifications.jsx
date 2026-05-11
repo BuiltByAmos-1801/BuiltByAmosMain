@@ -24,8 +24,8 @@ const certificates = [
   },
   {
     title: 'IT Technical Support',
-    detail: 'Technical support training is currently in progress.',
-    status: 'Running',
+    detail: 'Technical support certificate completed.',
+    status: 'Completed',
     icon: FiTool,
     certificate: '/certificates/IT-Technical-Support_AmosAnand.pdf'
   },
@@ -64,14 +64,14 @@ const certificates = [
     detail: 'Software testing engineering training certificate completed.',
     status: 'Completed',
     icon: FiAward,
-    certificate: '/certificates/SoftwareTestEngineer_AmosAnand.pdf'
+    certificate: '/certificates/Software Test Engineer_AmosAnand.pdf'
   },
   {
     title: 'Digital Mitra',
     detail: 'Website Development - 3 months completed.',
     status: 'Completed',
     icon: FiCode,
-    certificate: '/certificates/DigitalMitra_AmosAnand.pdf'
+    certificate: '/certificates/Digital Mitra_AmosAnand.pdf'
   },
 ];
 
