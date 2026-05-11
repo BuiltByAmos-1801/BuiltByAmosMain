@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
 import About from './components/About.jsx';
+import Team from './components/Team.jsx';
 import Skills from './components/Skills.jsx';
 import Projects from './components/Projects.jsx';
 import Education from './components/Education.jsx';
@@ -19,6 +20,7 @@ function Portfolio() {
       <main>
         <Hero />
         <About />
+        <Team />
         <Skills />
         <Projects />
         <Education />

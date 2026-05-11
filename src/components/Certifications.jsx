@@ -10,7 +10,6 @@ import {
   FiShield,
   FiSun,
   FiTool,
-  FiTrendingUp,
   FiX
 } from 'react-icons/fi';
 import SectionHeader from './SectionHeader.jsx';
