@@ -37,7 +37,7 @@ export default function Hero() {
             <button onClick={() => scrollToSection('projects')} className="button-secondary">
               View Portfolio
             </button>
-            <a href="https://wa.me/918757603560" target="_blank" rel="noreferrer" className="button-tertiary inline-flex items-center justify-center gap-2">
+            <a href="https://wa.me/918757603560" target="_blank" rel="noreferrer" className="button-secondary inline-flex items-center justify-center gap-2">
               WhatsApp Now
             </a>
           </div>
