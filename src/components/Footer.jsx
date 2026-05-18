@@ -52,7 +52,7 @@ export default function Footer() {
       </div>
 
       {/* Contact and Social Section */}
-      <div className="section-shell flex flex-col items-center justify-between gap-5 text-center sm:flex-row sm:text-left">
+      <div className="section-shell flex flex-col items-center justify-between gap-8 text-center sm:flex-row sm:text-left">
         <div className="flex flex-col items-center gap-3 sm:items-start">
           <div className="flex items-center gap-3">
             <img
@@ -68,8 +68,11 @@ export default function Footer() {
           <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
             <FiShield className="text-cyan" /> MSME Registered Company
           </p>
+          <p className="mt-3 max-w-xl text-sm leading-6 text-slate-400">
+            Web Developer in Jharkhand • Website Development Services in India • SEO Services • Contact / WhatsApp • Location: Jharkhand, India
+          </p>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:justify-end">
           <a className="text-slate-400 transition hover:text-cyan" href="https://github.com/BuiltByAmos-1801" target="_blank" rel="noreferrer" aria-label="GitHub">
             <FaGithub />
           </a>
