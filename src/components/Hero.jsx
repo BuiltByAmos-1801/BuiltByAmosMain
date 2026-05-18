@@ -18,39 +18,34 @@ export default function Hero() {
           transition={{ duration: 0.75, ease: 'easeOut' }}
         >
           <h1 className="font-heading text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
-            Built By Amos <span className="accent-text">Digital Agency</span>
+            Professional Web Developer in Jharkhand for Business Websites
           </h1>
           <p className="mt-4 inline-flex rounded-full border border-cyan/25 bg-cyan/10 px-4 py-2 text-sm font-bold uppercase tracking-[0.18em] text-cyan">
-            Web Developer in Ranchi, Jharkhand
+            Built By Amos — Web Development, Local SEO & Business Websites
           </p>
-          <div className="mt-6 h-12 font-heading text-2xl font-semibold text-slate-100 sm:text-3xl">
-            <span className="text-slate-400">I build as a </span>
-            <span className="text-cyan">Web Developer</span>
+          <div className="mt-6 max-w-3xl text-xl font-semibold leading-tight text-slate-100 sm:text-3xl">
+            Trusted website developer in Ranchi, Jharkhand creating responsive, mobile-friendly websites that rank well and convert visitors into customers.
           </div>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Professional website designer and business website developer in Jharkhand creating responsive websites,
-            SEO services in India, Python development, and automation solutions for growing companies.
+            Built By Amos builds affordable website design and SEO-optimized business websites for tattoo studios, clothing stores, coaching centers, restaurants, gyms and startups across India.
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <button onClick={() => scrollToSection('projects')} className="button-primary">
-              View My Work <FiArrowDownRight />
+            <button onClick={() => scrollToSection('contact')} className="button-primary">
+              Get Free Consultation
             </button>
-            <button onClick={() => scrollToSection('contact')} className="button-secondary">
-              Contact Me <FiSend />
+            <button onClick={() => scrollToSection('projects')} className="button-secondary">
+              View Portfolio
             </button>
+            <a href="https://wa.me/918757603560" target="_blank" rel="noreferrer" className="button-tertiary inline-flex items-center justify-center gap-2">
+              WhatsApp Now
+            </a>
           </div>
 
-          <div className="mt-8 flex items-center gap-4">
-            <a className="rounded-full border border-white/10 p-3 text-slate-300 transition hover:border-cyan hover:text-cyan" href="https://github.com/BuiltByAmos-1801" target="_blank" rel="noreferrer" aria-label="GitHub">
-              <FaGithub />
-            </a>
-            <a className="rounded-full border border-white/10 p-3 text-slate-300 transition hover:border-cyan hover:text-cyan" href="https://www.linkedin.com/in/amos-anand-a1a57b390/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <FaLinkedinIn />
-            </a>
-            <a className="rounded-full border border-white/10 p-3 text-slate-300 transition hover:border-cyan hover:text-cyan" href="https://www.instagram.com/itz.poker__0/" target="_blank" rel="noreferrer" aria-label="Instagram">
-              <FaInstagram />
-            </a>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <span className="rounded-full bg-white/5 px-3 py-2 text-sm font-semibold text-slate-300">Responsive Website Design</span>
+            <span className="rounded-full bg-white/5 px-3 py-2 text-sm font-semibold text-slate-300">Local SEO Expert</span>
+            <span className="rounded-full bg-white/5 px-3 py-2 text-sm font-semibold text-slate-300">Fast Loading Website</span>
           </div>
         </motion.div>
 
