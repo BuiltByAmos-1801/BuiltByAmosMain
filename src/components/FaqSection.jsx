@@ -1,5 +1,5 @@
 import { motion, useInView } from 'framer-motion';
-import { useMemo, useRef } from 'react';
+import { useRef } from 'react';
 import SectionHeader from './SectionHeader.jsx';
 
 const faqs = [
@@ -78,8 +78,6 @@ export default function FaqSection() {
             </motion.div>
           ))}
         </div>
-
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </div>
     </section>
   );
