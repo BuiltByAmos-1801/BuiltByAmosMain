@@ -52,13 +52,13 @@ export default function About() {
             transition={{ duration: 0.7, ease: 'easeOut' }}
           >
             <p className="text-lg leading-8 text-slate-300">
-              I'm Amos Anand, founder of <span className="font-bold text-cyan">Built By Amos</span> — a full-service web development agency based in Ranchi, Jharkhand. I specialize in building high-performance websites, modern React interfaces, and Python-powered backend solutions. My expertise spans responsive design, frontend development, automation, data handling, and end-to-end software solutions.
+              I'm Amos Anand, founder of <span className="font-bold text-cyan">Built By Amos</span> — a full-service web development agency based in Ranchi, Jharkhand. I specialize in web developer services, business website development, React website design, and Python automation for local brands and startups.
             </p>
             <p className="mt-5 text-lg leading-8 text-slate-300">
-              Over the years, I've learned that successful projects go beyond clean code. It's about understanding client goals, communicating clearly, delivering fast, and creating experiences that truly work. I believe great products happen when design and engineering work together seamlessly.
+              Our work focuses on responsive website design, mobile friendly development, local SEO optimization, and fast loading website performance. Every project is built to help small businesses improve Google rankings and convert visitors into customers.
             </p>
             <p className="mt-5 text-lg leading-8 text-slate-300">
-              Through <span className="font-bold text-cyan">Built By Amos</span>, I help growing brands and businesses across India establish strong digital presence. Whether it's custom websites, local SEO optimization, e-commerce solutions, or business automation — I focus on building practical, scalable digital products that drive real results.
+              Through <span className="font-bold text-cyan">Built By Amos</span>, we help tattoo studios, clothing stores, coaching centres, salons, gyms, and restaurants across Jharkhand and India establish stronger digital presence with practical, scalable websites.
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
