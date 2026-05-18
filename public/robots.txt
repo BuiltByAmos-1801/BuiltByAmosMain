@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://builtbyamos.great-site.net/sitemap.xml
+Sitemap: https://builtbyamos.in/sitemap.xml
