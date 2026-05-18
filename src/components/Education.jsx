@@ -1,33 +1,43 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FiBookOpen } from 'react-icons/fi';
+import useSiteContent from '../hooks/useSiteContent.js';
 import SectionHeader from './SectionHeader.jsx';
 
-const education = [
+const requiredTrainingEntries = [
   {
-    duration: '2024 - 2027',
-    school: 'Garhwa Polytechnic',
-    course: 'Diploma in Computer Science Engineering',
+    duration: 'Certificate Completed',
+    school: 'Cybersecurity',
+    course: 'Cybersecurity Training',
     detail:
-      'Currently in the 4th Semester, building strong fundamentals in programming, web development, databases, and software product thinking.'
+      'Completed cybersecurity training focused on digital safety, security awareness, and practical protection concepts for modern technology work.'
   },
   {
-    duration: 'Passing Year 2026',
-    school: 'NIOS',
-    course: 'Senior Secondary / 12th',
-    detail: 'Continuing senior secondary education through NIOS alongside technical learning.'
+    duration: 'Certificate Completed',
+    school: 'IoT Network Specialist',
+    course: 'Internet of Things Training',
+    detail:
+      'Completed IoT training covering connected devices, networking basics, and Internet of Things concepts for smart technology systems.'
   },
   {
-    duration: 'Passing Year 2024',
-    school: 'BNT ST. Mary School',
-    course: '10th Class',
-    detail: 'Completed secondary education before starting the diploma journey in Computer Science Engineering.'
+    duration: 'Certificate Completed',
+    school: 'Software Test Engineer',
+    course: 'Software Testing Training',
+    detail:
+      'Completed software testing training focused on quality checks, test planning, bug reporting, and improving software reliability.'
   }
 ];
 
 export default function Education() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-120px' });
+  const { education } = useSiteContent();
+  const educationItems = [
+    ...education,
+    ...requiredTrainingEntries.filter(
+      (requiredItem) => !education.some((item) => item.school?.toLowerCase() === requiredItem.school.toLowerCase())
+    )
+  ];
 
   return (
     <section id="education" className="section-padding">
@@ -41,7 +51,7 @@ export default function Education() {
         <div ref={ref} className="mx-auto max-w-3xl">
           <div className="relative space-y-6 pl-8">
             <div className="absolute bottom-0 left-[0.9rem] top-0 w-px bg-gradient-to-b from-cyan via-electric to-transparent" />
-            {education.map((item, index) => (
+            {educationItems.map((item, index) => (
               <motion.div
                 key={item.school}
                 initial={{ opacity: 0, y: 34 }}

@@ -119,7 +119,12 @@ export default function Packages() {
           <div className="grid gap-5 lg:grid-cols-[1fr_1.2fr] lg:items-center">
             <div>
               <div className="flex items-center gap-4">
-                <img src="/images/builtbyamos-logo.svg" alt="BuiltByAmos logo" className="h-16 w-16 rounded-2xl bg-white/5 object-contain p-2" />
+                <img
+                  src="/images/builtbyamos-logo.svg"
+                  alt="Built By Amos website development service logo"
+                  loading="lazy"
+                  className="h-16 w-16 rounded-2xl bg-white/5 object-contain p-2"
+                />
                 <div>
                   <h3 className="font-heading text-2xl font-bold text-white">{profile.name}</h3>
                   <p className="mt-1 text-sm font-semibold text-cyan">{profile.serviceTitle}</p>

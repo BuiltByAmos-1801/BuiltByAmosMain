@@ -1,44 +1,21 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FaCss3Alt, FaGithub, FaHtml5, FaJs, FaPython, FaReact } from 'react-icons/fa';
-import { SiDjango, SiFlask, SiMysql, SiTailwindcss } from 'react-icons/si';
-import { VscVscode } from 'react-icons/vsc';
+import { FiCode } from 'react-icons/fi';
+import useSiteContent from '../hooks/useSiteContent.js';
 import SectionHeader from './SectionHeader.jsx';
-
-const groups = [
-  {
-    title: 'Web Development',
-    items: [
-      { name: 'HTML5', level: 94, icon: FaHtml5 },
-      { name: 'CSS3', level: 90, icon: FaCss3Alt },
-      { name: 'JavaScript', level: 86, icon: FaJs },
-      { name: 'React.js', level: 84, icon: FaReact },
-      { name: 'Tailwind CSS', level: 88, icon: SiTailwindcss }
-    ]
-  },
-  {
-    title: 'Python Development',
-    items: [
-      { name: 'Core Python', level: 88, icon: FaPython },
-      { name: 'Flask', level: 78, icon: SiFlask },
-      { name: 'Django', level: 72, icon: SiDjango },
-      { name: 'Data Handling', level: 80, icon: FaPython },
-      { name: 'Automation & Scripting', level: 84, icon: FaPython }
-    ]
-  },
-  {
-    title: 'Tools & Technologies',
-    items: [
-      { name: 'GitHub', level: 86, icon: FaGithub },
-      { name: 'VS Code', level: 90, icon: VscVscode },
-      { name: 'MySQL', level: 76, icon: SiMysql }
-    ]
-  }
-];
 
 export default function Skills() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-100px' });
+  const { skills } = useSiteContent();
+  const groups = Object.values(
+    skills.reduce((collection, skill) => {
+      const title = skill.group || 'General Skills';
+      collection[title] = collection[title] || { title, items: [] };
+      collection[title].items.push(skill);
+      return collection;
+    }, {})
+  );
 
   return (
     <section id="skills" className="section-padding">
@@ -65,7 +42,7 @@ export default function Skills() {
                     <div className="mb-2 flex items-center justify-between gap-3">
                       <div className="flex items-center gap-3">
                         <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan/10 text-xl text-cyan">
-                          <skill.icon />
+                          <FiCode />
                         </span>
                         <span className="font-semibold text-slate-200">{skill.name}</span>
                       </div>

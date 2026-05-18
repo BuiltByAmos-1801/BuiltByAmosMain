@@ -4,8 +4,8 @@ import { FiMapPin, FiMonitor, FiTerminal } from 'react-icons/fi';
 import SectionHeader from './SectionHeader.jsx';
 
 const stats = [
-  { label: 'Current Semester', value: '4th' },
-  { label: 'Graduation', value: '2027' },
+  { label: 'Years in Development', value: '3+' },
+  { label: 'Projects Delivered', value: '15+' },
   { label: 'Agency', value: 'BuiltByAmos' }
 ];
 
@@ -33,8 +33,9 @@ export default function About() {
             <div className="glass relative aspect-[4/5] rounded-[2rem] p-5">
               <div className="relative h-full overflow-hidden rounded-[1.5rem] border border-cyan/20 bg-slate-950/75">
                 <img
-                  src="/images/author.webp"
-                  alt="Amos Anand"
+                  src="/images/author.png"
+                  alt="Amos Anand, founder of Built By Amos and web developer in Ranchi"
+                  loading="lazy"
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-transparent p-6 text-center">
@@ -51,18 +52,13 @@ export default function About() {
             transition={{ duration: 0.7, ease: 'easeOut' }}
           >
             <p className="text-lg leading-8 text-slate-300">
-              I am a Computer Science Engineering student at Garhwa Polytechnic, currently in the 4th Semester and
-              graduating in 2027. I build responsive websites, work with modern React interfaces, and use Python for
-              backend logic, automation, data handling, and scripting.
+              I'm Amos Anand, founder of <span className="font-bold text-cyan">Built By Amos</span> — a full-service web development agency based in Ranchi, Jharkhand. I specialize in building high-performance websites, modern React interfaces, and Python-powered backend solutions. My expertise spans responsive design, frontend development, automation, data handling, and end-to-end software solutions.
             </p>
             <p className="mt-5 text-lg leading-8 text-slate-300">
-              My freelancing experience has helped me think beyond code: client goals, clear communication, fast
-              delivery, and clean user experiences all matter. I like projects where design and engineering meet in a
-              useful, professional result.
+              Over the years, I've learned that successful projects go beyond clean code. It's about understanding client goals, communicating clearly, delivering fast, and creating experiences that truly work. I believe great products happen when design and engineering work together seamlessly.
             </p>
             <p className="mt-5 text-lg leading-8 text-slate-300">
-              I work under the agency name <span className="font-bold text-cyan">BuiltByAmos</span>, focused on
-              building modern websites, demo projects, and practical software solutions for growing brands.
+              Through <span className="font-bold text-cyan">Built By Amos</span>, I help growing brands and businesses across India establish strong digital presence. Whether it's custom websites, local SEO optimization, e-commerce solutions, or business automation — I focus on building practical, scalable digital products that drive real results.
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-3">

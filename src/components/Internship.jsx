@@ -1,18 +1,14 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FiCalendar, FiDatabase, FiFlag, FiZap } from 'react-icons/fi';
+import useSiteContent from '../hooks/useSiteContent.js';
 import SectionHeader from './SectionHeader.jsx';
-
-const internshipHighlights = [
-  { label: 'Status', value: 'Upcoming', icon: FiFlag },
-  { label: 'Track', value: 'Data Science', icon: FiDatabase },
-  { label: 'Tech Focus', value: 'Python', icon: FiZap },
-  { label: 'Start', value: 'Not started yet', icon: FiCalendar }
-];
+const icons = [FiFlag, FiDatabase, FiZap, FiCalendar];
 
 export default function Internship() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-120px' });
+  const { training } = useSiteContent();
 
   return (
     <section id="internship" className="section-padding">
@@ -47,15 +43,18 @@ export default function Internship() {
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
-              {internshipHighlights.map((item) => (
+              {training.map((item, index) => {
+                const Icon = icons[index % icons.length];
+                return (
                 <div key={item.label} className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
                   <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-cyan/10 text-cyan">
-                    <item.icon />
+                    <Icon />
                   </div>
                   <p className="text-sm font-semibold text-slate-400">{item.label}</p>
                   <p className="mt-1 font-heading text-xl font-bold text-white">{item.value}</p>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </motion.article>

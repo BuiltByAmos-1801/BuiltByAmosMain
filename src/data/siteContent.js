@@ -1,0 +1,265 @@
+export const defaultSiteContent = {
+  team: [
+    {
+      name: 'Amos Anand',
+      title: 'Founder & Web Developer',
+      image: '/images/author.png',
+      description:
+        'Founder of BuiltByAmos and a web developer who builds modern, scalable websites and web apps. I lead the team, shape the vision, and make sure client projects deliver real value.',
+      responsibilities: 'Web Development, Python Development, Client Solutions',
+      instagram: 'https://www.instagram.com/builtbyamos.0/?__pwa=1',
+      facebook: 'https://www.facebook.com/BuiltByAmos/',
+      youtube: 'https://www.youtube.com/@BuiltByAmos',
+      linkedin: 'https://www.linkedin.com/in/amos-anand-a1a57b390'
+    },
+    {
+      name: 'Malik Raza',
+      title: 'Co-founder & Operations Lead',
+      image: '/images/malik-optimized.jpg',
+      description:
+        'Co-founder of the company who manages operations and supports client outreach. Malik makes sure clients stay connected and project delivery runs smoothly.',
+      responsibilities: 'Operations, Client Outreach, Business Growth',
+      instagram: 'https://www.instagram.com/malikraza1621?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='
+    },
+    {
+      name: 'Arnish',
+      title: 'Lead Generation & Client Manager',
+      image: '/images/arnish-optimized.jpg',
+      description:
+        'Arnish focuses on lead generation and client management, helping the team find new opportunities and keep clients informed throughout the project lifecycle.',
+      responsibilities: 'Lead Generation, Client Management, Client Support',
+      instagram: 'https://www.instagram.com/arnish_kumar93?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='
+    },
+    {
+      name: 'Sadiq Ali',
+      title: 'Video Editing, SEO & Ads Specialist',
+      image: '/images/sadiq-optimized.jpg',
+      description:
+        'Sadiq handles video editing, SEO, and advertising for client campaigns. He brings stronger visibility and engagement to client brands across digital channels.',
+      responsibilities: 'Video Editing, SEO, Advertising',
+      instagram: 'https://www.instagram.com/sadiq__khan0921?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='
+    }
+  ],
+  skills: [
+    { group: 'Web Development', name: 'HTML5', level: 94 },
+    { group: 'Web Development', name: 'CSS3', level: 90 },
+    { group: 'Web Development', name: 'JavaScript', level: 86 },
+    { group: 'Web Development', name: 'React.js', level: 84 },
+    { group: 'Web Development', name: 'Tailwind CSS', level: 88 },
+    { group: 'Python Development', name: 'Core Python', level: 88 },
+    { group: 'Python Development', name: 'Flask', level: 78 },
+    { group: 'Python Development', name: 'Django', level: 72 },
+    { group: 'Python Development', name: 'Data Handling', level: 80 },
+    { group: 'Python Development', name: 'Automation & Scripting', level: 84 },
+    { group: 'Tools & Technologies', name: 'GitHub', level: 86 },
+    { group: 'Tools & Technologies', name: 'VS Code', level: 90 },
+    { group: 'Tools & Technologies', name: 'MySQL', level: 76 }
+  ],
+  clientProjects: [
+    {
+      title: 'Oracle Tattoo Studio Website',
+      client: 'Jenny',
+      description:
+        'Confirmed client website for Oracle Tattoo Studio in Ranchi. Work has started on a premium tattoo studio presence with booking-focused sections and strong local trust signals.',
+      tags: 'Tattoo Studio, Confirmed, Work Started',
+      status: 'Work Started',
+      live: ''
+    },
+    {
+      title: 'Gift Hub Website',
+      client: 'Vishal Panday',
+      description:
+        'Client website project for Gift Hub, focused on presenting gifting products, enquiries, store trust, and a polished brand experience for local customers.',
+      tags: 'Client Website, Gift Store, Business Website',
+      status: 'Client Project',
+      live: ''
+    },
+    {
+      title: 'Blacky Series Chill Music Artist Website',
+      client: 'Sadiq Khan',
+      description:
+        'Official hosted music artist website built for Blacky Series Chill with artist branding, online presence, and a responsive experience for fans.',
+      tags: 'Music Artist, Hosted Website, Live Client Work',
+      status: 'Live Website',
+      live: 'https://www.blackyserieschill.in/'
+    },
+    {
+      title: 'FFC Chicken Restaurant Website',
+      client: 'FFC Chicken',
+      description:
+        'Website discussion is in progress for FFC Chicken, a restaurant near Ratu Haji Chowk in Ranchi. The planned website will focus on menu, location, enquiries, offers, and a strong local food brand presence.',
+      tags: 'Restaurant, Ratu Haji Chowk, Ranchi',
+      status: 'Discussion in Progress',
+      live: ''
+    },
+    {
+      title: 'Chai and Me Cafe Website',
+      client: 'Chai and Me',
+      description:
+        'Website discussion is in progress for Chai and Me, a cafe in Harmu, Ranchi. The planned website will highlight cafe ambience, menu, customer trust, location, and online enquiry options.',
+      tags: 'Cafe, Harmu, Ranchi',
+      status: 'Discussion in Progress',
+      live: ''
+    }
+  ],
+  demoProjects: [
+    {
+      title: 'BBA Demo Cafe Website',
+      description: 'A responsive cafe demo website built to showcase menu, ambience, offers, and customer-friendly browsing.',
+      tags: 'HTML, CSS, JavaScript',
+      live: 'https://builtbyamos-1801.github.io/BBA-DEMO-CAFE/',
+      github: 'https://github.com/BuiltByAmos-1801/BBA-DEMO-CAFE.git'
+    },
+    {
+      title: 'BBA Demo Gym Website',
+      description: 'A modern fitness website demo with strong visuals, service sections, and a polished gym brand presentation.',
+      tags: 'HTML, CSS, JavaScript',
+      live: 'https://builtbyamos-1801.github.io/BBA-DEMO-GYM/',
+      github: 'https://github.com/BuiltByAmos-1801/BBA-DEMO-GYM.git'
+    },
+    {
+      title: 'BBA Demo Coaching Centre',
+      description: 'A coaching centre demo website for courses, admissions, trust-building content, and student-focused sections.',
+      tags: 'HTML, CSS, JavaScript',
+      live: 'https://builtbyamos-1801.github.io/BBA-DEMO-COACHING_CENTRE/',
+      github: 'https://github.com/BuiltByAmos-1801/BBA-DEMO-COACHING_CENTRE.git'
+    },
+  ],
+  services: [
+    {
+      title: 'Business Website Development',
+      description: 'Fast, responsive business websites by a web developer in Ranchi built to convert visitors into enquiries.'
+    },
+    { title: 'E-Commerce Website', description: 'Clean product pages, easy navigation, and checkout-ready online store experiences.' },
+    { title: 'SEO Optimization', description: 'Local SEO, metadata, speed, and content improvements for SEO services in India and better visibility.' },
+    { title: 'Portfolio Website', description: 'Premium personal and creator portfolios that showcase work with strong presentation.' },
+    { title: 'Business Automation Tools', description: 'Workflow tools, forms, dashboards, and scripts for businesses that need faster daily operations.' },
+    { title: 'Python Development', description: 'Python development for automation scripts, backend logic, data handling, and practical utilities.' },
+    { title: 'Website Maintenance', description: 'Updates, fixes, backups, performance checks, and ongoing website support.' },
+    { title: 'Google Business Profile Setup', description: 'Profile setup and optimization for maps, local discovery, photos, and reviews.' }
+  ],
+  testimonials: [
+    {
+      name: 'Oracle Tattoo Studio',
+      client: 'Jenny',
+      type: 'Tattoo Studio',
+      avatar: 'OT',
+      image: '/images/tattoo-oracle-final.webp',
+      review: 'The website direction looks premium and professional. Communication has been clear from planning to start.'
+    },
+    {
+      name: 'Gift Hub',
+      client: 'Vishal Pandey',
+      type: 'Gift Store',
+      avatar: 'GH',
+      image: '',
+      review: 'Professional work and smooth communication. The website plan fits our business needs perfectly.'
+    },
+    {
+      name: 'Blacky Series Chill',
+      client: 'Sadiq',
+      type: 'Music Artist',
+      avatar: 'BS',
+      image: '/images/blackyserieschill.jpg',
+      imageStyle: 'square',
+      review: 'My artist website is live, responsive, and presents the brand in a clean professional way.'
+    }
+  ],
+  blogs: [
+    {
+      title: 'Why Businesses Need Websites',
+      category: 'Business Growth',
+      date: 'May 15, 2026',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80',
+      excerpt: 'A business website developer helps your brand build trust, explain services clearly, and bring customers from Google search.'
+    },
+    {
+      title: 'SEO Tips for Local Businesses',
+      category: 'Local SEO',
+      date: 'May 12, 2026',
+      image: 'https://images.unsplash.com/photo-1562577309-4932fdd64cd1?auto=format&fit=crop&w=900&q=80',
+      excerpt: 'Web Developer in Ranchi and local SEO practices can improve keywords, page speed, Google profile content, and location visibility.'
+    },
+    {
+      title: 'Website vs Instagram Business',
+      category: 'Strategy',
+      date: 'May 8, 2026',
+      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80',
+      excerpt: 'Instagram is useful for attention, but a website gives your brand ownership, search visibility, and a stronger professional identity.'
+    },
+    {
+      title: 'Google Ranking Tips',
+      category: 'SEO',
+      date: 'May 3, 2026',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80',
+      excerpt:
+        'Google rankings improve when technical SEO, helpful content, structured pages, mobile performance, and business trust signals work together.'
+    }
+  ],
+  education: [
+    {
+      duration: '2024 - 2027',
+      school: 'Garhwa Polytechnic',
+      course: 'Diploma in Computer Science Engineering',
+      detail:
+        'Currently in the 4th Semester, building strong fundamentals in programming, web development, databases, and software product thinking.'
+    },
+    { duration: 'Passing Year 2026', school: 'NIOS', course: 'Senior Secondary / 12th', detail: 'Continuing senior secondary education through NIOS alongside technical learning.' },
+    {
+      duration: 'Passing Year 2024',
+      school: 'BNT ST. Mary School',
+      course: '10th Class',
+      detail: 'Completed secondary education before starting the diploma journey in Computer Science Engineering.'
+    },
+    {
+      duration: 'Certificate Completed',
+      school: 'Cybersecurity',
+      course: 'Cybersecurity Training',
+      detail:
+        'Completed cybersecurity training focused on digital safety, security awareness, and practical protection concepts for modern technology work.'
+    },
+    {
+      duration: 'Certificate Completed',
+      school: 'IoT Network Specialist',
+      course: 'Internet of Things Training',
+      detail:
+        'Completed IoT training covering connected devices, networking basics, and Internet of Things concepts for smart technology systems.'
+    },
+    {
+      duration: 'Certificate Completed',
+      school: 'Software Test Engineer',
+      course: 'Software Testing Training',
+      detail:
+        'Completed software testing training focused on quality checks, test planning, bug reporting, and improving software reliability.'
+    }
+  ],
+  training: [
+    { label: 'Status', value: 'Upcoming' },
+    { label: 'Track', value: 'Data Science' },
+    { label: 'Tech Focus', value: 'Python' },
+    { label: 'Start', value: 'Not started yet' }
+  ]
+};
+
+const STORAGE_KEY = 'builtByAmosSiteContent';
+
+export function getStoredContent() {
+  if (typeof window === 'undefined') return defaultSiteContent;
+
+  try {
+    const saved = window.localStorage.getItem(STORAGE_KEY);
+    return saved ? { ...defaultSiteContent, ...JSON.parse(saved) } : defaultSiteContent;
+  } catch {
+    return defaultSiteContent;
+  }
+}
+
+export function saveStoredContent(content) {
+  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(content));
+  window.dispatchEvent(new Event('builtbyamos-content-updated'));
+}
+
+export function resetStoredContent() {
+  window.localStorage.removeItem(STORAGE_KEY);
+  window.dispatchEvent(new Event('builtbyamos-content-updated'));
+}

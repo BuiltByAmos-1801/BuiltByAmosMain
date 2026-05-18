@@ -1,72 +1,19 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { FiBarChart2, FiFilm, FiSearch, FiCode, FiTrendingUp, FiUsers, FiTool } from 'react-icons/fi';
-import { SiPython } from 'react-icons/si';
-import { FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { FiCode } from 'react-icons/fi';
+import useSiteContent from '../hooks/useSiteContent.js';
 import SectionHeader from './SectionHeader.jsx';
 
-const teamMembers = [
-  {
-    name: '★彡[ᴀᴍᴏꜱ]彡★',
-    title: 'Founder & Web Developer',
-    image: '/images/author.webp',
-    description: 'Founder of BuiltByAmos and a web developer who builds modern, scalable websites and web apps. I lead the team, shape the vision, and make sure client projects deliver real value.',
-    responsibilities: [
-      { title: 'Web Development', icon: FiCode },
-      { title: 'Python Development', icon: SiPython },
-      { title: 'Client Solutions', icon: FiBarChart2 }
-    ],
-    socials: [
-      { label: 'Instagram', href: 'https://www.instagram.com/builtbyamos.0/?__pwa=1', icon: FaInstagram }
-    ]
-  },
-  {
-    name: 'Malik Raza',
-    title: 'Co-founder & Operations Lead',
-    image: '/images/malik.png',
-    description: 'Co-founder of the company who manages operations and supports client outreach. Malik makes sure clients stay connected and project delivery runs smoothly.',
-    responsibilities: [
-      { title: 'Operations', icon: FiTool },
-      { title: 'Client Outreach', icon: FiUsers },
-      { title: 'Business Growth', icon: FiTrendingUp }
-    ],
-    socials: [
-      { label: 'Instagram', href: 'https://www.instagram.com/malikraza1621?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: FaInstagram }
-    ]
-  },
-  {
-    name: 'Arnish 🩶',
-    title: 'Lead Generation & Client Manager',
-    image: '/images/arnish.png',
-    description: 'Arnish focuses on lead generation and client management, helping the team find new opportunities and keep clients informed throughout the project lifecycle.',
-    responsibilities: [
-      { title: 'Lead Generation', icon: FiTrendingUp },
-      { title: 'Client Management', icon: FiUsers },
-      { title: 'Client Support', icon: FiTool }
-    ],
-    socials: [
-      { label: 'Instagram', href: 'https://www.instagram.com/arnish_kumar93?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: FaInstagram }
-    ]
-  },
-  {
-    name: 'Sadiq Ali',
-    title: 'Video Editing, SEO & Ads Specialist',
-    image: '/images/sadiq.png',
-    description: 'Sadiq handles video editing, SEO, and advertising for client campaigns. He brings stronger visibility and engagement to client brands across digital channels.',
-    responsibilities: [
-      { title: 'Video Editing', icon: FiFilm },
-      { title: 'SEO', icon: FiSearch },
-      { title: 'Advertising', icon: FiBarChart2 }
-    ],
-    socials: [
-      { label: 'Instagram', href: 'https://www.instagram.com/sadiq__khan0921?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: FaInstagram }
-    ]
-  }
-];
-
-function TeamImage({ member, socials }) {
+function TeamImage({ member }) {
   const [failed, setFailed] = useState(false);
   const initials = member.name.split(' ').map((n) => n[0]).join('');
+  const socials = [
+    { label: 'Instagram', href: member.instagram, icon: FaInstagram },
+    { label: 'Facebook', href: member.facebook, icon: FaFacebookF },
+    { label: 'YouTube', href: member.youtube, icon: FaYoutube },
+    { label: 'LinkedIn', href: member.linkedin, icon: FaLinkedinIn }
+  ].filter((social) => social.href);
 
   if (failed) {
     return (
@@ -83,13 +30,26 @@ function TeamImage({ member, socials }) {
 
   return (
     <div>
-      <img
-        src={member.image}
-        alt={member.name}
-        onError={() => setFailed(true)}
-        className="h-full min-h-[22rem] w-full rounded-[1.5rem] object-cover"
-      />
-      {socials && (
+      <div className="group relative overflow-hidden rounded-[1.75rem] border border-cyan/20 bg-gradient-to-br from-cyan/15 via-white/[0.06] to-electric/10 p-3 shadow-glow">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,rgba(0,255,255,0.22),transparent_32%),radial-gradient(circle_at_82%_78%,rgba(59,130,246,0.22),transparent_34%)] opacity-80" />
+        <div className="relative overflow-hidden rounded-[1.25rem] border border-white/10 bg-slate-950">
+          <img
+            src={member.image}
+            alt={`${member.name} from Built By Amos digital agency team`}
+            loading="lazy"
+            onError={() => setFailed(true)}
+            className="h-full min-h-[22rem] w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+          />
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent p-5 pt-20">
+            <p className="font-heading text-2xl font-bold text-white">{member.name}</p>
+            <p className="mt-1 text-sm font-semibold text-cyan">{member.title}</p>
+          </div>
+        </div>
+        <div className="absolute right-5 top-5 rounded-full border border-white/15 bg-slate-950/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-white shadow-card backdrop-blur">
+          Built By Amos
+        </div>
+      </div>
+      {socials.length > 0 && (
         <div className="mt-6 flex justify-center gap-3">
           {socials.map((social) => (
             <a
@@ -97,7 +57,7 @@ function TeamImage({ member, socials }) {
               href={social.href}
               target="_blank"
               rel="noreferrer"
-              aria-label={social.label}
+              aria-label={`${member.name} ${social.label}`}
               className="rounded-full border border-white/10 p-3 text-slate-300 transition hover:border-cyan hover:text-cyan"
             >
               <social.icon />
@@ -112,6 +72,8 @@ function TeamImage({ member, socials }) {
 export default function Team() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-120px' });
+  const { team: teamMembers } = useSiteContent();
+  const listResponsibilities = (items) => String(items || '').split(',').map((item) => item.trim()).filter(Boolean);
 
   return (
     <section id="team" className="section-padding bg-ink/70">
@@ -122,22 +84,23 @@ export default function Team() {
           copy="A team built to turn ideas into growth through web development, marketing, and client success."
         />
 
-        <div className="mt-6 mb-12 rounded-3xl border border-white/10 bg-white/5 p-6 text-slate-300 shadow-2xl">
+        <div className="mb-12 mt-6 rounded-3xl border border-white/10 bg-white/5 p-6 text-slate-300 shadow-2xl">
           <p className="max-w-4xl text-lg leading-8">
-            Our team brings together web development, client management, lead generation, video editing, SEO, and advertising into one powerful growth engine. For each client project, we collaborate closely on planning, execute with precision, and follow up to turn ideas into measurable results.
+            Our team brings together web development, client management, lead generation, video editing, SEO, and
+            advertising into one powerful growth engine.
           </p>
         </div>
 
         <div ref={ref} className="space-y-16">
           {teamMembers.map((member, index) => (
-            <div key={member.name} className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+            <div key={`${member.name}-${index}`} className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr]">
               <motion.div
                 initial={{ opacity: 0, x: index % 2 === 0 ? -34 : 34 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.7, ease: 'easeOut', delay: index * 0.2 }}
                 className={`glass rounded-[2rem] p-5 ${index % 2 === 1 ? 'lg:order-2' : ''}`}
               >
-                <TeamImage member={member} socials={member.socials} />
+                <TeamImage member={member} />
               </motion.div>
 
               <motion.div
@@ -148,17 +111,15 @@ export default function Team() {
               >
                 <p className="text-sm font-bold uppercase tracking-[0.22em] text-cyan">{member.title}</p>
                 <h3 className="mt-3 font-heading text-3xl font-bold text-white sm:text-4xl">{member.name}</h3>
-                <p className="mt-5 text-lg leading-8 text-slate-300">
-                  {member.description}
-                </p>
+                <p className="mt-5 text-lg leading-8 text-slate-300">{member.description}</p>
 
                 <div className="mt-7 grid gap-4 sm:grid-cols-3">
-                  {member.responsibilities.map((item) => (
-                    <div key={item.title} className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                  {listResponsibilities(member.responsibilities).map((item) => (
+                    <div key={item} className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
                       <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-cyan/10 text-cyan">
-                        <item.icon />
+                        <FiCode />
                       </div>
-                      <p className="font-semibold text-slate-200">{item.title}</p>
+                      <p className="font-semibold text-slate-200">{item}</p>
                     </div>
                   ))}
                 </div>

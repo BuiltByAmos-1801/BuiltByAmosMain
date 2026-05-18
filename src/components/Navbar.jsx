@@ -8,10 +8,12 @@ const navItems = [
   { label: 'Team', id: 'team' },
   { label: 'Skills', id: 'skills' },
   { label: 'Projects', id: 'projects' },
+  { label: 'Services', id: 'services' },
+  { label: 'Pricing', id: 'pricing' },
+  { label: 'Reviews', id: 'testimonials' },
+  { label: 'MSME', id: 'msme' },
   { label: 'Education', id: 'education' },
   { label: 'Internship', id: 'internship' },
-  { label: 'Certs', id: 'certifications' },
-  { label: 'Packages', id: 'packages' },
   { label: 'Contact', id: 'contact' }
 ];
 
@@ -36,10 +38,20 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16);
+    let frame = 0;
+    const onScroll = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        setScrolled(window.scrollY > 16);
+        frame = 0;
+      });
+    };
     onScroll();
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
   }, []);
 
   const scrollToSection = (id) => {
@@ -59,7 +71,12 @@ export default function Navbar() {
           className="flex items-center gap-3 font-heading text-xl font-bold text-white"
           aria-label="Go to home"
         >
-          <img src="/images/builtbyamos-logo.svg" alt="BuiltByAmos logo" className="h-9 w-9 rounded-full object-contain" />
+          <img
+            src="/images/builtbyamos-logo.svg"
+            alt="Built By Amos official logo"
+            loading="lazy"
+            className="h-9 w-9 rounded-full object-contain"
+          />
           <span>BuiltByAmos<span className="text-cyan">.</span></span>
         </button>
 
