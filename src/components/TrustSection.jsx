@@ -46,7 +46,7 @@ export default function TrustSection() {
         <SectionHeader
           eyebrow="Why Choose Us"
           title="Trusted web development and SEO services for growing brands"
-          copy="Built By Amos combines website development, local SEO, and business website strategy to help startups and small businesses grow online."
+          copy="Built By Amos combines website development, local SEO, client reviews, and business website strategy to help startups and small businesses grow online."
         />
 
         <div ref={ref} className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
