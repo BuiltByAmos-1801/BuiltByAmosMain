@@ -64,8 +64,8 @@ export default function ServicesTestimonialsBlog() {
         <div className="section-shell">
           <SectionHeader
             eyebrow="Services"
-            title="Professional Digital Services"
-            copy="We help businesses grow online with modern websites, SEO, and automation solutions."
+            title="Website, SEO & Digital Services"
+            copy="Built By Amos delivers web development, local SEO, business websites, and Python solutions for brands in Ranchi, Jharkhand and across India."
           />
 
           <div ref={servicesRef} className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
