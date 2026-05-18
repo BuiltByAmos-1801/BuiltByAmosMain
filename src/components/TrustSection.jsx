@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FiCheckCircle, FiMessageSquare, FiShield, FiStar, FiThumbsUp, FiZap } from 'react-icons/fi';
+import { FiCheckCircle, FiLayers, FiMessageSquare, FiShield, FiStar, FiZap } from 'react-icons/fi';
 import SectionHeader from './SectionHeader.jsx';
 
 const trustPoints = [
@@ -15,7 +15,7 @@ const trustPoints = [
     copy: 'Every project is managed by founder Amos Anand for clear communication, fast decisions, and business-focused delivery.'
   },
   {
-    icon: FiTheme,
+    icon: FiLayers,
     title: 'Modern Website Design',
     copy: 'Responsive website design and mobile friendly development that creates fast-loading, conversion-ready pages.'
   },

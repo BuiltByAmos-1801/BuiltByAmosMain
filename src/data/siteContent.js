@@ -127,16 +127,45 @@ export const defaultSiteContent = {
   ],
   services: [
     {
-      title: 'Business Website Development',
-      description: 'Fast, responsive business websites by a web developer in Ranchi built to convert visitors into enquiries.'
+      title: 'Website Development',
+      description: 'Custom website development for brands, businesses, and service providers that need a modern and fast-loading online presence.'
     },
-    { title: 'E-Commerce Website', description: 'Clean product pages, easy navigation, and checkout-ready online store experiences.' },
-    { title: 'SEO Optimization', description: 'Local SEO, metadata, speed, and content improvements for SEO services in India and better visibility.' },
-    { title: 'Portfolio Website', description: 'Premium personal and creator portfolios that showcase work with strong presentation.' },
-    { title: 'Business Automation Tools', description: 'Workflow tools, forms, dashboards, and scripts for businesses that need faster daily operations.' },
-    { title: 'Python Development', description: 'Python development for automation scripts, backend logic, data handling, and practical utilities.' },
-    { title: 'Website Maintenance', description: 'Updates, fixes, backups, performance checks, and ongoing website support.' },
-    { title: 'Google Business Profile Setup', description: 'Profile setup and optimization for maps, local discovery, photos, and reviews.' }
+    {
+      title: 'Business Website Design',
+      description: 'Professional business website design for startups, local companies, coaching centres, restaurants, salons, gyms, and more.'
+    },
+    {
+      title: 'SEO Optimization',
+      description: 'SEO services for website pages, metadata, keyword targeting, and technical improvements that help search visibility.'
+    },
+    {
+      title: 'Local SEO',
+      description: 'Local SEO for Ranchi, Jharkhand and Garhwa businesses to rank higher in local search and Google Maps results.'
+    },
+    {
+      title: 'Google Business Profile Optimization',
+      description: 'Google Business Profile setup and optimization to improve local rankings, reviews, directions and customer trust.'
+    },
+    {
+      title: 'Landing Page Design',
+      description: 'SEO-friendly landing pages built for lead generation, campaigns, product launches and local service enquiries.'
+    },
+    {
+      title: 'Portfolio Website',
+      description: 'Portfolio websites for creatives, agencies and professionals that present work clearly and attract clients.'
+    },
+    {
+      title: 'E-commerce Website',
+      description: 'E-commerce websites with easy product browsing, checkout-ready design and mobile-friendly store experiences.'
+    },
+    {
+      title: 'Website Maintenance',
+      description: 'Ongoing website maintenance, updates, backups, performance checks and security support for live sites.'
+    },
+    {
+      title: 'Python Development',
+      description: 'Python development for backend logic, automation, data handling, scripts and practical business tools.'
+    }
   ],
   testimonials: [
     {
