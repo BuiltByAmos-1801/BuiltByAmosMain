@@ -12,6 +12,9 @@ import ServicesTestimonialsBlog from './components/ServicesTestimonialsBlog.jsx'
 import Pricing from './components/Pricing.jsx';
 import MsmeSection from './components/MsmeSection.jsx';
 import GoogleRating from './components/GoogleRating.jsx';
+import IndustrySection from './components/IndustrySection.jsx';
+import TrustSection from './components/TrustSection.jsx';
+import FaqSection from './components/FaqSection.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 
@@ -28,8 +31,11 @@ function Portfolio() {
         <Skills />
         <Projects />
         <ServicesTestimonialsBlog />
+        <IndustrySection />
+        <TrustSection />
         <Pricing />
         <MsmeSection />
+        <FaqSection />
         <Education />
         <Internship />
         <GoogleRating />
