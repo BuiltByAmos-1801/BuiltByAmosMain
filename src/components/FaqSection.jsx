@@ -39,22 +39,6 @@ export default function FaqSection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-120px' });
 
-  const faqSchema = useMemo(
-    () => ({
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: faqs.map((item) => ({
-        '@type': 'Question',
-        name: item.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: item.answer
-        }
-      }))
-    }),
-    []
-  );
-
   return (
     <section id="faqs" className="section-padding bg-ink/70">
       <div className="section-shell">
