@@ -15,9 +15,7 @@ const navItems = [
   { label: 'Pricing', id: 'pricing' },
   { label: 'Reviews', id: 'testimonials' },
   { label: 'MSME', id: 'msme' },
-  { label: 'Education', id: 'education' },
-  { label: 'Internship', id: 'internship' },
-  { label: 'Contact', id: 'contact' }
+  
 ];
 
 export default function Navbar() {

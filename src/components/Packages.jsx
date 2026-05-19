@@ -34,6 +34,18 @@ const packages = [
     ]
   },
   {
+    category: 'Tattoo Studio',
+    summary: 'Premium website packages for tattoo studios, focused on bookings, gallery, branding, and local customer trust.',
+    prices: ['Rs. 14,999', 'Rs. 24,999', 'Rs. 34,999'],
+    pages: ['1 Page', 'Multi-Page', 'Custom Website'],
+    delivery: ['4-5 Days', '7-10 Days', '10-14 Days'],
+    plans: [
+      ['Premium 1-Page Website', 'Mobile Responsive', 'Tattoo Gallery Section', 'WhatsApp Integration', 'Instagram Integration', 'Contact Form', 'Basic SEO Setup', '1 Month Free Support'],
+      ['Multi-Page Website', 'Artist Portfolio', 'Online Booking', 'Advanced Gallery', 'SEO Optimization', 'Speed Optimization', 'Google Business Setup', 'WhatsApp + Instagram', 'Basic Ads Setup', '1 Month Maintenance'],
+      ['Luxury Custom Website', 'Full Booking System', 'Premium Dark UI/UX', 'SEO + Google Ads', 'Instagram Landing Page', 'High-Speed Optimization', 'Premium Animations', 'Monthly Maintenance', 'Priority Support', 'Branding Consultation']
+    ]
+  },
+  {
     category: 'Clinic',
     summary: 'Doctor profile, services, appointment, timings, and trust-building clinic website packages.',
     prices: ['Rs. 6,000', 'Rs. 9,000', 'Rs. 13,000'],

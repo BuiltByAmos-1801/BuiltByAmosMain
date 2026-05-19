@@ -86,7 +86,7 @@ export default function MsmeSection() {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <a className="button-primary" href="#contact">
+              <a className="button-primary" href="https://wa.me/918757603560" target="_blank" rel="noreferrer">
                 Start a Project <FiCheckCircle />
               </a>
               <a className="button-secondary" href="https://g.page/r/CYkrf9Wvu3LqEBM/review" target="_blank" rel="noreferrer">

@@ -7,7 +7,7 @@ import SectionHeader from './SectionHeader.jsx';
 const packages = [
   {
     name: 'Launch Package',
-    price: '₹7,999',
+    price: '₹14,999',
     badge: 'Best For Small Businesses',
     label: 'Starter',
     comparison: 'For New Businesses',
@@ -31,7 +31,7 @@ const packages = [
   },
   {
     name: 'Business Pro Package',
-    price: '₹14,999',
+    price: '₹19,999',
     badge: 'Most Popular',
     label: 'Pro',
     comparison: 'Best Value',

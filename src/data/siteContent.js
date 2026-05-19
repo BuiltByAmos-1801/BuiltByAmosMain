@@ -91,15 +91,6 @@ export const defaultSiteContent = {
       tags: 'Restaurant, Ratu Haji Chowk, Ranchi',
       status: 'Discussion in Progress',
       live: ''
-    },
-    {
-      title: 'Chai and Me Cafe Website',
-      client: 'Chai and Me',
-      description:
-        'Website discussion is in progress for Chai and Me, a cafe in Harmu, Ranchi. The planned website will highlight cafe ambience, menu, customer trust, location, and online enquiry options.',
-      tags: 'Cafe, Harmu, Ranchi',
-      status: 'Discussion in Progress',
-      live: ''
     }
   ],
   demoProjects: [

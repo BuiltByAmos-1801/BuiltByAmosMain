@@ -6,12 +6,9 @@ import About from './components/About.jsx';
 import Team from './components/Team.jsx';
 import Skills from './components/Skills.jsx';
 import Projects from './components/Projects.jsx';
-import Education from './components/Education.jsx';
-import Internship from './components/Internship.jsx';
 import ServicesTestimonialsBlog from './components/ServicesTestimonialsBlog.jsx';
 import Pricing from './components/Pricing.jsx';
 import MsmeSection from './components/MsmeSection.jsx';
-import GoogleRating from './components/GoogleRating.jsx';
 import IndustrySection from './components/IndustrySection.jsx';
 import TrustSection from './components/TrustSection.jsx';
 import FaqSection from './components/FaqSection.jsx';
@@ -36,10 +33,6 @@ function Portfolio() {
         <Pricing />
         <MsmeSection />
         <FaqSection />
-        <Education />
-        <Internship />
-        <GoogleRating />
-        <Contact />
       </main>
       <Footer />
     </div>

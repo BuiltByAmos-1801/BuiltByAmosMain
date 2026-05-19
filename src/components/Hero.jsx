@@ -31,9 +31,9 @@ export default function Hero() {
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <button onClick={() => scrollToSection('contact')} className="button-primary">
+            <a href="https://wa.me/918757603560" target="_blank" rel="noreferrer" className="button-primary">
               Get Free Consultation
-            </button>
+            </a>
             <button onClick={() => scrollToSection('projects')} className="button-secondary">
               View Portfolio
             </button>
