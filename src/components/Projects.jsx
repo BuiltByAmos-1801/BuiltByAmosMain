@@ -9,7 +9,10 @@ export default function Projects() {
   const inView = useInView(ref, { once: true, margin: '-120px' });
   const { clientProjects, demoProjects } = useSiteContent();
   const listTags = (tags) => String(tags || '').split(',').map((tag) => tag.trim()).filter(Boolean);
-  const visibleDemoProjects = demoProjects.filter((project) => !project.title.toLowerCase().includes('music artist'));
+  const visibleDemoProjects = demoProjects.filter((project) => {
+    const title = project.title.toLowerCase();
+    return !title.includes('music artist');
+  });
 
   return (
     <section id="projects" className="section-padding bg-ink/70">
@@ -67,18 +70,11 @@ export default function Projects() {
                   ))}
                 </div>
                 </div>
-                {(project.live || project.github) && (
+                {project.github && (
                   <div className="flex flex-wrap gap-3 lg:justify-end">
-                    {project.live && (
-                      <a className="button-primary px-5 py-2.5" href={project.live} target="_blank" rel="noreferrer" aria-label={`${project.title} live website`}>
-                        Visit Website <FiExternalLink />
-                      </a>
-                    )}
-                    {project.github && (
-                      <a className="button-secondary px-5 py-2.5" href={project.github} target="_blank" rel="noreferrer" aria-label={`${project.title} GitHub`}>
-                        GitHub <FiGithub />
-                      </a>
-                    )}
+                    <a className="button-secondary px-5 py-2.5" href={project.github} target="_blank" rel="noreferrer" aria-label={`${project.title} GitHub`}>
+                      GitHub <FiGithub />
+                    </a>
                   </div>
                 )}
               </div>
@@ -121,14 +117,20 @@ export default function Projects() {
                       </span>
                     ))}
                   </div>
-                  <div className="mt-7 flex flex-wrap gap-3">
-                    <a className="button-primary px-5 py-2.5" href={project.live} target="_blank" rel="noreferrer" aria-label={`${project.title} live demo`}>
-                      Live Demo <FiExternalLink />
-                    </a>
-                    <a className="button-secondary px-5 py-2.5" href={project.github} target="_blank" rel="noreferrer" aria-label={`${project.title} GitHub`}>
-                      GitHub <FiGithub />
-                    </a>
-                  </div>
+                  {(project.live || project.github) && (
+                    <div className="mt-7 flex flex-wrap gap-3">
+                      {project.live && (
+                        <a className="button-primary px-5 py-2.5" href={project.live} target="_blank" rel="noreferrer" aria-label={`${project.title} live demo`}>
+                          Live Demo <FiExternalLink />
+                        </a>
+                      )}
+                      {project.github && (
+                        <a className="button-secondary px-5 py-2.5" href={project.github} target="_blank" rel="noreferrer" aria-label={`${project.title} GitHub`}>
+                          GitHub <FiGithub />
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               </motion.article>
             ))}

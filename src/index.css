@@ -14,12 +14,12 @@
 body {
   margin: 0;
   min-width: 320px;
-  background: #030712;
+  background: #101217;
   font-family: 'Inter', sans-serif;
 }
 
 ::selection {
-  background: rgba(0, 255, 255, 0.25);
+  background: rgba(216, 168, 78, 0.3);
   color: #ffffff;
 }
 
@@ -28,12 +28,12 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #020617;
+  background: #101217;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #00ffff, #3b82f6);
-  border: 2px solid #020617;
+  background: #d8a84e;
+  border: 2px solid #101217;
   border-radius: 999px;
 }
 
@@ -46,23 +46,23 @@ body {
 }
 
 .glass {
-  @apply border border-white/10 bg-white/[0.06] shadow-card backdrop-blur-xl;
+  @apply border border-white/10 bg-[#1b2028]/90 shadow-card;
 }
 
 .accent-text {
-  @apply bg-gradient-to-r from-cyan to-electric bg-clip-text text-transparent;
+  @apply text-cyan;
 }
 
 .button-primary {
-  @apply inline-flex items-center justify-center gap-2 rounded-full bg-cyan px-6 py-3 text-sm font-bold text-slate-950 shadow-glow transition hover:-translate-y-1 hover:bg-white focus:outline-none focus:ring-2 focus:ring-cyan focus:ring-offset-2 focus:ring-offset-midnight;
+  @apply inline-flex items-center justify-center gap-2 rounded-lg bg-cyan px-6 py-3 text-sm font-bold text-slate-950 shadow-glow transition hover:-translate-y-0.5 hover:bg-white focus:outline-none focus:ring-2 focus:ring-cyan focus:ring-offset-2 focus:ring-offset-midnight;
 }
 
 .button-secondary {
-  @apply inline-flex items-center justify-center gap-2 rounded-full border border-cyan/35 px-6 py-3 text-sm font-bold text-cyan transition hover:-translate-y-1 hover:border-cyan hover:bg-cyan/10 focus:outline-none focus:ring-2 focus:ring-cyan focus:ring-offset-2 focus:ring-offset-midnight;
+  @apply inline-flex items-center justify-center gap-2 rounded-lg border border-white/15 px-6 py-3 text-sm font-bold text-slate-100 transition hover:-translate-y-0.5 hover:border-cyan hover:bg-white/5 hover:text-cyan focus:outline-none focus:ring-2 focus:ring-cyan focus:ring-offset-2 focus:ring-offset-midnight;
 }
 
 .section-kicker {
-  @apply mb-3 text-sm font-bold uppercase tracking-[0.24em] text-cyan;
+  @apply mb-3 text-sm font-bold uppercase tracking-[0.18em] text-cyan;
 }
 
 .section-title {
@@ -76,7 +76,7 @@ body {
 .pricing-card::before {
   position: absolute;
   inset: -40%;
-  background: conic-gradient(from 180deg, transparent 0deg, rgba(0, 255, 255, 0.46) 70deg, transparent 130deg, transparent 360deg);
+  background: conic-gradient(from 180deg, transparent 0deg, rgba(216, 168, 78, 0.34) 70deg, transparent 130deg, transparent 360deg);
   content: '';
   opacity: 0;
   transform: rotate(0deg);
@@ -90,7 +90,7 @@ body {
 }
 
 .pricing-card-popular {
-  box-shadow: 0 26px 90px rgba(0, 255, 255, 0.18), 0 0 0 1px rgba(0, 255, 255, 0.32);
+  box-shadow: 0 24px 76px rgba(216, 168, 78, 0.16), 0 0 0 1px rgba(216, 168, 78, 0.28);
 }
 
 @media (min-width: 768px) {
@@ -107,7 +107,7 @@ body {
   }
 
   .shadow-glow {
-    box-shadow: 0 0 22px rgba(0, 255, 255, 0.12);
+    box-shadow: 0 12px 28px rgba(216, 168, 78, 0.12);
   }
 
   .backdrop-blur,

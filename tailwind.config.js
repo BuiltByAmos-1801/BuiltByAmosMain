@@ -8,18 +8,18 @@ export default {
         body: ['Inter', 'sans-serif']
       },
       colors: {
-        midnight: '#030712',
-        ink: '#07111f',
-        cyan: '#00FFFF',
-        electric: '#3B82F6'
+        midnight: '#101217',
+        ink: '#171B22',
+        cyan: '#D8A84E',
+        electric: '#6F8FBF'
       },
       boxShadow: {
-        glow: '0 0 40px rgba(0, 255, 255, 0.18)',
-        card: '0 24px 80px rgba(0, 0, 0, 0.35)'
+        glow: '0 14px 34px rgba(216, 168, 78, 0.16)',
+        card: '0 18px 54px rgba(0, 0, 0, 0.28)'
       },
       backgroundImage: {
         grid:
-          'linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px)'
+          'linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)'
       }
     }
   },

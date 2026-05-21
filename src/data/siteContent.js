@@ -23,7 +23,7 @@ export const defaultSiteContent = {
     },
     {
       name: 'Arnish',
-      title: 'Lead Generation & Client Manager',
+      title: 'Lead Generation',
       image: '/images/arnish-optimized.jpg',
       description:
         'Arnish focuses on lead generation and client management, helping the team find new opportunities and keep clients informed throughout the project lifecycle.',
@@ -71,6 +71,15 @@ export const defaultSiteContent = {
       description:
         'Client website project for Gift Hub, focused on presenting gifting products, enquiries, store trust, and a polished brand experience for local customers.',
       tags: 'Client Website, Gift Store, Business Website',
+      status: 'Client Project',
+      live: ''
+    },
+    {
+      title: 'Joyal Services Website',
+      client: 'Prashant Kumar Joyal',
+      description:
+        'Client website built for Joyal Services, a software development company focused on presenting services, business trust, enquiries, and a professional digital presence.',
+      tags: 'Software Development, Client Website, Business Services',
       status: 'Client Project',
       live: ''
     },
@@ -174,6 +183,14 @@ export const defaultSiteContent = {
       avatar: 'GH',
       image: '',
       review: 'Professional work and smooth communication. The website plan fits our business needs perfectly.'
+    },
+    {
+      name: 'Joyal Services',
+      client: 'Prashant Kumar Joyal',
+      type: 'Software Development Company',
+      avatar: 'JS',
+      image: '',
+      review: 'Built By Amos created a professional website for my software development company. The design is clean, responsive, and presents our services clearly.'
     },
     {
       name: 'Blacky Series Chill',

@@ -6,10 +6,9 @@ export default function Hero() {
   const scrollToSection = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <section id="home" className="relative flex min-h-screen items-center overflow-hidden px-5 pb-16 pt-28 sm:px-8 lg:px-12">
-      <div className="absolute inset-0 bg-grid bg-[length:48px_48px] opacity-70" />
-      <div className="absolute left-[-18rem] top-[-16rem] h-[34rem] w-[34rem] rounded-full bg-cyan/20 blur-3xl" />
-      <div className="absolute bottom-[-18rem] right-[-14rem] h-[36rem] w-[36rem] rounded-full bg-electric/25 blur-3xl" />
+    <section id="home" className="relative flex min-h-screen items-center overflow-hidden bg-[linear-gradient(135deg,#101217_0%,#171b22_52%,#202126_100%)] px-5 pb-16 pt-28 sm:px-8 lg:px-12">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan/60 to-transparent" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[length:120px_120px] opacity-25" />
 
       <div className="section-shell relative z-10 grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
         <motion.div
@@ -50,19 +49,19 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.92, rotate: -3 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.15, ease: 'easeOut' }}
-          className="glass relative mx-auto min-h-[34rem] w-full max-w-md rounded-[2rem] p-6 sm:min-h-[36rem]"
+          className="glass relative mx-auto min-h-[34rem] w-full max-w-md rounded-2xl p-6 sm:min-h-[36rem]"
         >
-          <div className="absolute inset-4 rounded-[1.5rem] border border-cyan/30" />
-          <div className="flex min-h-[31rem] flex-col justify-between gap-8 rounded-[1.5rem] bg-gradient-to-br from-slate-950 via-slate-900 to-cyan/20 p-8 sm:min-h-[33rem]">
+          <div className="absolute inset-4 rounded-xl border border-white/10" />
+          <div className="flex min-h-[31rem] flex-col justify-between gap-8 rounded-xl bg-[#141820] p-8 sm:min-h-[33rem]">
             <div>
               <img
                 src="/images/builtbyamos-logo.svg"
                 alt="Built By Amos web development company logo"
                 loading="lazy"
-                className="mb-5 h-16 w-16 rounded-2xl bg-white/5 object-contain p-2"
+                className="mb-5 h-16 w-16 rounded-xl bg-white/5 object-contain p-2"
               />
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan">Available for work</p>
               <h2 className="mt-4 font-heading text-4xl font-bold text-white">
@@ -71,7 +70,7 @@ export default function Hero() {
             </div>
             <div className="grid grid-cols-3 gap-3 pt-4">
               {['React', 'Python', 'Tailwind'].map((skill) => (
-                <div key={skill} className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center text-sm font-bold text-slate-200">
+                <div key={skill} className="rounded-lg border border-white/10 bg-white/[0.04] p-4 text-center text-sm font-bold text-slate-200">
                   {skill}
                 </div>
               ))}
