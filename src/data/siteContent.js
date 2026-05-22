@@ -40,21 +40,6 @@ export const defaultSiteContent = {
       instagram: 'https://www.instagram.com/sadiq__khan0921?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='
     }
   ],
-  skills: [
-    { group: 'Web Development', name: 'HTML5', level: 94 },
-    { group: 'Web Development', name: 'CSS3', level: 90 },
-    { group: 'Web Development', name: 'JavaScript', level: 86 },
-    { group: 'Web Development', name: 'React.js', level: 84 },
-    { group: 'Web Development', name: 'Tailwind CSS', level: 88 },
-    { group: 'Python Development', name: 'Core Python', level: 88 },
-    { group: 'Python Development', name: 'Flask', level: 78 },
-    { group: 'Python Development', name: 'Django', level: 72 },
-    { group: 'Python Development', name: 'Data Handling', level: 80 },
-    { group: 'Python Development', name: 'Automation & Scripting', level: 84 },
-    { group: 'Tools & Technologies', name: 'GitHub', level: 86 },
-    { group: 'Tools & Technologies', name: 'VS Code', level: 90 },
-    { group: 'Tools & Technologies', name: 'MySQL', level: 76 }
-  ],
   clientProjects: [
     {
       title: 'Oracle Tattoo Studio Website',
@@ -93,12 +78,12 @@ export const defaultSiteContent = {
       live: 'https://www.blackyserieschill.in/'
     },
     {
-      title: 'FFC Chicken Restaurant Website',
-      client: 'FFC Chicken',
+      title: 'Rapid Cure Pharma Website',
+      client: 'Ashish Kumar Gupta',
       description:
-        'Website discussion is in progress for FFC Chicken, a restaurant near Ratu Haji Chowk in Ranchi. The planned website will focus on menu, location, enquiries, offers, and a strong local food brand presence.',
-      tags: 'Restaurant, Ratu Haji Chowk, Ranchi',
-      status: 'Discussion in Progress',
+        'Client website built for Ashish Kumar Gupta\'s Rapid Cure Pharma medical store in Bokaro, designed to help customers place online orders, browse medicines and essentials, send enquiries, view offers, and connect with the store easily.',
+      tags: 'Rapid Cure Pharma, Online Orders, Bokaro',
+      status: 'Client Project',
       live: ''
     }
   ],

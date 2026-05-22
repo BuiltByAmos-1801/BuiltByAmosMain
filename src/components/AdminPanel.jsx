@@ -15,12 +15,6 @@ const sections = [
     fields: ['name', 'title', 'image', 'description', 'responsibilities', 'instagram', 'facebook', 'youtube', 'linkedin']
   },
   {
-    key: 'skills',
-    label: 'Skills',
-    emptyItem: { group: '', name: '', level: 80 },
-    fields: ['group', 'name', 'level']
-  },
-  {
     key: 'clientProjects',
     label: 'Client Projects',
     emptyItem: { title: '', client: '', description: '', tags: '', status: '', live: '' },
@@ -189,7 +183,7 @@ export default function AdminPanel() {
             <p className="text-sm font-bold uppercase tracking-[0.22em] text-cyan">Built By Amos Admin</p>
             <h1 className="mt-2 font-heading text-3xl font-bold text-white sm:text-4xl">Website Content Manager</h1>
             <p className="mt-3 max-w-2xl text-slate-400">
-              Manage team, skills, projects, services, testimonials, blogs, education, and training content from one dashboard.
+              Manage team, projects, services, testimonials, blogs, education, and training content from one dashboard.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
