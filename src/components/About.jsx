@@ -39,8 +39,8 @@ export default function About() {
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-transparent p-6 text-center">
-                  <h3 className="font-heading text-2xl font-bold text-white">Amos Anand</h3>
-                  <p className="mt-2 text-sm font-semibold text-white">Web Developer & Python Developer</p>
+                  <h3 className="font-heading text-2xl font-bold text-[#ffffff]">Amos Anand</h3>
+                  <p className="mt-2 text-sm font-semibold text-[#ffffff]">Web Developer & Python Developer</p>
                 </div>
               </div>
             </div>
