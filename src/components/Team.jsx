@@ -42,7 +42,7 @@ function TeamImage({ member }) {
           />
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent p-5 pt-20">
             <p className="font-heading text-2xl font-bold text-white">{member.name}</p>
-            <p className="mt-1 text-sm font-semibold text-cyan">{member.title}</p>
+            <p className="mt-1 text-sm font-semibold text-white">{member.title}</p>
           </div>
         </div>
         <div className="absolute right-5 top-5 rounded-full border border-white/15 bg-slate-950/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-white shadow-card backdrop-blur">

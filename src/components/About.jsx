@@ -40,7 +40,7 @@ export default function About() {
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-transparent p-6 text-center">
                   <h3 className="font-heading text-2xl font-bold text-white">Amos Anand</h3>
-                  <p className="mt-2 text-sm font-semibold text-slate-300">Web Developer & Python Developer</p>
+                  <p className="mt-2 text-sm font-semibold text-white">Web Developer & Python Developer</p>
                 </div>
               </div>
             </div>
