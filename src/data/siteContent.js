@@ -3,7 +3,7 @@ export const defaultSiteContent = {
     {
       name: 'Amos Anand',
       title: 'Founder & Web Developer',
-      image: '/images/author.png',
+      image: '/images/Amos_Anand.JPG',
       description:
         'Founder of BuiltByAmos and a web developer who builds modern, scalable websites and web apps. I lead the team, shape the vision, and make sure client projects deliver real value.',
       responsibilities: 'Web Development, Python Development, Client Solutions',

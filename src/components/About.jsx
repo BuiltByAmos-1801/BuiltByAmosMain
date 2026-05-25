@@ -33,7 +33,7 @@ export default function About() {
             <div className="glass relative aspect-[4/5] rounded-[2rem] p-5">
               <div className="relative h-full overflow-hidden rounded-[1.5rem] border border-cyan/20 bg-slate-950/75">
                 <img
-                  src="/images/author.png"
+                  src="/images/Amos_Anand.JPG"
                   alt="Amos Anand, founder of Built By Amos and web developer in Ranchi"
                   loading="lazy"
                   className="h-full w-full object-cover"
