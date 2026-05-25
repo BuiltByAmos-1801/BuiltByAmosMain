@@ -109,7 +109,7 @@ export default function Team() {
                 transition={{ duration: 0.7, ease: 'easeOut', delay: index * 0.2 }}
                 className={`glass rounded-3xl p-6 sm:p-8 ${index % 2 === 1 ? 'lg:order-1' : ''}`}
               >
-                <p className="text-sm font-bold uppercase tracking-[0.22em] text-cyan">{member.title}</p>
+                <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#ffffff]">{member.title}</p>
                 <h3 className="mt-3 font-heading text-3xl font-bold text-white sm:text-4xl">{member.name}</h3>
                 <p className="mt-5 text-lg leading-8 text-slate-300">{member.description}</p>
 
