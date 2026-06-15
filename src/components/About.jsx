@@ -1,11 +1,11 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FiMapPin, FiMonitor, FiTerminal } from 'react-icons/fi';
+import { FiMapPin, FiPenTool, FiVideo } from 'react-icons/fi';
 import SectionHeader from './SectionHeader.jsx';
 
 const stats = [
-  { label: 'Years in Development', value: '3+' },
-  { label: 'Projects Delivered', value: '15+' },
+  { label: 'Years as Agency', value: '2+' },
+  { label: 'Projects Delivered', value: '20+' },
   { label: 'Agency', value: 'BuiltByAmos' }
 ];
 
@@ -19,7 +19,7 @@ export default function About() {
         <SectionHeader
           eyebrow="About me"
           title="A developer building practical digital products"
-          copy="I enjoy turning ideas into polished web experiences and Python-powered tools that solve real problems."
+          copy="Turning ideas into powerful digital experiences — website design, video editing, digital marketing, SEO, and branding for growing businesses."
         />
 
         <div ref={ref} className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr]">
@@ -40,7 +40,7 @@ export default function About() {
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-transparent p-6 text-center">
                   <h3 className="font-heading text-2xl font-bold text-[#ffffff]">Amos Anand</h3>
-                  <p className="mt-2 text-sm font-semibold text-[#ffffff]">Web Developer & Python Developer</p>
+                  <p className="mt-2 text-sm font-semibold text-[#ffffff]">Web Developer & Digital Marketing</p>
                 </div>
               </div>
             </div>
@@ -52,7 +52,7 @@ export default function About() {
             transition={{ duration: 0.7, ease: 'easeOut' }}
           >
             <p className="text-lg leading-8 text-slate-300">
-              I'm Amos Anand, founder of <span className="font-bold text-cyan">Built By Amos</span> — a full-service web development agency based in Ranchi, Jharkhand. I specialize in web developer services, business website development, React website design, and Python automation for local brands and startups.
+              I'm Amos Anand, founder of <span className="font-bold text-cyan">Built By Amos</span> — a full-service web development and digital marketing agency based in Ranchi, Jharkhand. We offer website design, video shoot & video editing, digital marketing & branding, and SEO & online growth solutions for local brands and startups.
             </p>
             <p className="mt-5 text-lg leading-8 text-slate-300">
               Our work focuses on responsive website design, mobile friendly development, local SEO optimization, and fast loading website performance. Every project is built to help small businesses improve Google rankings and convert visitors into customers.
@@ -73,8 +73,8 @@ export default function About() {
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               {[
                 { icon: FiMapPin, text: 'Ranchi, Jharkhand' },
-                { icon: FiMonitor, text: 'Frontend Development' },
-                { icon: FiTerminal, text: 'Python Automation' }
+                { icon: FiVideo, text: 'Video Shoot & Editing' },
+                { icon: FiPenTool, text: 'Digital Marketing & Branding' }
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-3 text-sm font-semibold text-slate-300">
                   <span className="flex h-10 w-10 items-center justify-center rounded-full bg-cyan/10 text-cyan">

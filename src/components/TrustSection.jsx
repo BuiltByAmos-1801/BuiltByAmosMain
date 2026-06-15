@@ -32,7 +32,7 @@ const trustPoints = [
   {
     icon: FiStar,
     title: 'Projects Completed',
-    copy: 'Experience with multiple business websites, portfolio websites, e-commerce stores, and local service brands across India.'
+    copy: '20+ projects completed — business websites, portfolio sites, e-commerce stores, and local service brands across India.'
   }
 ];
 
@@ -92,7 +92,7 @@ export default function TrustSection() {
           >
             <div className="rounded-[2rem] border border-cyan/20 bg-gradient-to-br from-slate-950/80 to-cyan/10 p-8 text-center">
               <p className="text-sm uppercase tracking-[0.24em] text-cyan">Business Website Developer</p>
-              <h3 className="mt-4 text-4xl font-bold text-white">15+ Projects Completed</h3>
+              <h3 className="mt-4 text-4xl font-bold text-white">20+ Projects Completed</h3>
               <p className="mt-4 leading-7 text-slate-300">
                 Built By Amos delivers websites that work for local businesses, including tattoo studios, clothing stores, coaching centers, restaurants, salons, gyms and startups.
               </p>

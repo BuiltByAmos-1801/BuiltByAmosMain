@@ -63,8 +63,9 @@ export default function MsmeSection() {
             transition={{ duration: 0.7, ease: 'easeOut' }}
           >
             <p className="text-lg leading-8 text-slate-300">
-              Built By Amos is led by <span className="font-bold text-white">Amos Anand</span>, a web developer and
-              Python developer building professional websites for local businesses, creators, and growing brands. The
+              Built By Amos is led by <span className="font-bold text-white">Amos Anand</span>, a professional web
+              developer in Jharkhand building business websites, SEO-friendly design, and digital branding for local
+              businesses, creators, and growing brands. The
               company focuses on modern design, search-friendly structure, mobile responsiveness, and practical support
               after launch.
             </p>

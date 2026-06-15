@@ -3,11 +3,11 @@ import { useRef } from 'react';
 import { FiAlertTriangle, FiArrowUpRight, FiCheck, FiClock, FiPhoneCall, FiShield, FiZap } from 'react-icons/fi';
 import { FaInstagram } from 'react-icons/fa';
 import SectionHeader from './SectionHeader.jsx';
+import { buildPricingPackageMessage, buildWhatsAppUrl } from '../utils/whatsapp.js';
 
 const packages = [
   {
     name: 'Launch Package',
-    price: '₹14,999',
     badge: 'Best For Small Businesses',
     label: 'Starter',
     comparison: 'For New Businesses',
@@ -15,7 +15,6 @@ const packages = [
     trust: 'Perfect for local businesses and startups',
     accent: 'from-emerald-400 to-cyan',
     glow: 'bg-emerald-400/20',
-    button: 'Get Started',
     features: [
       '1-3 Pages Website',
       'Mobile Responsive Design',
@@ -31,7 +30,6 @@ const packages = [
   },
   {
     name: 'Business Pro Package',
-    price: '₹19,999',
     badge: 'Most Popular',
     label: 'Pro',
     comparison: 'Best Value',
@@ -39,7 +37,6 @@ const packages = [
     trust: 'Recommended For Most Businesses',
     accent: 'from-cyan to-electric',
     glow: 'bg-cyan/20',
-    button: 'Book Now',
     popular: true,
     highlight: 'Recommended For Most Businesses',
     features: [
@@ -60,7 +57,6 @@ const packages = [
   },
   {
     name: 'Enterprise Growth Package',
-    price: '₹24,999+',
     badge: 'Best For Growing Brands',
     label: 'Enterprise',
     comparison: 'Maximum Growth',
@@ -68,7 +64,6 @@ const packages = [
     trust: 'Built for scale, automation, and serious lead generation',
     accent: 'from-violet-400 to-electric',
     glow: 'bg-violet-500/20',
-    button: 'Contact Us',
     features: [
       'Custom Dynamic Website',
       'Admin Panel',
@@ -143,10 +138,7 @@ export default function Pricing() {
 
                 <div className="mt-8 border-t border-white/10 pt-7">
                   <h3 className="font-heading text-2xl font-bold leading-tight text-white sm:text-3xl">{item.name}</h3>
-                  <p className={`mt-4 bg-gradient-to-r ${item.accent} bg-clip-text font-heading text-5xl font-black leading-none text-transparent sm:text-6xl`}>
-                    {item.price}
-                  </p>
-                  <p className="mt-3 text-sm font-semibold leading-6 text-slate-400">{item.trust}</p>
+                  <p className="mt-4 text-sm font-semibold leading-6 text-slate-400">{item.trust}</p>
                   <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-cyan/20 bg-cyan/10 px-3 py-1.5 text-sm font-bold text-cyan">
                     <FiClock aria-hidden="true" /> Delivery: {item.delivery}
                   </p>
@@ -175,10 +167,17 @@ export default function Pricing() {
                       ? 'bg-gradient-to-r from-cyan to-electric text-slate-950 shadow-[0_0_34px_rgba(0,255,255,0.35)] hover:-translate-y-1 hover:shadow-[0_0_48px_rgba(0,255,255,0.48)]'
                       : 'border border-cyan/35 bg-cyan/10 text-cyan hover:-translate-y-1 hover:border-cyan hover:bg-cyan hover:text-slate-950 hover:shadow-glow'
                   }`}
-                  href="#contact"
-                  aria-label={`${item.button} for ${item.name}`}
+                  href={buildWhatsAppUrl(
+                    buildPricingPackageMessage({
+                      name: item.name,
+                      label: item.label
+                    })
+                  )}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Start project with ${item.name} on WhatsApp`}
                 >
-                  {item.button} <FiArrowUpRight aria-hidden="true" />
+                  Start Project <FiArrowUpRight aria-hidden="true" />
                 </a>
               </div>
             </motion.article>

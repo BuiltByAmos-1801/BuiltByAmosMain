@@ -16,17 +16,41 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, ease: 'easeOut' }}
         >
-          <h1 className="font-heading text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
-            Professional Web Developer in Jharkhand for Business Websites
+          <h1 className="font-heading text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+            Professional Website Development & Digital Marketing
           </h1>
-          <p className="mt-4 inline-flex rounded-full border border-cyan/25 bg-cyan/10 px-4 py-2 text-sm font-bold uppercase tracking-[0.18em] text-cyan">
-            Built By Amos — Web Development, Local SEO & Business Websites
-          </p>
-          <div className="mt-6 max-w-3xl text-xl font-semibold leading-tight text-slate-100 sm:text-3xl">
-            Trusted website developer in Ranchi, Jharkhand creating responsive, mobile-friendly websites that rank well and convert visitors into customers.
+          <div className="mt-6 max-w-3xl text-xl font-semibold leading-tight text-slate-100 sm:text-2xl lg:text-3xl">
+            Helping businesses grow online with creative and modern digital solutions.
           </div>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Built By Amos builds affordable website design and SEO-optimized business websites for tattoo studios, clothing stores, coaching centers, restaurants, gyms and startups across India.
+          <div className="mt-6 grid max-w-2xl gap-3 sm:grid-cols-2">
+            {[
+              'Website Design',
+              'Video Shoot & Video Editing',
+              'Digital Marketing & Branding',
+              'SEO & Online Growth Solutions'
+            ].map((service) => (
+              <span
+                key={service}
+                className="rounded-xl border border-cyan/20 bg-cyan/10 px-4 py-3 text-sm font-semibold leading-snug text-slate-200"
+              >
+                {service}
+              </span>
+            ))}
+          </div>
+          <p className="mt-6 max-w-2xl text-base font-semibold leading-7 text-slate-200 sm:text-lg">
+            <span className="text-cyan">Built By Amos</span> · Ranchi, Jharkhand
+          </p>
+          <p className="mt-2 max-w-2xl text-sm font-semibold uppercase tracking-[0.12em] text-slate-400 sm:text-base">
+            Fast Support · Creative Team · Professional Service
+          </p>
+          <p className="mt-5 max-w-2xl text-lg font-medium leading-8 text-slate-300">
+            Turning ideas into powerful digital experiences.
+          </p>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-400">
+            Professional web developer in Jharkhand for business websites — trusted website developer in Ranchi
+            creating responsive, mobile-friendly sites that rank well and convert visitors into customers. Affordable
+            website design and SEO-optimized business websites for tattoo studios, clothing stores, coaching centers,
+            restaurants, gyms and startups across India.
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -42,9 +66,10 @@ export default function Hero() {
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <span className="rounded-full bg-white/5 px-3 py-2 text-sm font-semibold text-slate-300">Responsive Website Design</span>
+            <span className="rounded-full bg-white/5 px-3 py-2 text-sm font-semibold text-slate-300">Website Design</span>
+            <span className="rounded-full bg-white/5 px-3 py-2 text-sm font-semibold text-slate-300">Video Editing</span>
+            <span className="rounded-full bg-white/5 px-3 py-2 text-sm font-semibold text-slate-300">Digital Marketing</span>
             <span className="rounded-full bg-white/5 px-3 py-2 text-sm font-semibold text-slate-300">Local SEO Expert</span>
-            <span className="rounded-full bg-white/5 px-3 py-2 text-sm font-semibold text-slate-300">Fast Loading Website</span>
           </div>
         </motion.div>
 
@@ -64,12 +89,12 @@ export default function Hero() {
                 className="mb-5 h-16 w-16 rounded-xl bg-white object-contain p-2 shadow-[0_10px_24px_rgba(70,52,31,0.08)]"
               />
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan">Available for work</p>
-              <h2 className="mt-4 font-heading text-4xl font-bold text-white">
-                Website development company in Jharkhand for clean websites and useful tools.
+              <h2 className="mt-4 font-heading text-3xl font-bold leading-snug text-white">
+                Website development & digital marketing in Jharkhand — design, video, SEO & online growth for your brand.
               </h2>
             </div>
-            <div className="grid grid-cols-3 gap-3 pt-4">
-              {['React', 'Python', 'Tailwind'].map((skill) => (
+            <div className="grid grid-cols-2 gap-3 pt-4">
+              {['Website Design', 'Video Editing', 'Digital Marketing', 'SEO Growth'].map((skill) => (
                 <div key={skill} className="rounded-lg border border-[#eadfcc] bg-[#fffaf2] p-4 text-center text-sm font-bold text-slate-200 shadow-[0_8px_18px_rgba(70,52,31,0.05)]">
                   {skill}
                 </div>

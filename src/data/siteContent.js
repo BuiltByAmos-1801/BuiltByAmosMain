@@ -6,7 +6,7 @@ export const defaultSiteContent = {
       image: '/images/Amos_Anand.JPG',
       description:
         'Founder of BuiltByAmos and a web developer who builds modern, scalable websites and web apps. I lead the team, shape the vision, and make sure client projects deliver real value.',
-      responsibilities: 'Web Development, Python Development, Client Solutions',
+      responsibilities: 'Web Development, Digital Marketing, Client Solutions',
       instagram: 'https://www.instagram.com/builtbyamos.0/?__pwa=1',
       facebook: 'https://www.facebook.com/BuiltByAmos/',
       youtube: 'https://www.youtube.com/@BuiltByAmos',
@@ -14,21 +14,12 @@ export const defaultSiteContent = {
     },
     {
       name: 'Malik Raza',
-      title: 'Co-founder & Operations Lead',
+      title: 'Client Management Head',
       image: '/images/malik-optimized.jpg',
       description:
-        'Co-founder of the company who manages operations and supports client outreach. Malik makes sure clients stay connected and project delivery runs smoothly.',
-      responsibilities: 'Operations, Client Outreach, Business Growth',
+        'Head of client management who brings in new clients and handles lead generation and client management. Malik keeps clients connected, informed, and supported throughout the project lifecycle.',
+      responsibilities: 'Client Acquisition, Lead Management, Client Management',
       instagram: 'https://www.instagram.com/malikraza1621?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='
-    },
-    {
-      name: 'Arnish',
-      title: 'Lead Generation',
-      image: '/images/arnish-optimized.jpg',
-      description:
-        'Arnish focuses on lead generation and client management, helping the team find new opportunities and keep clients informed throughout the project lifecycle.',
-      responsibilities: 'Lead Generation, Client Management, Client Support',
-      instagram: 'https://www.instagram.com/arnish_kumar93?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='
     },
     {
       name: 'Sadiq Ali',
@@ -148,8 +139,12 @@ export const defaultSiteContent = {
       description: 'Ongoing website maintenance, updates, backups, performance checks and security support for live sites.'
     },
     {
-      title: 'Python Development',
-      description: 'Python development for backend logic, automation, data handling, scripts and practical business tools.'
+      title: 'Video Shoot & Video Editing',
+      description: 'Professional video shoots and editing for business promos, reels, ads, and brand content that builds trust and engagement online.'
+    },
+    {
+      title: 'Digital Marketing & Branding',
+      description: 'Digital marketing, social media branding, and campaign-ready content to help businesses grow visibility and attract more customers.'
     }
   ],
   testimonials: [
@@ -264,13 +259,41 @@ export const defaultSiteContent = {
 };
 
 const STORAGE_KEY = 'builtByAmosSiteContent';
+const REMOVED_TEAM_MEMBERS = new Set(['Arnish']);
+const RESTORED_TEAM_MEMBERS = ['Malik Raza'];
+
+function cleanContent(content) {
+  const defaultTeamByName = new Map(defaultSiteContent.team.map((member) => [member.name, member]));
+  const team = Array.isArray(content.team)
+    ? content.team.filter((member) => !REMOVED_TEAM_MEMBERS.has(member.name))
+    : defaultSiteContent.team;
+
+  RESTORED_TEAM_MEMBERS.forEach((name) => {
+    if (!team.some((member) => member.name === name) && defaultTeamByName.has(name)) {
+      const insertAfter = team.findIndex((member) => member.name === 'Amos Anand');
+      team.splice(insertAfter + 1, 0, defaultTeamByName.get(name));
+    }
+  });
+
+  return {
+    ...content,
+    team
+  };
+}
 
 export function getStoredContent() {
   if (typeof window === 'undefined') return defaultSiteContent;
 
   try {
     const saved = window.localStorage.getItem(STORAGE_KEY);
-    return saved ? { ...defaultSiteContent, ...JSON.parse(saved) } : defaultSiteContent;
+    if (!saved) return defaultSiteContent;
+
+    const parsed = JSON.parse(saved);
+    const content = cleanContent({ ...defaultSiteContent, ...parsed });
+    if (JSON.stringify(parsed.team) !== JSON.stringify(content.team)) {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(content));
+    }
+    return content;
   } catch {
     return defaultSiteContent;
   }

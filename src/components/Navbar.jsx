@@ -8,13 +8,13 @@ const navItems = [
   { label: 'Team', id: 'team' },
   { label: 'Projects', id: 'projects' },
   { label: 'Services', id: 'services' },
+  { label: 'Reviews', id: 'testimonials' },
+  { label: 'Blog', id: 'blog' },
   { label: 'Industries', id: 'industries' },
   { label: 'Trust', id: 'trust' },
-  { label: 'FAQs', id: 'faqs' },
   { label: 'Pricing', id: 'pricing' },
-  { label: 'Reviews', id: 'testimonials' },
   { label: 'MSME', id: 'msme' },
-  
+  { label: 'FAQs', id: 'faqs' },
 ];
 
 export default function Navbar() {

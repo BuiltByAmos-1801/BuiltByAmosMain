@@ -1,7 +1,8 @@
 import { AnimatePresence, motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { FiCheck, FiClock, FiGlobe, FiMail, FiMapPin, FiPhone, FiPlus, FiX } from 'react-icons/fi';
+import { FiArrowUpRight, FiCheck, FiClock, FiGlobe, FiMail, FiMapPin, FiPhone, FiPlus, FiX } from 'react-icons/fi';
 import SectionHeader from './SectionHeader.jsx';
+import { buildCategoryPackageMessage, buildPackageInquiryMessage, buildWhatsAppUrl } from '../utils/whatsapp.js';
 
 const planNames = ['Basic', 'Standard', 'Premium'];
 const profile = {
@@ -152,7 +153,7 @@ export default function Packages() {
             <div className="rounded-2xl border border-cyan/20 bg-cyan/10 p-5">
               <p className="font-heading text-xl font-bold text-white">All packages include</p>
               <div className="mt-4 grid gap-3 text-sm font-semibold text-slate-200 sm:grid-cols-2">
-                {['1 Year Hosting + Domain', 'Mobile Friendly', 'WhatsApp Button', 'Free Consultation Available', 'Personal Meeting on Request', 'Prices inclusive of GST'].map((item) => (
+                {['1 Year Hosting + Domain', 'Mobile Friendly', 'WhatsApp Button', 'Free Consultation Available', 'Personal Meeting on Request'].map((item) => (
                   <span key={item} className="flex items-center gap-2">
                     <FiCheck className="shrink-0 text-cyan" /> {item}
                   </span>
@@ -203,7 +204,12 @@ export default function Packages() {
               Basic, Standard, and Premium package details.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a className="button-primary" href={`https://wa.me/91${profile.phone}`} target="_blank" rel="noreferrer">
+              <a
+                className="button-primary"
+                href={buildWhatsAppUrl(buildPackageInquiryMessage('Website Package Consultation'))}
+                target="_blank"
+                rel="noreferrer"
+              >
                 WhatsApp Now
               </a>
               <a className="button-secondary" href={`mailto:${profile.email}`}>
@@ -232,13 +238,13 @@ export default function Packages() {
             >
               <div className="flex items-center justify-between gap-4 border-b border-white/10 p-4 sm:p-5">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan">Package Pricing</p>
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan">Package Details</p>
                   <h3 className="mt-1 font-heading text-2xl font-bold text-white">{activePackage.category}</h3>
                 </div>
                 <button
                   onClick={() => setActivePackage(null)}
                   className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-xl text-white transition hover:border-cyan hover:text-cyan"
-                  aria-label="Close package pricing"
+                  aria-label="Close package details"
                 >
                   <FiX />
                 </button>
@@ -247,11 +253,10 @@ export default function Packages() {
               <div className="overflow-y-auto p-4 sm:p-5">
                 <div className="grid gap-5 lg:grid-cols-3">
                   {planNames.map((plan, planIndex) => (
-                    <div key={`${activePackage.category}-${plan}`} className="rounded-2xl border border-white/10 bg-slate-950/55 p-5">
+                    <div key={`${activePackage.category}-${plan}`} className="flex flex-col rounded-2xl border border-white/10 bg-slate-950/55 p-5">
                       <p className="text-sm font-bold uppercase tracking-[0.18em] text-cyan">{plan}</p>
-                      <p className="mt-3 font-heading text-3xl font-bold text-white">{activePackage.prices[planIndex]}</p>
-                      <p className="mt-2 text-sm font-semibold text-slate-400">Pages: {activePackage.pages[planIndex]}</p>
-                      <ul className="mt-5 space-y-3">
+                      <p className="mt-3 text-sm font-semibold text-slate-400">Pages: {activePackage.pages[planIndex]}</p>
+                      <ul className="mt-5 flex-1 space-y-3">
                         {activePackage.plans[planIndex].map((feature) => (
                           <li key={feature} className="flex gap-3 text-sm leading-6 text-slate-300">
                             <FiCheck className="mt-1 shrink-0 text-cyan" />
@@ -262,6 +267,20 @@ export default function Packages() {
                       <p className="mt-5 flex items-center gap-2 text-sm font-bold text-slate-200">
                         <FiClock className="text-cyan" /> Delivery: {activePackage.delivery[planIndex]}
                       </p>
+                      <a
+                        className="button-primary mt-6 inline-flex w-full items-center justify-center gap-2"
+                        href={buildWhatsAppUrl(
+                          buildCategoryPackageMessage({
+                            category: activePackage.category,
+                            plan
+                          })
+                        )}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`Start project with ${activePackage.category} ${plan} package on WhatsApp`}
+                      >
+                        Start Project <FiArrowUpRight aria-hidden="true" />
+                      </a>
                     </div>
                   ))}
                 </div>

@@ -20,7 +20,7 @@ export default function Projects() {
         <SectionHeader
           eyebrow="Projects"
           title="Client projects and demo websites"
-          copy="Real client work is shown separately from demo builds so every project type is clear and professional."
+          copy="20+ projects completed — real client work shown separately from demo builds so every project type is clear and professional."
         />
 
         <div ref={ref}>
@@ -28,6 +28,9 @@ export default function Projects() {
             <div>
               <p className="section-kicker mb-2">Client Work</p>
               <h3 className="font-heading text-3xl font-bold text-white sm:text-4xl">Professional client projects</h3>
+              <p className="mt-2 inline-flex rounded-full border border-cyan/25 bg-cyan/10 px-4 py-1.5 text-sm font-bold text-cyan">
+                20+ Projects Completed
+              </p>
             </div>
             <p className="max-w-xl leading-7 text-slate-400">
               Confirmed, delivered, and in-discussion business websites handled under Built By Amos for real clients and brands.
