@@ -1,18 +1,14 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FiExternalLink, FiGithub } from 'react-icons/fi';
+import { FiGithub } from 'react-icons/fi';
 import useSiteContent from '../hooks/useSiteContent.js';
 import SectionHeader from './SectionHeader.jsx';
 
 export default function Projects() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-120px' });
-  const { clientProjects, demoProjects } = useSiteContent();
+  const { clientProjects } = useSiteContent();
   const listTags = (tags) => String(tags || '').split(',').map((tag) => tag.trim()).filter(Boolean);
-  const visibleDemoProjects = demoProjects.filter((project) => {
-    const title = project.title.toLowerCase();
-    return !title.includes('music artist');
-  });
 
   return (
     <section id="projects" className="section-padding bg-ink/70">
@@ -82,60 +78,6 @@ export default function Projects() {
                 )}
               </div>
             </motion.article>
-            ))}
-          </div>
-
-          <div className="mb-8 mt-16 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="section-kicker mb-2">Demo Work</p>
-              <h3 className="font-heading text-3xl font-bold text-white sm:text-4xl">Demo website concepts</h3>
-            </div>
-            <p className="max-w-xl leading-7 text-slate-400">
-              Ready-made concept websites created to show design style, layout quality, and business-specific sections.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {visibleDemoProjects.map((project, index) => (
-              <motion.article
-                key={project.title}
-                initial={{ opacity: 0, y: 38 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.65, delay: 0.25 + index * 0.1, ease: 'easeOut' }}
-                className="glass group relative overflow-hidden rounded-3xl p-6"
-              >
-                <div className="absolute right-0 top-0 h-32 w-32 rounded-bl-full bg-cyan/10 transition group-hover:bg-cyan/20" />
-                <div className="relative">
-                  <div className="mb-5 flex flex-wrap items-center gap-3">
-                    <span className="rounded-full border border-cyan/25 bg-cyan/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-cyan">
-                      Demo Project
-                    </span>
-                  </div>
-                  <h3 className="font-heading text-2xl font-bold text-white sm:text-3xl">{project.title}</h3>
-                  <p className="mt-4 max-w-3xl text-base leading-8 text-slate-300">{project.description}</p>
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    {listTags(project.tags).map((tag) => (
-                      <span key={tag} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-300">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  {(project.live || project.github) && (
-                    <div className="mt-7 flex flex-wrap gap-3">
-                      {project.live && (
-                        <a className="button-primary px-5 py-2.5" href={project.live} target="_blank" rel="noreferrer" aria-label={`${project.title} live demo`}>
-                          Live Demo <FiExternalLink />
-                        </a>
-                      )}
-                      {project.github && (
-                        <a className="button-secondary px-5 py-2.5" href={project.github} target="_blank" rel="noreferrer" aria-label={`${project.title} GitHub`}>
-                          GitHub <FiGithub />
-                        </a>
-                      )}
-                    </div>
-                  )}
-                </div>
-              </motion.article>
             ))}
           </div>
         </div>
