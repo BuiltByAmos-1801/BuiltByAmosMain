@@ -7,7 +7,7 @@ import { buildCategoryPackageMessage, buildPackageInquiryMessage, buildWhatsAppU
 const planNames = ['Basic', 'Standard', 'Premium'];
 const profile = {
   name: 'Amos Anand',
-  serviceTitle: 'Web Development Services',
+  serviceTitle: 'Web & Application Development Services',
   location: 'Ranchi Kathitand',
   email: 'builtbyamos@gmail.com',
   phone: '8757603560',
@@ -17,6 +17,7 @@ const profile = {
 const addOns = [
   { service: 'Logo Design', price: 'Rs. 500 - Rs. 1,000' },
   { service: 'Extra Page', price: 'Rs. 500/page' },
+  { service: 'Application Development', price: 'Custom Quote' },
   { service: 'Annual Maintenance', price: 'Rs. 1,500/year' },
   { service: 'SEO Monthly', price: 'Rs. 2,000/month' }
 ];
@@ -104,6 +105,18 @@ const packages = [
       ['Home, Products, About Us, Contact', 'Mobile Friendly Design', 'WhatsApp Order Button', 'Location Map', 'Timing Section', 'Basic SEO', '1 Year Hosting + Domain'],
       ['Home, Product Catalogue, About Us, Offers & Discounts, Contact', 'Mobile Friendly Design', 'WhatsApp Order Button', 'Product Catalogue With Images', 'Offers & Discount Section', 'Location Map', 'Google My Business Setup', 'Social Media Links', 'Speed Optimization', 'Basic SEO'],
       ['Home, Full Product Listing, About Us, Offers & Discounts, Customer Reviews, Contact', 'Mobile Friendly Design', 'WhatsApp Chat Widget', 'Full Product Listing With Images', 'Customer Enquiry System', 'Offers & Discount Section', 'Festive Offer Banners', 'Location Map', 'Google My Business Setup', 'Advanced SEO', '6 Months Free Support', '1 Free Update Per Month']
+    ]
+  },
+  {
+    category: 'Application Development',
+    summary: 'Custom web apps, business tools, dashboards, booking systems, and automation-focused application development.',
+    prices: ['Custom Quote', 'Custom Quote', 'Custom Quote'],
+    pages: ['Starter App', 'Business App', 'Advanced App'],
+    delivery: ['7-10 Days', '14-21 Days', '21+ Days'],
+    plans: [
+      ['Requirement Discussion', 'Responsive Web App UI', 'Core Feature Development', 'Basic Admin Flow', 'WhatsApp / Contact Integration', 'Basic Testing', 'Deployment Support'],
+      ['Custom Business Application', 'User-Friendly Dashboard', 'Admin Panel', 'Form & Data Management', 'Search / Filter Features', 'Role-Based Access Planning', 'API Integration Support', 'Testing & Deployment'],
+      ['Advanced Custom Application', 'Complete Admin Dashboard', 'User Login System', 'Database Integration', 'Payment / Booking / CRM Flow', 'Automation Features', 'Analytics Setup', 'Priority Testing', 'Post-Launch Support']
     ]
   }
 ];

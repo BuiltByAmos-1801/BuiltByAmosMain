@@ -107,6 +107,10 @@ export const defaultSiteContent = {
       description: 'Custom website development for brands, businesses, and service providers that need a modern and fast-loading online presence.'
     },
     {
+      title: 'Application Development',
+      description: 'Custom application development for business tools, dashboards, booking systems, admin panels, and workflow automation needs.'
+    },
+    {
       title: 'Business Website Design',
       description: 'Professional business website design for startups, local companies, coaching centres, restaurants, salons, gyms, and more.'
     },

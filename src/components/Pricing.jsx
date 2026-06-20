@@ -66,6 +66,7 @@ const packages = [
     glow: 'bg-violet-500/20',
     features: [
       'Custom Dynamic Website',
+      'Web Application Development',
       'Admin Panel',
       'Lead Generation Setup',
       'Analytics Dashboard',
@@ -212,7 +213,7 @@ export default function Pricing() {
               <p className="text-sm font-bold uppercase tracking-[0.22em] text-cyan">BuiltByAmos</p>
               <h3 className="mt-2 font-heading text-3xl font-bold text-white">Need a Custom Website Solution?</h3>
               <p className="mt-4 max-w-3xl leading-8 text-slate-300">
-                Book a free consultation for custom website development, SEO, automation, admin panels, or growth-focused landing pages.
+                Book a free consultation for custom website development, application development, SEO, automation, admin panels, or growth-focused landing pages.
               </p>
               <div className="mt-5 flex flex-wrap gap-4 text-sm font-semibold text-slate-400">
                 <a className="inline-flex items-center gap-2 transition hover:text-cyan" href="https://www.instagram.com/builtbyamos.0/" target="_blank" rel="noreferrer">
