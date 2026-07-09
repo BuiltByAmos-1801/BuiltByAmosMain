@@ -123,3 +123,19 @@ body {
     transform: none;
   }
 }
+
+/* Team images: keep whole image visible and responsive */
+.team-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: top;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+@media (min-width: 1024px) {
+  .team-img {
+    max-height: 260px;
+  }
+}
