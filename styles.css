@@ -132,10 +132,17 @@ body {
   object-position: top;
   display: block;
   background-color: rgba(255, 255, 255, 0.02);
+  max-height: 220px;
+}
+
+@media (min-width: 640px) {
+  .team-img {
+    max-height: 280px;
+  }
 }
 
 @media (min-width: 1024px) {
   .team-img {
-    max-height: 260px;
+    max-height: 320px;
   }
 }
