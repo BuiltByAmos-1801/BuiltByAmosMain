@@ -1586,15 +1586,16 @@
 
 .logo-marquee-wrapper {
   display: flex;
-  width: 200%;
+  width: max-content;
   animation: marquee-scroll 25s linear infinite;
 }
 
 .logo-marquee-track {
   display: flex;
-  justify-content: space-around;
-  width: 50%;
   align-items: center;
+  gap: 5rem;
+  padding: 0 2.5rem;
+  flex-shrink: 0;
 }
 
 .logo-marquee-item {
@@ -1607,6 +1608,7 @@
   color: var(--color-text-secondary);
   opacity: 0.6;
   transition: opacity var(--transition-fast);
+  white-space: nowrap;
 }
 
 .logo-marquee-item:hover {
@@ -1617,6 +1619,20 @@
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+@media (max-width: 576px) {
+  .logo-marquee-container {
+    padding: 1.5rem 0;
+  }
+  .logo-marquee-track {
+    gap: 3.5rem;
+    padding: 0 1.5rem;
+  }
+  .logo-marquee-item img {
+    height: 25px !important;
+  }
+}
+
 
 /* Tech Stack Grid */
 .tech-grid {

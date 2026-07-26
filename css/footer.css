@@ -49,8 +49,8 @@ footer {
 }
 
 .social-icon-btn {
-  width: 38px;
-  height: 38px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: #FFFFFF;
   border: 1px solid rgba(17, 24, 39, 0.05);
@@ -60,6 +60,11 @@ footer {
   color: var(--color-text-secondary);
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition-spring), border-color var(--transition-smooth), color var(--transition-smooth);
+}
+
+.social-icon-btn svg, .social-icon-btn i {
+  width: 15px !important;
+  height: 15px !important;
 }
 
 .social-icon-btn:hover {
