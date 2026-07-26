@@ -77,6 +77,27 @@
           "longitude": 85.3096
         },
         "areaServed": ["Jharkhand", "Bihar", "India"]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What technologies do you use for custom development?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We build with optimized, lightweight stacks. For core websites and SaaS landing pages, we write pure HTML5, CSS3, and ES6 JavaScript. For larger web apps and products, we use Node.js, Postgres, and scalable cloud databases. We focus on fast rendering speeds and clean search engine optimizations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are you an MSME registered software agency?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Built By Amos is a registered MSME under the Government of India. This ensures that we follow professional standards, provide official tax invoicing (GST), and deliver secure, reliable service agreements."
+            }
+          }
+        ]
       }
     ]
   }
@@ -86,9 +107,9 @@
 
   <!-- Loading Screen Overlay -->
   <div class="loading-screen" id="loading-screen" aria-hidden="true">
-    <div class="loader-logo">
-      <div class="loader-logo-icon"></div>
-      <span>Built By Amos</span>
+    <div class="loader-logo" style="display:flex; flex-direction:column; align-items:center; gap:16px;">
+      <img src="./images/builtbyamos-logo.svg" alt="Built By Amos Logo" class="loader-logo-img" style="height: 90px; width: auto;">
+      <span style="font-size: 1.5rem; font-weight:800; letter-spacing:0.05em;">Built By Amos</span>
     </div>
     <div class="loader-progress-bar">
       <div class="loader-progress" id="loader-progress"></div>
@@ -275,14 +296,14 @@
         <div class="logo-marquee-container">
           <div class="logo-marquee-wrapper">
             <div class="logo-marquee-track">
-              <div class="logo-marquee-item"><i data-lucide="award"></i> Oracle Tattoo Studio</div>
+              <div class="logo-marquee-item"><img src="./images/Oracle_Tattoo_Logo.png" alt="Oracle Tattoo" style="height:26px; width:auto; opacity:0.8;"> Oracle Tattoo Studio</div>
               <div class="logo-marquee-item"><i data-lucide="briefcase"></i> Joyal Services</div>
               <div class="logo-marquee-item"><i data-lucide="wrench"></i> Shivam Automobiles</div>
               <div class="logo-marquee-item"><i data-lucide="palette"></i> Sadiq Khan (Artist)</div>
               <div class="logo-marquee-item"><i data-lucide="shield-check"></i> MSME Registered</div>
             </div>
             <div class="logo-marquee-track">
-              <div class="logo-marquee-item"><i data-lucide="award"></i> Oracle Tattoo Studio</div>
+              <div class="logo-marquee-item"><img src="./images/Oracle_Tattoo_Logo.png" alt="Oracle Tattoo" style="height:26px; width:auto; opacity:0.8;"> Oracle Tattoo Studio</div>
               <div class="logo-marquee-item"><i data-lucide="briefcase"></i> Joyal Services</div>
               <div class="logo-marquee-item"><i data-lucide="wrench"></i> Shivam Automobiles</div>
               <div class="logo-marquee-item"><i data-lucide="palette"></i> Sadiq Khan (Artist)</div>
@@ -493,10 +514,10 @@
             
             <!-- Project 1: Oracle Tattoo Studio -->
             <div class="portfolio-card glass-card">
-              <div class="portfolio-media">
-                <div class="portfolio-mockup">
-                  <div class="portfolio-mockup-inner">
-                    <img src="https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?auto=format&fit=crop&w=800&q=80" alt="Oracle Tattoo Studio">
+              <div class="portfolio-media" style="background: rgba(59, 130, 246, 0.03);">
+                <div class="portfolio-mockup" style="display:flex; align-items:center; justify-content:center; min-height:220px; padding:2rem;">
+                  <div class="portfolio-mockup-inner" style="background:#FFFFFF; padding:1.5rem; border-radius:12px; box-shadow:var(--shadow-sm); display:inline-flex; align-items:center; justify-content:center;">
+                    <img src="./images/Oracle_Tattoo_Logo.png" alt="Oracle Tattoo Studio Logo" style="max-height: 90px; width: auto; object-fit: contain;">
                   </div>
                 </div>
               </div>

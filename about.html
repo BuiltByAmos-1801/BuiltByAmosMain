@@ -74,9 +74,9 @@
 
   <!-- Loading Screen Overlay -->
   <div class="loading-screen" id="loading-screen" aria-hidden="true">
-    <div class="loader-logo">
-      <div class="loader-logo-icon"></div>
-      <span>Built By Amos</span>
+    <div class="loader-logo" style="display:flex; flex-direction:column; align-items:center; gap:16px;">
+      <img src="./images/builtbyamos-logo.svg" alt="Built By Amos Logo" class="loader-logo-img" style="height: 90px; width: auto;">
+      <span style="font-size: 1.5rem; font-weight:800; letter-spacing:0.05em;">Built By Amos</span>
     </div>
     <div class="loader-progress-bar">
       <div class="loader-progress" id="loader-progress"></div>
@@ -373,105 +373,159 @@
             <p class="section-subtitle">A professional company structure ensuring specialized focus and operational excellence across all services.</p>
           </div>
 
-          <div class="dept-grid stagger-grid" style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+          <div class="dept-grid stagger-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
             
             <!-- 1. Management -->
-            <div class="glass-card dept-card mouse-glow-card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 250px;">
+            <div class="glass-card dept-card mouse-glow-card" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 240px; border-radius: 16px;">
               <div>
-                <div class="dept-num" style="font-size: 2rem; font-weight:800; color:rgba(59,130,246,0.1); margin-bottom:1rem;">01</div>
-                <h3 style="font-size:1.25rem; font-weight:800; margin-bottom:0.75rem;">Management</h3>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                  <div style="width:40px; height:40px; border-radius:10px; background:rgba(59,130,246,0.05); color:var(--color-accent); display:flex; align-items:center; justify-content:center;">
+                    <i data-lucide="briefcase" style="width:20px; height:20px;"></i>
+                  </div>
+                  <div style="font-size: 0.9rem; font-weight:800; color:rgba(59,130,246,0.15);">01</div>
+                </div>
+                <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:0.5rem;">Management</h3>
                 <p style="font-size:0.85rem; color:var(--color-text-secondary); line-height:1.5;">Directing product strategies, financial allocations, agency standards, and contract protocols.</p>
-              </div>
-              <div style="font-size:0.75rem; font-weight:700; color:var(--color-accent); margin-top:1.5rem; display:flex; gap:10px; flex-wrap:wrap;">
-                <span>• Founder & CEO</span>
               </div>
             </div>
 
             <!-- 2. Website Development -->
-            <div class="glass-card dept-card mouse-glow-card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 250px;">
+            <div class="glass-card dept-card mouse-glow-card" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 240px; border-radius: 16px;">
               <div>
-                <div class="dept-num" style="font-size: 2rem; font-weight:800; color:rgba(59,130,246,0.1); margin-bottom:1rem;">02</div>
-                <h3 style="font-size:1.25rem; font-weight:800; margin-bottom:0.75rem;">Website Development</h3>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                  <div style="width:40px; height:40px; border-radius:10px; background:rgba(59,130,246,0.05); color:var(--color-accent); display:flex; align-items:center; justify-content:center;">
+                    <i data-lucide="code-2" style="width:20px; height:20px;"></i>
+                  </div>
+                  <div style="font-size: 0.9rem; font-weight:800; color:rgba(59,130,246,0.15);">02</div>
+                </div>
+                <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:0.5rem;">Website Development</h3>
                 <p style="font-size:0.85rem; color:var(--color-text-secondary); line-height:1.5;">Coding responsive, fast SaaS portals and agency sites with modern CSS and modular ESM scripts.</p>
-              </div>
-              <div style="font-size:0.75rem; font-weight:700; color:var(--color-accent); margin-top:1.5rem; display:flex; gap:10px; flex-wrap:wrap;">
-                <span>• Frontend</span>
-                <span>• Backend</span>
-                <span>• Testing</span>
               </div>
             </div>
 
             <!-- 3. Mobile App Development -->
-            <div class="glass-card dept-card mouse-glow-card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 250px;">
+            <div class="glass-card dept-card mouse-glow-card" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 240px; border-radius: 16px;">
               <div>
-                <div class="dept-num" style="font-size: 2rem; font-weight:800; color:rgba(59,130,246,0.1); margin-bottom:1rem;">03</div>
-                <h3 style="font-size:1.25rem; font-weight:800; margin-bottom:0.75rem;">Mobile App Development</h3>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                  <div style="width:40px; height:40px; border-radius:10px; background:rgba(59,130,246,0.05); color:var(--color-accent); display:flex; align-items:center; justify-content:center;">
+                    <i data-lucide="smartphone" style="width:20px; height:20px;"></i>
+                  </div>
+                  <div style="font-size: 0.9rem; font-weight:800; color:rgba(59,130,246,0.15);">03</div>
+                </div>
+                <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:0.5rem;">Mobile App Development</h3>
                 <p style="font-size:0.85rem; color:var(--color-text-secondary); line-height:1.5;">Engineering native android products and Flutter cross-platforms matching mobile OS patterns.</p>
-              </div>
-              <div style="font-size:0.75rem; font-weight:700; color:var(--color-accent); margin-top:1.5rem; display:flex; gap:10px; flex-wrap:wrap;">
-                <span>• Android</span>
-                <span>• Flutter</span>
-                <span>• APIs</span>
               </div>
             </div>
 
             <!-- 4. UI/UX Design -->
-            <div class="glass-card dept-card mouse-glow-card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 250px;">
+            <div class="glass-card dept-card mouse-glow-card" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 240px; border-radius: 16px;">
               <div>
-                <div class="dept-num" style="font-size: 2rem; font-weight:800; color:rgba(59,130,246,0.1); margin-bottom:1rem;">04</div>
-                <h3 style="font-size:1.25rem; font-weight:800; margin-bottom:0.75rem;">UI/UX Design</h3>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                  <div style="width:40px; height:40px; border-radius:10px; background:rgba(59,130,246,0.05); color:var(--color-accent); display:flex; align-items:center; justify-content:center;">
+                    <i data-lucide="figma" style="width:20px; height:20px;"></i>
+                  </div>
+                  <div style="font-size: 0.9rem; font-weight:800; color:rgba(59,130,246,0.15);">04</div>
+                </div>
+                <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:0.5rem;">UI/UX Design</h3>
                 <p style="font-size:0.85rem; color:var(--color-text-secondary); line-height:1.5;">Building interactive high-fidelity user templates, typography schemes, and wireframe prototypes.</p>
-              </div>
-              <div style="font-size:0.75rem; font-weight:700; color:var(--color-accent); margin-top:1.5rem; display:flex; gap:10px; flex-wrap:wrap;">
-                <span>• Wireframing</span>
-                <span>• Prototyping</span>
-                <span>• Brand Identity</span>
               </div>
             </div>
 
             <!-- 5. Digital Marketing -->
-            <div class="glass-card dept-card mouse-glow-card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 250px;">
+            <div class="glass-card dept-card mouse-glow-card" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 240px; border-radius: 16px;">
               <div>
-                <div class="dept-num" style="font-size: 2rem; font-weight:800; color:rgba(59,130,246,0.1); margin-bottom:1rem;">05</div>
-                <h3 style="font-size:1.25rem; font-weight:800; margin-bottom:0.75rem;">Digital Marketing</h3>
-                <p style="font-size:0.85rem; color:var(--color-text-secondary); line-height:1.5;">Scaling localized search optimization for Ranchi, managing social media marketing, and planning campaigns.</p>
-              </div>
-              <div style="font-size:0.75rem; font-weight:700; color:var(--color-accent); margin-top:1.5rem; display:flex; gap:10px; flex-wrap:wrap;">
-                <span>• SEO</span>
-                <span>• GBP</span>
-                <span>• Socials</span>
-                <span>• Lead Gen</span>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                  <div style="width:40px; height:40px; border-radius:10px; background:rgba(59,130,246,0.05); color:var(--color-accent); display:flex; align-items:center; justify-content:center;">
+                    <i data-lucide="trending-up" style="width:20px; height:20px;"></i>
+                  </div>
+                  <div style="font-size: 0.9rem; font-weight:800; color:rgba(59,130,246,0.15);">05</div>
+                </div>
+                <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:0.5rem;">Digital Marketing</h3>
+                <p style="font-size:0.85rem; color:var(--color-text-secondary); line-height:1.5;">Managing social media marketing, planning client campaigns, and launching growth funnels.</p>
               </div>
             </div>
 
-            <!-- 6. Business Software -->
-            <div class="glass-card dept-card mouse-glow-card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 250px;">
+            <!-- 6. SEO -->
+            <div class="glass-card dept-card mouse-glow-card" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 240px; border-radius: 16px;">
               <div>
-                <div class="dept-num" style="font-size: 2rem; font-weight:800; color:rgba(59,130,246,0.1); margin-bottom:1rem;">06</div>
-                <h3 style="font-size:1.25rem; font-weight:800; margin-bottom:0.75rem;">Business Software</h3>
-                <p style="font-size:0.85rem; color:var(--color-text-secondary); line-height:1.5;">Prototyping SaaS solutions like GarageOS and BillCraft billing panels for retail and services businesses.</p>
-              </div>
-              <div style="font-size:0.75rem; font-weight:700; color:var(--color-accent); margin-top:1.5rem; display:flex; gap:10px; flex-wrap:wrap;">
-                <span>• ERP</span>
-                <span>• CRM</span>
-                <span>• POS</span>
-                <span>• Automation</span>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                  <div style="width:40px; height:40px; border-radius:10px; background:rgba(59,130,246,0.05); color:var(--color-accent); display:flex; align-items:center; justify-content:center;">
+                    <i data-lucide="search" style="width:20px; height:20px;"></i>
+                  </div>
+                  <div style="font-size: 0.9rem; font-weight:800; color:rgba(59,130,246,0.15);">06</div>
+                </div>
+                <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:0.5rem;">SEO</h3>
+                <p style="font-size:0.85rem; color:var(--color-text-secondary); line-height:1.5;">Scaling localized search optimization for Ranchi, Jharkhand, and Bihar to capture organic search rankings.</p>
               </div>
             </div>
 
-            <!-- 7. Support -->
-            <div class="glass-card dept-card mouse-glow-card" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 250px; grid-column: span 3;">
-              <div style="display:flex; justify-content:space-between; align-items:flex-start; width:100%; gap:2rem; flex-wrap:wrap;">
-                <div style="max-width: 500px;">
-                  <div class="dept-num" style="font-size: 2rem; font-weight:800; color:rgba(59,130,246,0.1); margin-bottom:1rem;">07</div>
-                  <h3 style="font-size:1.25rem; font-weight:800; margin-bottom:0.75rem;">Support & Maintenance</h3>
-                  <p style="font-size:0.85rem; color:var(--color-text-secondary); line-height:1.5;">Monitoring server uptimes, managing data backups, resolving client bugs, and providing lifetime technical assistance.</p>
+            <!-- 7. Business Software -->
+            <div class="glass-card dept-card mouse-glow-card" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 240px; border-radius: 16px;">
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                  <div style="width:40px; height:40px; border-radius:10px; background:rgba(59,130,246,0.05); color:var(--color-accent); display:flex; align-items:center; justify-content:center;">
+                    <i data-lucide="database" style="width:20px; height:20px;"></i>
+                  </div>
+                  <div style="font-size: 0.9rem; font-weight:800; color:rgba(59,130,246,0.15);">07</div>
                 </div>
-                <div style="font-size:0.85rem; font-weight:700; color:var(--color-accent); display:flex; flex-direction:column; gap:8px;">
-                  <span>✔ 24/7 Server Checks</span>
-                  <span>✔ Daily DB Backups</span>
-                  <span>✔ Technical Assistance Support</span>
+                <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:0.5rem;">Business Software</h3>
+                <p style="font-size:0.85rem; color:var(--color-text-secondary); line-height:1.5;">Prototyping custom SaaS solutions, database pipelines, and secure cloud storage servers.</p>
+              </div>
+            </div>
+
+            <!-- 8. AI Automation -->
+            <div class="glass-card dept-card mouse-glow-card" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 240px; border-radius: 16px;">
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                  <div style="width:40px; height:40px; border-radius:10px; background:rgba(59,130,246,0.05); color:var(--color-accent); display:flex; align-items:center; justify-content:center;">
+                    <i data-lucide="cpu" style="width:20px; height:20px;"></i>
+                  </div>
+                  <div style="font-size: 0.9rem; font-weight:800; color:rgba(59,130,246,0.15);">08</div>
                 </div>
+                <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:0.5rem;">AI Automation</h3>
+                <p style="font-size:0.85rem; color:var(--color-text-secondary); line-height:1.5;">Setting up automated SMS/WhatsApp marketing triggers, workflow automation, and custom model integrations.</p>
+              </div>
+            </div>
+
+            <!-- 9. Support -->
+            <div class="glass-card dept-card mouse-glow-card" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 240px; border-radius: 16px;">
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                  <div style="width:40px; height:40px; border-radius:10px; background:rgba(59,130,246,0.05); color:var(--color-accent); display:flex; align-items:center; justify-content:center;">
+                    <i data-lucide="headphones" style="width:20px; height:20px;"></i>
+                  </div>
+                  <div style="font-size: 0.9rem; font-weight:800; color:rgba(59,130,246,0.15);">09</div>
+                </div>
+                <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:0.5rem;">Support</h3>
+                <p style="font-size:0.85rem; color:var(--color-text-secondary); line-height:1.5;">Monitoring server uptimes, managing data backups, and resolving client bug inquiries.</p>
+              </div>
+            </div>
+
+            <!-- 10. Testing -->
+            <div class="glass-card dept-card mouse-glow-card" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 240px; border-radius: 16px;">
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                  <div style="width:40px; height:40px; border-radius:10px; background:rgba(59,130,246,0.05); color:var(--color-accent); display:flex; align-items:center; justify-content:center;">
+                    <i data-lucide="check-square" style="width:20px; height:20px;"></i>
+                  </div>
+                  <div style="font-size: 0.9rem; font-weight:800; color:rgba(59,130,246,0.15);">10</div>
+                </div>
+                <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:0.5rem;">Testing</h3>
+                <p style="font-size:0.85rem; color:var(--color-text-secondary); line-height:1.5;">Performing strict manual QA checks, cross-browser compatibility testing, and responsive audit runs.</p>
+              </div>
+            </div>
+
+            <!-- 11. Project Management -->
+            <div class="glass-card dept-card mouse-glow-card" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 240px; border-radius: 16px;">
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                  <div style="width:40px; height:40px; border-radius:10px; background:rgba(59,130,246,0.05); color:var(--color-accent); display:flex; align-items:center; justify-content:center;">
+                    <i data-lucide="calendar" style="width:20px; height:20px;"></i>
+                  </div>
+                  <div style="font-size: 0.9rem; font-weight:800; color:rgba(59,130,246,0.15);">11</div>
+                </div>
+                <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:0.5rem;">Project Management</h3>
+                <p style="font-size:0.85rem; color:var(--color-text-secondary); line-height:1.5;">Coordinating agile sprint releases, scheduling design approvals, and organizing team deliverables.</p>
               </div>
             </div>
 
@@ -489,21 +543,33 @@
           </div>
 
           <div class="about-timeline">
+            <!-- 2025 -->
             <div class="about-timeline-item active">
               <div class="at-node"></div>
               <div class="at-content">
                 <span class="at-year">2025</span>
-                <h3>Founding & Launch</h3>
-                <p>Established Built By Amos in Ranchi, Jharkhand. Assembled core design and development teams. Launched 15 core service pathways serving local MSMEs and national SaaS clients.</p>
+                <h3>Founding & Infrastructure</h3>
+                <p>Company Founded. Completed official MSME Registration. Website Services Started, targeting local business digital transformations.</p>
               </div>
             </div>
 
+            <!-- 2026 -->
             <div class="about-timeline-item active">
               <div class="at-node"></div>
               <div class="at-content">
                 <span class="at-year">2026</span>
-                <h3>MSME Registration & Local SEO Scaling</h3>
-                <p>Acquired official government MSME registrations. Scaled local search targeting for Ranchi, Bihar, and Jharkhand. Commenced beta prototyping for our upcoming products (GarageOS, BillCraft, Coaching ERP).</p>
+                <h3>Product Development & Mobile Scaling</h3>
+                <p>GarageOS Development. BillCraft Development. Client App Development began, catering to retail, automotive, and startup spaces.</p>
+              </div>
+            </div>
+
+            <!-- 2027 -->
+            <div class="about-timeline-item active">
+              <div class="at-node"></div>
+              <div class="at-content">
+                <span class="at-year">2027 (Roadmap)</span>
+                <h3>SaaS Expansion & Regional Footprint</h3>
+                <p>Launch SaaS Products. Expand Across Jharkhand. Expand Across Bihar, establishing direct localized service centers.</p>
               </div>
             </div>
           </div>
@@ -513,7 +579,7 @@
       <!-- Statistics Summary -->
       <section style="padding: 5rem 0;">
         <div class="container">
-          <div class="stats-grid stagger-grid">
+          <div class="stats-grid stagger-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
             <div class="glass-card stat-card mouse-glow-card">
               <div class="stat-number" data-target="20" data-suffix="+">0</div>
               <div class="stat-label">Projects Completed</div>
@@ -523,8 +589,20 @@
               <div class="stat-label">Happy Clients</div>
             </div>
             <div class="glass-card stat-card mouse-glow-card">
+              <div class="stat-number" data-target="98" data-suffix="%">0</div>
+              <div class="stat-label">Client Retention</div>
+            </div>
+            <div class="glass-card stat-card mouse-glow-card">
               <div class="stat-number" data-target="2" data-suffix="+">0</div>
-              <div class="stat-label">Years Experience</div>
+              <div class="stat-label">Years of Journey</div>
+            </div>
+            <div class="glass-card stat-card mouse-glow-card">
+              <div class="stat-number" data-target="3" data-suffix="+">0</div>
+              <div class="stat-label">Products Developed</div>
+            </div>
+            <div class="glass-card stat-card mouse-glow-card">
+              <div class="stat-number" data-target="2" data-suffix="+">0</div>
+              <div class="stat-label">Team Members</div>
             </div>
           </div>
         </div>
