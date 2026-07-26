@@ -1,4 +1,6 @@
+# robots.txt for builtbyamos.in
 User-agent: *
 Allow: /
 
+# Sitemaps
 Sitemap: https://builtbyamos.in/sitemap.xml

@@ -1,321 +1,597 @@
-<!doctype html>
-<html lang="en-IN" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-    <title>Amos Anand | Built By Amos | Digital Services Ranchi</title>
-    <meta name="description" content="Amos Anand leads Built By Amos to deliver web development, local SEO, and video services in Ranchi. MSME-registered agency for fast, SEO-ready digital solutions." />
-    <meta name="keywords" content="Amos Anand, Built By Amos, digital services Ranchi, web developer in Ranchi, local SEO Ranchi, website development agency Jharkhand" />
-    <meta name="author" content="Amos Anand" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://builtbyamos.in/services.html" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              ink: "#0B0B0B",
-              smoke: "#A3A3A3",
-              line: "rgba(255,255,255,0.12)",
-            },
-            fontFamily: {
-              sans: ["Poppins", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
-            },
-            boxShadow: {
-              glow: "0 0 48px rgba(255,255,255,0.12)",
-            },
-          },
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Services We Provide | Premium Development & UIUX Design - Built By Amos</title>
+  <meta name="description" content="Explore our 15 custom software development services: website engineering, native mobile apps, custom ERP/CRM panels, AI workflows, and localized SEO setups.">
+  <meta name="keywords" content="App Development Ranchi, Web Developer Ranchi, Custom CRM Ranchi, AI Automation Jharkhand, Software Company Jharkhand">
+  <link rel="canonical" href="https://builtbyamos.in/services.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://builtbyamos.in/services.html">
+  <meta property="og:title" content="Services We Provide | Premium Development & UIUX Design - Built By Amos">
+  <meta property="og:description" content="Custom business systems, cloud dashboards, APIs, native iOS/Android development, and SEO optimization.">
+  <meta property="og:image" content="https://builtbyamos.in/assets/og-services.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./images/builtbyamos-logo.svg">
+
+  <!-- Custom Modular CSS -->
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/sections.css">
+  <link rel="stylesheet" href="./css/footer.css">
+
+  <!-- Service and FAQ SEO Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Custom Software Development",
+        "serviceType": "SoftwareEngineering",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Built By Amos",
+          "address": "Ranchi, Jharkhand, India"
         },
-      };
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="./styles.css" rel="stylesheet" />
-  </head>
-    <body class="noise min-h-screen overflow-x-hidden bg-ink font-sans text-white antialiased">
-    <div id="cursorGlow" class="pointer-events-none fixed left-0 top-0 z-40 hidden h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/10 blur-3xl transition-opacity duration-300 lg:block" aria-hidden="true"></div>
-    <header class="fixed inset-x-0 top-0 z-30 border-b border-line bg-gradient-to-r from-ink/90 via-ink/80 to-ink/95 backdrop-blur-xl shadow-xl">
-      <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 sm:px-8">
-        <a href="./index.html" class="flex items-center gap-3 text-sm font-black uppercase tracking-[0.18em] text-white">
-          <img src="./images/builtbyamos-logo.svg" alt="Built By Amos" class="h-9 w-auto" />
-          <span class="hidden sm:inline">Built By Amos</span>
-        </a>
-        <div class="hidden items-center gap-8 text-sm text-white/80 md:flex">
-          <a class="magnetic-link hover:text-white" href="./index.html">Home</a>
-          <a class="magnetic-link hover:text-white" href="./services.html">Services</a>
-          <a class="magnetic-link hover:text-white" href="./website-development-ranchi.html">Web Dev</a>
-          <a class="magnetic-link hover:text-white" href="./portfolio.html">Portfolio</a>
-          <a class="magnetic-link hover:text-white" href="./blog.html">Blog</a>
-          <a class="magnetic-link hover:text-white" href="./about.html">About</a>
-          <a class="magnetic-link hover:text-white" href="./pricing.html">Pricing</a>
-          <a class="magnetic-link hover:text-white" href="./contact.html">Contact</a>
-        </div>
-        <div class="hidden items-center gap-6 md:flex">
-          <div class="flex flex-col gap-1 text-right text-xs text-white/60">
-            <a href="mailto:builtbiamos@gmail.com" class="hover:text-white transition">builtbiamos@gmail.com</a>
-            <a href="tel:+918757603560" class="hover:text-white transition">+91 8757603560</a>
-          </div>
-        </div>
-        <div class="flex items-center gap-3">
-          <a href="./contact.html" class="hidden rounded-full bg-white px-5 py-2 text-sm font-semibold uppercase tracking-[0.14em] text-ink shadow-lg transition hover:opacity-95 md:inline-flex">Contact</a>
-          <button id="menuButton" class="group inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/3 px-4 py-2 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:border-white/20 hover:bg-white/6" type="button" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
-        </div>
+        "areaServed": ["Jharkhand", "Bihar", "India"],
+        "description": "Premium custom web platforms, mobile apps, ERPs, CRMs, and API integrations."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do you scope a custom software application?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We begin with a thorough discovery meeting to map user journeys, write functional scoping documents, and confirm visual specs prior to coding."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide native source code files?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, all source code rights and build files are transferred entirely to the client upon launch completion."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Loading Screen Overlay -->
+  <div class="loading-screen" id="loading-screen" aria-hidden="true">
+    <div class="loader-logo">
+      <div class="loader-logo-icon"></div>
+      <span>Built By Amos</span>
+    </div>
+    <div class="loader-progress-bar">
+      <div class="loader-progress" id="loader-progress"></div>
+    </div>
+    <div class="loader-percentage" id="loader-percentage">0%</div>
+  </div>
+
+  <!-- Page Transition Panel -->
+  <div class="page-transition-overlay" id="transition-overlay" aria-hidden="true"></div>
+
+  <!-- Custom Animated Cursor Elements -->
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true"></div>
+
+  <!-- Background Orbs Container -->
+  <div class="bg-orbs-container" aria-hidden="true">
+    <div class="bg-orb orb-blue"></div>
+    <div class="bg-orb orb-purple"></div>
+  </div>
+
+  <!-- Header Sticky Navigation -->
+  <header>
+    <div class="navbar-container">
+      <a href="./index.html" class="brand" aria-label="Built By Amos Home" style="display:flex; align-items:center;">
+        <img src="./images/builtbyamos-logo.svg" alt="Built By Amos Logo" style="height: 52px; width: auto; max-height: 52px;">
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <a href="./index.html" class="nav-link">Home</a>
+        <a href="./about.html" class="nav-link">About</a>
+        <a href="./services.html" class="nav-link active">Services</a>
+        <a href="./products.html" class="nav-link">Products</a>
+        <a href="./contact.html" class="nav-link">Contact</a>
       </nav>
-      <div id="mobileMenu" class="hidden border-t border-line bg-ink/95 px-5 py-6 md:hidden">
-        <div class="mx-auto grid max-w-7xl gap-4 text-lg font-semibold">
-          <a href="./index.html" class="mobile-link text-white/85 transition hover:text-white">Home</a>
-          <a href="./services.html" class="mobile-link text-white/85 transition hover:text-white">Services</a>
-          <a href="./website-development-ranchi.html" class="mobile-link text-white/85 transition hover:text-white">Web Dev</a>
-          <a href="./portfolio.html" class="mobile-link text-white/85 transition hover:text-white">Portfolio</a>
-          <a href="./blog.html" class="mobile-link text-white/85 transition hover:text-white">Blog</a>
-          <a href="./about.html" class="mobile-link text-white/85 transition hover:text-white">About</a>
-          <a href="./pricing.html" class="mobile-link text-white/85 transition hover:text-white">Pricing</a>
-          <a href="./contact.html" class="mobile-link text-white/85 transition hover:text-white">Contact</a>
-        </div>
-      </div>
-    </header>
 
-    <main class="relative z-10">
-      <section class="relative overflow-hidden px-5 pt-32 pb-12 sm:px-8">
-        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80');" aria-hidden="true"></div>
-        <canvas id="particleCanvas" class="absolute inset-0 h-full w-full opacity-50" aria-hidden="true"></canvas>
-        <div class="absolute left-1/2 top-1/3 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-white/10 blur-[130px]" aria-hidden="true"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-ink/40 via-ink/80 to-ink" aria-hidden="true"></div>
-        <div class="relative z-10 mx-auto max-w-7xl">
-          <div class="reveal rounded-3xl overflow-hidden border border-line bg-ink/60 backdrop-blur-sm p-8 sm:p-12">
-            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-              <div>
-                <p class="text-sm font-semibold uppercase tracking-[0.32em] text-white/50">Our Services</p>
-                <h1 class="max-w-4xl text-4xl font-black leading-tight sm:text-6xl mt-4">Amos Anand Builds Websites, SEO & Video for Ranchi Businesses</h1>
-                <p class="mt-4 text-white/60 max-w-2xl">Built By Amos is a Ranchi-based digital agency led by Amos Anand. We deliver web development, local SEO, and digital marketing that helps Jharkhand businesses attract more customers online.</p>
-                <div class="mt-6 flex flex-wrap gap-3">
-                  <a href="./contact.html" class="inline-flex items-center gap-3 rounded-full bg-white px-5 py-3 font-semibold text-ink shadow-glow transition hover:scale-[1.02]">Get Started</a>
-                  <a href="./portfolio.html" class="inline-flex items-center gap-3 rounded-full border border-white/20 px-5 py-3 text-white transition hover:bg-white/10">View Portfolio</a>
-                </div>
+      <div class="nav-actions">
+        <div class="nav-social-icons">
+          <a href="https://github.com/builtbyamos" target="_blank" rel="noopener" style="color:var(--color-text-primary); opacity:0.75;" aria-label="GitHub"><i data-lucide="github" style="width:16px; height:16px;"></i></a>
+          <a href="https://linkedin.com/company/builtbyamos" target="_blank" rel="noopener" style="color:var(--color-text-primary); opacity:0.75;" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:16px; height:16px;"></i></a>
+          <a href="https://wa.me/918757603560" target="_blank" rel="noopener" style="color:#25D366;" aria-label="WhatsApp"><i data-lucide="message-square" style="width:16px; height:16px;"></i></a>
+        </div>
+        <a href="./contact.html" class="btn btn-primary btn-nav">Book Call</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="scroll-progress-container">
+        <div class="scroll-progress-bar"></div>
+      </div>
+    </div>
+  </header>
+
+  <main id="smooth-wrapper">
+    <div id="smooth-content">
+
+      <!-- Services Intro Hero -->
+      <section style="padding-top: 12rem; padding-bottom: 4rem;">
+        <div class="container text-center reveal-fade">
+          <span class="section-tag">Agency Capabilities</span>
+          <h1 class="section-title" style="font-size: clamp(2.5rem, 5vw, 4rem);">Premium Digital Solutions Suite</h1>
+          <p class="section-subtitle">We design, build, and deploy 15 high-fidelity software service patterns mapped to business growth parameters.</p>
+          
+          <!-- Category Filter Tabs -->
+          <div class="services-filter-tabs reveal-fade" style="margin-top:3rem; display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
+            <button class="filter-tab-btn active" data-filter="all">All Services</button>
+            <button class="filter-tab-btn" data-filter="engineering">Core Engineering</button>
+            <button class="filter-tab-btn" data-filter="enterprise">Enterprise Software</button>
+            <button class="filter-tab-btn" data-filter="design">Design & Strategy</button>
+            <button class="filter-tab-btn" data-filter="optimization">Optimization & Support</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Display Grid -->
+      <section style="padding-top: 2rem;">
+        <div class="container">
+          <div class="services-grid stagger-grid" id="expanded-services-grid">
+            
+            <!-- 1. Website Development -->
+            <div class="glass-card service-card mouse-glow-card tilt-card" data-category="engineering">
+              <div class="service-header">
+                <div class="service-icon-box"><i data-lucide="globe"></i></div>
+                <h3>Website Development</h3>
+                <p>Corporate identity sites, SaaS landing layouts, and optimized web apps featuring responsive light layouts.</p>
               </div>
-              <div class="hidden lg:block shrink-0">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&q=80" alt="Team working" class="h-56 w-80 rounded-2xl object-cover border border-white/10 shadow-2xl" />
+              <div class="service-features-list">
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> 0.3s Load Target</span>
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Apple/Stripe Styling</span>
+              </div>
+            </div>
+
+            <!-- 2. Mobile App Development -->
+            <div class="glass-card service-card mouse-glow-card tilt-card" data-category="engineering">
+              <div class="service-header">
+                <div class="service-icon-box"><i data-lucide="smartphone"></i></div>
+                <h3>Mobile App Development</h3>
+                <p>Native iOS and Android software systems utilizing fast performance frameworks.</p>
+              </div>
+              <div class="service-features-list">
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Push Notifications</span>
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Native SDK Access</span>
+              </div>
+            </div>
+
+            <!-- 3. Custom Business Software -->
+            <div class="glass-card service-card mouse-glow-card tilt-card" data-category="enterprise">
+              <div class="service-header">
+                <div class="service-icon-box"><i data-lucide="layers"></i></div>
+                <h3>Custom Business Software</h3>
+                <p>Bespoke automation panels built to support complex data logs and backend task management.</p>
+              </div>
+              <div class="service-features-list">
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Structured Workflows</span>
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Local DB Encryptions</span>
+              </div>
+            </div>
+
+            <!-- 4. UI/UX Design -->
+            <div class="glass-card service-card mouse-glow-card tilt-card" data-category="design">
+              <div class="service-header">
+                <div class="service-icon-box"><i data-lucide="palette"></i></div>
+                <h3>UI/UX Design</h3>
+                <p>Wireframes, branding palettes, custom SVG illustrations, and high-fidelity interaction prototypes.</p>
+              </div>
+              <div class="service-features-list">
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Dynamic Micro-animations</span>
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Typography Pairing</span>
+              </div>
+            </div>
+
+            <!-- 5. AI Automation -->
+            <div class="glass-card service-card mouse-glow-card tilt-card" data-category="optimization">
+              <div class="service-header">
+                <div class="service-icon-box"><i data-lucide="cpu"></i></div>
+                <h3>AI Automation</h3>
+                <p>Chatbot scripts, GPT/Claude API hookups, smart lead parsing, and automated notification setups.</p>
+              </div>
+              <div class="service-features-list">
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> OpenAI API Link</span>
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Background Cron Tasks</span>
+              </div>
+            </div>
+
+            <!-- 6. SEO Optimization -->
+            <div class="glass-card service-card mouse-glow-card tilt-card" data-category="optimization">
+              <div class="service-header">
+                <div class="service-icon-box"><i data-lucide="search"></i></div>
+                <h3>SEO Optimization</h3>
+                <p>Structured schema injection, metadata strategy, local maps pack ranking, and speed performance tuning.</p>
+              </div>
+              <div class="service-features-list">
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Core Web Vitals Audit</span>
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Schema.org Markups</span>
+              </div>
+            </div>
+
+            <!-- 7. Website Maintenance -->
+            <div class="glass-card service-card mouse-glow-card tilt-card" data-category="optimization">
+              <div class="service-header">
+                <div class="service-icon-box"><i data-lucide="life-buoy"></i></div>
+                <h3>Website Maintenance</h3>
+                <p>Hourly uptime checks, security patch installations, SSL logs updates, and daily database backup tasks.</p>
+              </div>
+              <div class="service-features-list">
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Cloud Health Logs</span>
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Rapid Bug Fixes</span>
+              </div>
+            </div>
+
+            <!-- 8. Business Consultation -->
+            <div class="glass-card service-card mouse-glow-card tilt-card" data-category="design">
+              <div class="service-header">
+                <div class="service-icon-box"><i data-lucide="help-circle"></i></div>
+                <h3>Business Consultation</h3>
+                <p>Digital scoping, technology stack auditing, operations mapping, and system integration strategies.</p>
+              </div>
+              <div class="service-features-list">
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Cost Analysis Logs</span>
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> System Blueprints</span>
+              </div>
+            </div>
+
+            <!-- 9. Cloud Integration -->
+            <div class="glass-card service-card mouse-glow-card tilt-card" data-category="engineering">
+              <div class="service-header">
+                <div class="service-icon-box"><i data-lucide="cloud"></i></div>
+                <h3>Cloud Integration</h3>
+                <p>Amazon AWS, Google Cloud, and Vercel architectures. Hosting setup, SSL keys configuration, and cloud DB linkups.</p>
+              </div>
+              <div class="service-features-list">
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> 99.9% Uptime Goal</span>
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Load Balancer Setups</span>
+              </div>
+            </div>
+
+            <!-- 10. API Integration -->
+            <div class="glass-card service-card mouse-glow-card tilt-card" data-category="engineering">
+              <div class="service-header">
+                <div class="service-icon-box"><i data-lucide="link-2"></i></div>
+                <h3>API Integration</h3>
+                <p>Secure custom webhooks, payment gates (Stripe, Razorpay), SMS alerts systems, and external calendar hooks.</p>
+              </div>
+              <div class="service-features-list">
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Webhook listeners</span>
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Secure OAuth 2.0 locks</span>
+              </div>
+            </div>
+
+            <!-- 11. Dashboard Development -->
+            <div class="glass-card service-card mouse-glow-card tilt-card" data-category="enterprise">
+              <div class="service-header">
+                <div class="service-icon-box"><i data-lucide="pie-chart"></i></div>
+                <h3>Dashboard Development</h3>
+                <p>Premium SaaS administration control boards, real-time data visualizers, and CSV/PDF export pipelines.</p>
+              </div>
+              <div class="service-features-list">
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Rich Interactive SVGs</span>
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Fast Cache Render</span>
+              </div>
+            </div>
+
+            <!-- 12. CRM Development -->
+            <div class="glass-card service-card mouse-glow-card tilt-card" data-category="enterprise">
+              <div class="service-header">
+                <div class="service-icon-box"><i data-lucide="users"></i></div>
+                <h3>CRM Development</h3>
+                <p>Customer pipeline organizers, automated WhatsApp followup cues, support chat dashboards, and lead lists.</p>
+              </div>
+              <div class="service-features-list">
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Team Assignment Alerts</span>
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Sales Pipe Boards</span>
+              </div>
+            </div>
+
+            <!-- 13. ERP Development -->
+            <div class="glass-card service-card mouse-glow-card tilt-card" data-category="enterprise">
+              <div class="service-header">
+                <div class="service-icon-box"><i data-lucide="briefcase"></i></div>
+                <h3>ERP Development</h3>
+                <p>Enterprise resource portals: staff calendars, attendance logs, asset tracking, and batch planners.</p>
+              </div>
+              <div class="service-features-list">
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> HR Management Logs</span>
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Automated Alerts</span>
+              </div>
+            </div>
+
+            <!-- 14. Invoice Software -->
+            <div class="glass-card service-card mouse-glow-card tilt-card" data-category="enterprise">
+              <div class="service-header">
+                <div class="service-icon-box"><i data-lucide="receipt"></i></div>
+                <h3>Invoice Software</h3>
+                <p>Automated billing templates, custom tax settings (GST), and printable PDF generators.</p>
+              </div>
+              <div class="service-features-list">
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> WhatsApp Bill Push</span>
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> POS Offline Cache</span>
+              </div>
+            </div>
+
+            <!-- 15. Inventory Software -->
+            <div class="glass-card service-card mouse-glow-card tilt-card" data-category="enterprise">
+              <div class="service-header">
+                <div class="service-icon-box"><i data-lucide="package"></i></div>
+                <h3>Inventory Software</h3>
+                <p>Stock count trackers, barcode scanners, automatic purchase triggers, and item categorization tables.</p>
+              </div>
+              <div class="service-features-list">
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Expiry/Low Warning SMS</span>
+                <span class="service-feat-item"><i data-lucide="check" style="color:var(--color-success)"></i> Multi-location Sync</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Localized Landing Page Suggestions for SEO Ranchi/Jharkhand/Bihar -->
+      <section class="section-bg-alt">
+        <div class="container">
+          <div class="section-header reveal-fade">
+            <span class="section-tag">Regional Operations</span>
+            <h2 class="section-title">Serving Jharkhand & Bihar</h2>
+            <p class="section-subtitle">We build custom software systems for regional business hubs and enterprise setups.</p>
+          </div>
+          
+          <div class="grid-3 stagger-grid">
+            <div class="glass-card why-card mouse-glow-card">
+              <span style="font-size:0.75rem; font-weight:700; color:var(--color-accent); text-transform:uppercase;">Ranchi Center</span>
+              <h3>Software Company in Ranchi</h3>
+              <p>Specialized developers providing on-site scope analysis, custom POS setups for local medical stores, and coaching management CRM systems for Ranchi's education centers.</p>
+            </div>
+            
+            <div class="glass-card why-card mouse-glow-card">
+              <span style="font-size:0.75rem; font-weight:700; color:var(--color-accent); text-transform:uppercase;">Jharkhand Scope</span>
+              <h3>Development across Jharkhand</h3>
+              <p>Serving industrial hubs and retail chains in Jamshedpur, Dhanbad, and Bokaro with secure local database software and cloud CRM platforms.</p>
+            </div>
+
+            <div class="glass-card why-card mouse-glow-card">
+              <span style="font-size:0.75rem; font-weight:700; color:var(--color-accent); text-transform:uppercase;">Bihar Network</span>
+              <h3>Business Software in Bihar</h3>
+              <p>Designing fast web platforms, booking portals, and inventory tools for startups and logistics firms in Patna, Muzaffarpur, and Gaya.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq">
+        <div class="container container-narrow">
+          <div class="section-header reveal-fade">
+            <span class="section-tag">FAQ Help</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+          </div>
+          
+          <div class="faq-accordion reveal-fade">
+            <div class="faq-item">
+              <button class="faq-header" aria-expanded="false">
+                <span class="faq-question">How do you scope a custom software application?</span>
+                <i data-lucide="chevron-down" class="faq-icon"></i>
+              </button>
+              <div class="faq-content">
+                <p class="faq-answer">
+                  We begin with a thorough discovery meeting to map user journeys, write functional scoping documents, and confirm visual specs prior to coding.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-header" aria-expanded="false">
+                <span class="faq-question">Do you provide native source code files?</span>
+                <i data-lucide="chevron-down" class="faq-icon"></i>
+              </button>
+              <div class="faq-content">
+                <p class="faq-answer">
+                  Yes, all source code rights and build files are transferred entirely to the client upon launch completion.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="px-5 pb-32 sm:px-8 lg:pb-48">
-      <div class="mx-auto max-w-7xl">
+    </div>
+  </main>
 
-        <div class="grid gap-6 lg:grid-cols-2">
-          <article class="reveal card-hover rounded-3xl border border-line bg-white/[0.03] p-0 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Website development" class="h-48 w-full object-cover" />
-            <div class="p-6">
-              <h2 class="text-2xl font-black uppercase"><a href="./website-development-ranchi.html" class="hover:underline">Website Development</a></h2>
-              <p class="mt-4 text-white/65">We create modern, mobile-friendly websites for businesses, portfolios, ecommerce stores, and personal brands. Every site is built to look sharp and perform smoothly.</p>
-              <a href="./website-development-ranchi.html" class="mt-4 inline-block text-sm font-bold uppercase tracking-wider text-white/70 hover:text-white">Learn more →</a>
-            </div>
-          </article>
-          <article class="reveal card-hover rounded-3xl border border-line bg-white/[0.03] p-0 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80" alt="Application development" class="h-48 w-full object-cover" />
-            <div class="p-6">
-              <h2 class="text-2xl font-black uppercase">Application Development</h2>
-              <p class="mt-4 text-white/65">From dashboards to custom admin panels and business tools, we build apps that simplify work and improve your team’s efficiency.</p>
-            </div>
-          </article>
-          <article class="reveal card-hover rounded-3xl border border-line bg-white/[0.03] p-0 overflow-hidden">
-            <img src="images/seo-img.svg" alt="SEO optimization" class="h-48 w-full object-cover" />
-            <div class="p-6">
-              <h2 class="text-2xl font-black uppercase"><a href="./local-seo-ranchi.html" class="hover:underline">SEO & Local SEO</a></h2>
-              <p class="mt-4 text-white/65">We help brands rank better on Google with local SEO strategies focused on Ranchi, Jharkhand, and Garhwa for stronger online visibility.</p>
-              <a href="./local-seo-ranchi.html" class="mt-4 inline-block text-sm font-bold uppercase tracking-wider text-white/70 hover:text-white">Learn more →</a>
-            </div>
-          </article>
-          <article class="reveal card-hover rounded-3xl border border-line bg-white/[0.03] p-0 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1200&q=80" alt="Video shoot and editing" class="h-48 w-full object-cover" />
-            <div class="p-6">
-              <h2 class="text-2xl font-black uppercase">Video Shoot & Editing</h2>
-              <p class="mt-4 text-white/65">We create compelling promos, reels, ads, and brand videos that make your business look professional and memorable online.</p>
-            </div>
-          </article>
-          <article class="reveal card-hover rounded-3xl border border-line bg-white/[0.03] p-0 overflow-hidden lg:col-span-2">
-            <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=1200&q=80" alt="Digital marketing" class="h-48 w-full object-cover" />
-            <div class="p-6">
-              <h2 class="text-2xl font-black uppercase">Digital Marketing</h2>
-              <p class="mt-4 text-white/65">Google Ads, social media campaigns, and targeted marketing strategies designed to grow your audience and drive qualified sales.</p>
-            </div>
-          </article>
-        </div>
+  <!-- Sticky Actions (Consultation & WhatsApp) -->
+  <div class="floating-actions" aria-label="Quick contact links">
+    <a href="https://wa.me/918757603560" class="floating-btn floating-whatsapp" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+      <i data-lucide="message-square"></i>
+    </a>
+    <a href="./contact.html" class="floating-btn floating-consultation" aria-label="Book Free Consultation">
+      <i data-lucide="phone-call"></i>
+    </a>
+  </div>
 
-        <section class="mt-12">
-          <div class="reveal mb-8">
-            <h2 class="text-3xl font-black uppercase">Full Services</h2>
-            <p class="mt-3 text-white/60">Comprehensive offerings to grow your business online — website design, apps, SEO, local listings, video, and ongoing maintenance.</p>
-          </div>
-
-          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mt-6">
-            <div class="card-hover rounded-2xl border border-line overflow-hidden bg-white/[0.02]">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80" alt="Website development" class="h-28 w-full object-cover" />
-              <div class="p-5">
-                <h3 class="font-bold uppercase">Website Development</h3>
-                <p class="mt-2 text-white/60 text-sm">Responsive sites, fast performance, modern UI, and conversion-focused layouts.</p>
-              </div>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-glow"></div>
+    <div class="container footer-grid">
+      <div class="footer-brand-column">
+        <a href="./index.html" class="brand" aria-label="Built By Amos Footer Home" style="display:inline-flex; align-items:center; margin-bottom:1rem;">
+          <img src="./images/builtbyamos-logo.svg" alt="Built By Amos Logo" style="height: 56px; width: auto;">
+        </a>
+        <p class="footer-brand-desc">
+          We engineer custom software, fast websites, SaaS systems, and digital designs built to help your business scale.
+        </p>
+            <div class="footer-socials" style="display:flex; flex-wrap:wrap; gap:8px; margin-top:1.5rem;">
+              <a href="https://github.com/builtbyamos" class="social-icon-btn" aria-label="GitHub Profile" target="_blank" rel="noopener"><i data-lucide="github"></i></a>
+              <a href="https://linkedin.com/company/builtbyamos" class="social-icon-btn" aria-label="LinkedIn Profile" target="_blank" rel="noopener"><i data-lucide="linkedin"></i></a>
+              <a href="https://instagram.com/builtbyamos" class="social-icon-btn" aria-label="Instagram Profile" target="_blank" rel="noopener"><i data-lucide="instagram"></i></a>
+              <a href="https://facebook.com/builtbyamos" class="social-icon-btn" aria-label="Facebook Profile" target="_blank" rel="noopener"><i data-lucide="facebook"></i></a>
+              <a href="https://youtube.com/builtbyamos" class="social-icon-btn" aria-label="YouTube Profile" target="_blank" rel="noopener"><i data-lucide="youtube"></i></a>
+              <a href="mailto:builtbiamos@gmail.com" class="social-icon-btn" aria-label="Email Contact"><i data-lucide="mail"></i></a>
+              <a href="https://wa.me/918757603560" target="_blank" rel="noopener" class="social-icon-btn" aria-label="WhatsApp Contact" style="color:#25D366; border-color:rgba(37,211,102,0.15);"><i data-lucide="message-square"></i></a>
+              <a href="tel:8757603560" class="social-icon-btn" aria-label="Phone Call"><i data-lucide="phone"></i></a>
+              <a href="./index.html" class="social-icon-btn" aria-label="Website Home"><i data-lucide="globe"></i></a>
             </div>
-            <div class="card-hover rounded-2xl border border-line overflow-hidden bg-white/[0.02]">
-              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80" alt="Application development" class="h-28 w-full object-cover" />
-              <div class="p-5">
-                <h3 class="font-bold uppercase">Application Development</h3>
-                <p class="mt-2 text-white/60 text-sm">Booking systems, dashboards, admin panels, and custom business tools.</p>
-              </div>
+            
+            <!-- GitHub Profile Button -->
+            <div style="margin-top:1.5rem;">
+              <a href="https://github.com/builtbyamos" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size:0.8rem; padding: 0.5rem 1rem; display:inline-flex; align-items:center; gap:6px;">
+                <i data-lucide="github" style="width:14px; height:14px;"></i> View Our GitHub
+              </a>
             </div>
-            <div class="card-hover rounded-2xl border border-line overflow-hidden bg-white/[0.02]">
-              <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=400&q=80" alt="Business website design" class="h-28 w-full object-cover" />
-              <div class="p-5">
-                <h3 class="font-bold uppercase">Business Website Design</h3>
-                <p class="mt-2 text-white/60 text-sm">Professional templates and bespoke designs for SMEs and startups.</p>
-              </div>
-            </div>
-            <div class="card-hover rounded-2xl border border-line overflow-hidden bg-white/[0.02]">
-              <img src="images/seo-img.svg" alt="SEO optimization" class="h-28 w-full object-cover" />
-              <div class="p-5">
-                <h3 class="font-bold uppercase">SEO Optimization</h3>
-                <p class="mt-2 text-white/60 text-sm">On-page SEO, metadata, keyword research, and technical fixes for higher rankings.</p>
-              </div>
-            </div>
-            <div class="card-hover rounded-2xl border border-line overflow-hidden bg-white/[0.02]">
-              <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=400&q=80" alt="Local SEO" class="h-28 w-full object-cover" />
-              <div class="p-5">
-                <h3 class="font-bold uppercase">Local SEO & GBP</h3>
-                <p class="mt-2 text-white/60 text-sm">Google Business Profile setup, review strategy, and local citations for Ranchi and nearby areas.</p>
-              </div>
-            </div>
-            <div class="card-hover rounded-2xl border border-line overflow-hidden bg-white/[0.02]">
-              <img src="images/landing-page-img.jpeg" alt="Landing pages" class="h-28 w-full object-cover" />
-              <div class="p-5">
-                <h3 class="font-bold uppercase">Landing Pages</h3>
-                <p class="mt-2 text-white/60 text-sm">High-converting, SEO-friendly campaign pages for launches and lead capture.</p>
-              </div>
-            </div>
-            <div class="card-hover rounded-2xl border border-line overflow-hidden bg-white/[0.02]">
-              <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=400&q=80" alt="E-commerce" class="h-28 w-full object-cover" />
-              <div class="p-5">
-                <h3 class="font-bold uppercase">E-commerce</h3>
-                <p class="mt-2 text-white/60 text-sm">Simple product catalogs, checkout flows, and mobile-first shopping experiences.</p>
-              </div>
-            </div>
-            <div class="card-hover rounded-2xl border border-line overflow-hidden bg-white/[0.02]">
-              <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=400&q=80" alt="Video shoot" class="h-28 w-full object-cover" />
-              <div class="p-5">
-                <h3 class="font-bold uppercase">Video Shoot & Editing</h3>
-                <p class="mt-2 text-white/60 text-sm">Short promos, reels, ads, and product videos shot and edited for social platforms.</p>
-              </div>
-            </div>
-            <div class="card-hover rounded-2xl border border-line overflow-hidden bg-white/[0.02]">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80" alt="Maintenance" class="h-28 w-full object-cover" />
-              <div class="p-5">
-                <h3 class="font-bold uppercase">Maintenance & Support</h3>
-                <p class="mt-2 text-white/60 text-sm">Monthly updates, backups, performance checks, and security monitoring for live sites.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-12 rounded-2xl border border-line overflow-hidden bg-white/[0.02]">
-            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80" alt="Website packages" class="h-48 w-full object-cover" />
-            <div class="p-8">
-            <h3 class="text-2xl font-black uppercase">Website Packages Designed to Grow Your Business</h3>
-            <p class="mt-2 text-white/60">Professional websites with SEO, performance, and modern UI built for real business growth. Domain & hosting charged separately.</p>
-
-            <div class="mt-6 grid gap-6 lg:grid-cols-3 lg:items-start">
-              <!-- Launch Package -->
-              <div class="card-hover rounded-xl border border-line overflow-hidden bg-white/[0.02]">
-                <img src="images/starterpackage.png" alt="Launch Package" class="h-50 w-full object-cover" />
-                <div class="p-6">
-                  <h4 class="font-bold uppercase text-lg">Launch Package</h4>
-                  <p class="mt-1 text-sm text-white/55">Perfect for local businesses and startups</p>
-                  <p class="mt-2 text-xs font-bold uppercase tracking-wider text-white/40">Delivery: 3–5 Days</p>
-                  <ul class="mt-4 space-y-2 text-sm text-white/60">
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> 1–3 Pages Website</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Mobile Responsive Design</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> WhatsApp Chat Integration</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Contact Form</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Basic SEO Setup</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Google Map Integration</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Social Media Integration</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> SSL Security</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Google Search Console Setup</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> 1 Month Free Support</li>
-                  </ul>
-                  <div class="mt-5"><a href="./contact.html" class="inline-block rounded-full bg-white px-4 py-2 text-ink font-semibold text-sm">Start Project</a></div>
-                </div>
-              </div>
-
-              <!-- Business Pro Package -->
-              <div class="pricing-featured card-hover rounded-xl border overflow-hidden">
-                <img src="images/standradpackage.png" alt="Business Pro Package" class="h-68 w-full object-cover" />
-                <div class="p-6">
-                  <h4 class="font-bold uppercase text-lg">Business Pro Package</h4>
-                  <p class="mt-1 text-sm text-white/55">⭐ Recommended for most businesses</p>
-                  <p class="mt-2 text-xs font-bold uppercase tracking-wider text-white/40">Delivery: 5–7 Days</p>
-                  <ul class="mt-4 space-y-2 text-sm text-white/60">
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> 5–8 Pages Premium Website</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Advanced SEO Optimization</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Premium UI/UX Design</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Google Search Indexing</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Testimonials Section</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Gallery / Portfolio</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Blog Setup</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Speed Optimization</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Business Email Integration</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Google Business Profile Setup</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Custom Animations</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Performance Optimization</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> 1 Month Free Maintenance</li>
-                  </ul>
-                  <div class="mt-5"><a href="./contact.html" class="inline-block rounded-full bg-white px-4 py-2 text-ink font-semibold text-sm">Start Project</a></div>
-                </div>
-              </div>
-
-              <!-- Enterprise Growth Package -->
-              <div class="card-hover rounded-xl border border-line overflow-hidden bg-white/[0.02]">
-                <img src="images/premiumpackage.png" alt="Enterprise Growth Package" class="h-68 w-full object-cover" />
-                <div class="p-6">
-                  <h4 class="font-bold uppercase text-lg">Enterprise Growth Package</h4>
-                  <p class="mt-1 text-sm text-white/55">Built for scale, automation, and serious lead generation</p>
-                  <p class="mt-2 text-xs font-bold uppercase tracking-wider text-white/40">Delivery: 7–14 Days</p>
-                  <ul class="mt-4 space-y-2 text-sm text-white/60">
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Custom Dynamic Website</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Web Application Development</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Admin Panel</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Lead Generation Setup</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Analytics Dashboard</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Payment Gateway</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Advanced SEO</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Automation Features</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Landing Pages</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Priority Support</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Monthly Maintenance</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Conversion Optimization</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> CRM Integration</li>
-                    <li class="flex gap-2"><span class="text-white/35 shrink-0">✓</span> Advanced Performance Optimization</li>
-                  </ul>
-                  <div class="mt-5"><a href="./contact.html" class="inline-block rounded-full bg-white px-4 py-2 text-ink font-semibold text-sm">Start Project</a></div>
-                </div>
-              </div>
-            </div>
-            <p class="mt-8 rounded-xl border border-line bg-white/[0.03] px-5 py-4 text-center text-sm text-white/55">
-              <span class="font-bold uppercase tracking-wider text-white/65">Domain & Hosting Charges Separate</span>
-              <span class="mx-2 text-white/25">|</span>
-              Charged separately according to client requirements.
-            </p>
-            </div>
-          </div>
-        </section>
       </div>
-      </section>
-    </main>
 
-    <div id="site-footer" data-base="./"></div>
+      <div class="footer-column">
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="./services.html" class="footer-link">Web Development</a>
+          <a href="./services.html" class="footer-link">Mobile Apps</a>
+          <a href="./services.html" class="footer-link">Custom CRMs</a>
+          <a href="./services.html" class="footer-link">AI Automation</a>
+          <a href="./services.html" class="footer-link">UI UX Design</a>
+        </div>
+      </div>
 
-    <script src="./footer.js"></script>
-    <script src="./script.js"></script>
-  </body>
+      <div class="footer-column">
+        <h4>Industries</h4>
+        <div class="footer-links">
+          <a href="./index.html#industries" class="footer-link">Coaching Centers</a>
+          <a href="./index.html#industries" class="footer-link">Auto Garages</a>
+          <a href="./index.html#industries" class="footer-link">Medical Stores</a>
+          <a href="./index.html#industries" class="footer-link">Real Estate</a>
+          <a href="./index.html#industries" class="footer-link">Startups</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Products</h4>
+        <div class="footer-links">
+          <a href="./products.html" class="footer-link">GarageOS</a>
+          <a href="./products.html" class="footer-link">BillCraft</a>
+          <a href="./products.html" class="footer-link">Coaching ERP</a>
+          <a href="./products.html" class="footer-link">Built By Amos App</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Company</h4>
+        <div class="footer-links">
+          <a href="./about.html" class="footer-link">Engineering Blog</a>
+          <a href="./contact.html" class="footer-link">Careers</a>
+          <a href="./contact.html" class="footer-link">Partner Program</a>
+          <a href="./contact.html" class="footer-link">Community</a>
+          <a href="./about.html" class="footer-link">About Us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="footer-copy">
+        &copy; 2026 Built By Amos. All rights reserved.
+      </div>
+      
+      <div class="msme-badge" style="display:inline-flex; align-items:center; gap:8px;">
+        <img src="./images/MSME-Logo.png" alt="MSME Logo" style="height: 24px; width: auto; object-fit: contain;">
+        <span>MSME Registered Agency</span>
+      </div>
+
+      <div class="footer-bottom-links">
+        <a href="./contact.html" class="footer-bottom-link">Privacy Policy</a>
+        <a href="./contact.html" class="footer-bottom-link">Terms & Conditions</a>
+        <a href="./contact.html" class="footer-bottom-link">Refund Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Imports -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script type="module" src="./js/main.js"></script>
+
+  <!-- Simple dynamic filter scripts for the 15 services -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabBtns = document.querySelectorAll('.filter-tab-btn');
+      const cards = document.querySelectorAll('#expanded-services-grid .service-card');
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Reset actives
+          tabBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filter = btn.getAttribute('data-filter');
+
+          cards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            if (filter === 'all' || category === filter) {
+              card.style.display = 'flex';
+              // Trigger a small GSAP animate trigger if loaded
+              if (typeof gsap !== 'undefined') {
+                gsap.fromTo(card, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.4 });
+              }
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+  <style>
+    .filter-tab-btn {
+      padding: 0.6rem 1.5rem;
+      background: var(--glass-bg);
+      border: var(--glass-border);
+      border-radius: 99px;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      transition: all var(--transition-fast);
+      cursor: pointer;
+    }
+    .filter-tab-btn.active, .filter-tab-btn:hover {
+      background: var(--gradient-primary);
+      color: #FFFFFF;
+      border-color: transparent;
+      box-shadow: var(--shadow-md);
+    }
+  </style>
+
+</body>
 </html>
