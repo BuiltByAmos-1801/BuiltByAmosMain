@@ -923,6 +923,7 @@
   height: 52px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 20%;
   box-shadow: var(--shadow-sm);
   border: 2px solid #FFFFFF;
 }

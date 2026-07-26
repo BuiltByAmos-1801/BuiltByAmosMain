@@ -109,14 +109,15 @@ export function initAnimations() {
     gsap.from(cards, {
       scrollTrigger: {
         trigger: grid,
-        start: 'top 80%',
+        start: 'top 85%',
         toggleActions: 'play none none none'
       },
       opacity: 0,
-      y: 50,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: 'power3.out'
+      y: 30,
+      duration: 0.6,
+      stagger: 0.08,
+      ease: 'power2.out',
+      clearProps: 'all'
     });
   });
 
