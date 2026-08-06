@@ -6,7 +6,7 @@ export function initForms() {
 
   // Input styling animations for form focus transitions
   const inputs = document.querySelectorAll('.form-input');
-  
+
   inputs.forEach(input => {
     // Force set checked state for fields prefilled by browsers
     if (input.value !== '') {
@@ -28,14 +28,14 @@ export function initForms() {
   if (auditForm) {
     auditForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      
+
       const submitBtn = auditForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.textContent;
-      
+
       if (!validateForm(auditForm)) {
         return;
       }
-      
+
       submitBtn.disabled = true;
       submitBtn.textContent = 'Analyzing details...';
 
@@ -54,14 +54,14 @@ export function initForms() {
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      
+
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.textContent;
 
       if (!validateForm(contactForm)) {
         return;
       }
-      
+
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending message...';
 
@@ -93,10 +93,36 @@ export function initForms() {
     });
   }
 
+  // Handle ApnaDukan Waitlist Form submission
+  const waitlistForm = document.getElementById('waitlist-form');
+  if (waitlistForm) {
+    waitlistForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const submitBtn = waitlistForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+
+      if (!validateForm(waitlistForm)) {
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Joining waitlist...';
+
+      setTimeout(() => {
+        showFormSuccess(waitlistForm, 'You are on the ApnaDukan waitlist! Updates are on the way.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+        waitlistForm.reset();
+        inputs.forEach(i => i.classList.remove('has-content'));
+      }, 1200);
+    });
+  }
+
   function validateForm(form) {
     let isValid = true;
     const requiredInputs = form.querySelectorAll('[required]');
-    
+
     requiredInputs.forEach(input => {
       // Basic text validation
       if (input.value.trim() === '') {
@@ -130,7 +156,7 @@ export function initForms() {
 
   function highlightError(input) {
     input.style.borderColor = '#EF4444';
-    
+
     // Animate subtle shake effect
     input.style.transform = 'translateX(-5px)';
     setTimeout(() => input.style.transform = 'translateX(5px)', 80);
