@@ -354,8 +354,23 @@ body.cursor-hover .custom-cursor-dot {
   transition-duration: 0.15s;
 }
 
-transition: 0.75s ease;
-pointer-events: none;
+.btn-primary {
+  background: var(--gradient-primary);
+  color: #FFFFFF;
+  box-shadow: 0 8px 24px -6px rgba(59, 130, 246, 0.35);
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.35) 40%, rgba(255, 255, 255, 0.35) 60%, transparent 100%);
+  transform: skewX(-25deg);
+  transition: 0.75s ease;
+  pointer-events: none;
 }
 
 .btn-primary:hover {
