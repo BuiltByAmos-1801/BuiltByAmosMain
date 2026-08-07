@@ -119,6 +119,36 @@ export function initForms() {
     });
   }
 
+  // Handle LokSetu Early Access Form submission
+  const loksetuForm = document.getElementById('loksetu-earlyaccess-form');
+  if (loksetuForm) {
+    loksetuForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const submitBtn = loksetuForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+
+      if (!validateForm(loksetuForm)) {
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Joining early access...';
+
+      // Integration point: Forward details via standard fetch or EmailJS here if needed
+      setTimeout(() => {
+        showFormSuccess(loksetuForm, 'Thank you! You are on the LokSetu early access list. We will be in touch!');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+        loksetuForm.reset();
+        
+        // Clear active label overlays
+        const loksetuInputs = loksetuForm.querySelectorAll('.form-input');
+        loksetuInputs.forEach(i => i.classList.remove('has-content'));
+      }, 1200);
+    });
+  }
+
   function validateForm(form) {
     let isValid = true;
     const requiredInputs = form.querySelectorAll('[required]');
