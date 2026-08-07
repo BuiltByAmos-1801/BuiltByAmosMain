@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>BillCraft — Smart Invoice & Billing Software | Built By Amos</title>
+    <meta name="description"
+        content="BillCraft is a smart invoice and billing software that restructures wholesale and retail POS transactions with rapid entry tools and custom tax metrics.">
+    <meta name="keywords"
+        content="Billing Software, Invoice Software India, POS Software, Retail Management, Ranchi, BuiltByAmos">
+    <link rel="canonical" href="https://builtbyamos.in/billcraft.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://builtbyamos.in/billcraft.html">
+    <meta property="og:title" content="BillCraft — Smart Invoice & Billing Software">
+    <meta property="og:description"
+        content="Fast, accurate billing and invoicing for retail and wholesale. Manage transactions, inventory, and taxes seamlessly.">
+    <meta property="og:image" content="https://builtbyamos.in/assets/og-billcraft.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./images/builtbyamos-logo.svg">
+
+    <!-- Custom Modular CSS -->
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/sections.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+
+<body>
+
+    <!-- Loading Screen Overlay -->
+    <div class="loading-screen" id="loading-screen" aria-hidden="true">
+        <div class="loader-logo" style="display:flex; flex-direction:column; align-items:center; gap:16px;">
+            <img src="./images/builtbyamos-logo.svg" alt="Built By Amos Logo" class="loader-logo-img"
+                style="height: 90px; width: auto;">
+            <span style="font-size: 1.5rem; font-weight:800; letter-spacing:0.05em;">Built By Amos</span>
+        </div>
+        <div class="loader-progress-bar">
+            <div class="loader-progress" id="loader-progress"></div>
+        </div>
+        <div class="loader-percentage" id="loader-percentage">0%</div>
+    </div>
+
+    <!-- Page Transition Panel -->
+    <div class="page-transition-overlay" id="transition-overlay" aria-hidden="true"></div>
+
+    <!-- Custom Animated Cursor Elements -->
+    <div class="custom-cursor-dot" aria-hidden="true"></div>
+    <div class="custom-cursor-ring" aria-hidden="true"></div>
+
+    <!-- Background Orbs Container -->
+    <div class="bg-orbs-container" aria-hidden="true">
+        <div class="bg-orb orb-blue"></div>
+        <div class="bg-orb orb-cyan"></div>
+    </div>
+
+    <!-- Header Sticky Navigation -->
+    <header>
+        <div class="navbar-container">
+            <a href="./index.html" class="brand" aria-label="Built By Amos Home"
+                style="display:flex; align-items:center;">
+                <img src="./images/builtbyamos-logo.svg" alt="Built By Amos Logo"
+                    style="height: 52px; width: auto; max-height: 52px;">
+            </a>
+
+            <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="./about.html" class="nav-link">About</a>
+                <a href="./services.html" class="nav-link">Services</a>
+                <a href="./products.html" class="nav-link">Products</a>
+                <a href="./contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="nav-social-icons">
+                    <a href="https://github.com/BuiltByAmos-1801" target="_blank" rel="noopener"
+                        style="color:var(--color-text-primary); opacity:0.75;" aria-label="GitHub"><i
+                            data-lucide="github" style="width:16px; height:16px;"></i></a>
+                    <a href="https://linkedin.com/company/builtbyamos" target="_blank" rel="noopener"
+                        style="color:var(--color-text-primary); opacity:0.75;" aria-label="LinkedIn"><i
+                            data-lucide="linkedin" style="width:16px; height:16px;"></i></a>
+                    <a href="https://wa.me/918757603560" target="_blank" rel="noopener" style="color:#25D366;"
+                        aria-label="WhatsApp"><i data-lucide="message-square" style="width:16px; height:16px;"></i></a>
+                </div>
+                <a href="./contact.html" class="btn btn-primary btn-nav">Book Call</a>
+            </div>
+
+            <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="scroll-progress-container">
+                <div class="scroll-progress-bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- Hero Section -->
+            <section style="padding-top: 11rem; padding-bottom: 6rem;">
+                <div class="container">
+                    <div style="grid-template-columns: 1.15fr 0.85fr; gap: 3.5rem; align-items:center; display: grid;">
+
+                        <div
+                            style="display:flex; flex-direction:column; gap:1.5rem; animation: fadeInUp 0.8s ease both;">
+                            <span class="product-badge product-badge-premium" style="align-self: flex-start;">🚀 Coming
+                                Soon</span>
+                            <h1
+                                style="font-size: clamp(2.5rem, 5.5vw, 4rem); font-weight:800; line-height:1.08; letter-spacing:-0.03em;">
+                                BillCraft</h1>
+                            <p
+                                style="font-size: clamp(1.1rem, 1.8vw, 1.35rem); font-weight:600; color:var(--color-text-primary); line-height:1.55;">
+                                Smart Invoice & Billing Software. Fast, Accurate, Compliant.
+                            </p>
+                            <p style="color:var(--color-text-secondary); line-height:1.8; font-size:1.02rem;">
+                                BillCraft revolutionizes how you handle billing and invoicing. Designed for both
+                                wholesale and retail businesses, it combines rapid data entry, comprehensive inventory
+                                management, unified dashboard statistics, and automated tax calculations to streamline
+                                your entire sales and invoicing workflow.
+                            </p>
+
+                            <div style="display:flex; flex-wrap:wrap; gap:0.75rem; margin-top:0.5rem;">
+                                <div class="meta-pill">Fast Invoice Printing</div>
+                                <div class="meta-pill">Offline Capability</div>
+                                <div class="meta-pill">Smart Analytics</div>
+                            </div>
+
+                            <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:1.5rem;">
+                                <a href="./contact.html" class="btn btn-primary">Start Using BillCraft <i
+                                        data-lucide="arrow-right"></i></a>
+                                <a href="./products.html" class="btn btn-secondary">Back to Products</a>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display:flex; justify-content:center; align-items:center; position:relative; animation: fadeInRight 0.8s ease 0.2s both;">
+                            <div
+                                style="width:260px; height:auto; border-radius:36px; border:8px solid #111827; box-shadow:var(--shadow-xl); overflow:hidden; background:#000; position:relative; animation: floatAnim1 6s infinite ease-in-out alternate;">
+                                <div
+                                    style="width:100%; height:500px; background:linear-gradient(135deg, rgba(16,185,129,0.1) 0%, rgba(16,185,129,0.05) 100%); display:flex; align-items:center; justify-content:center; font-size:3rem;">
+                                    💳</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="section-bg-alt" style="padding:4rem 0;">
+                <div class="container">
+                    <div style="text-align:center; margin-bottom:4rem; animation: fadeInUp 0.8s ease both;">
+                        <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight:800; margin-bottom:1rem;">Core
+                            Features</h2>
+                        <p
+                            style="color:var(--color-text-secondary); max-width:600px; margin:0 auto; font-size:1.05rem;">
+                            Powerful billing solutions for retail and wholesale operations
+                        </p>
+                    </div>
+
+                    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:2rem;">
+                        <div class="glass-card" style="padding:2rem; animation: fadeInUp 0.8s ease 0.1s both;">
+                            <div style="font-size:2.5rem; margin-bottom:1rem;">🖨️</div>
+                            <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:0.75rem;">1-Click Invoice Prints
+                            </h3>
+                            <p style="color:var(--color-text-secondary); line-height:1.6;">
+                                Generate and print professional invoices in a single click. Customize formats for
+                                different business needs with print-ready templates.
+                            </p>
+                        </div>
+
+                        <div class="glass-card" style="padding:2rem; animation: fadeInUp 0.8s ease 0.2s both;">
+                            <div style="font-size:2.5rem; margin-bottom:1rem;">📡</div>
+                            <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:0.75rem;">Offline Local DB
+                                Backup</h3>
+                            <p style="color:var(--color-text-secondary); line-height:1.6;">
+                                Work seamlessly even without internet. Local database ensures data persistence and
+                                automatic backup of all transactions.
+                            </p>
+                        </div>
+
+                        <div class="glass-card" style="padding:2rem; animation: fadeInUp 0.8s ease 0.3s both;">
+                            <div style="font-size:2.5rem; margin-bottom:1rem;">📊</div>
+                            <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:0.75rem;">Unified Dashboard
+                                Stats</h3>
+                            <p style="color:var(--color-text-secondary); line-height:1.6;">
+                                View real-time sales analytics, revenue trends, top products, and customer insights on a
+                                comprehensive dashboard.
+                            </p>
+                        </div>
+
+                        <div class="glass-card" style="padding:2rem; animation: fadeInUp 0.8s ease 0.4s both;">
+                            <div style="font-size:2.5rem; margin-bottom:1rem;">💬</div>
+                            <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:0.75rem;">WhatsApp Receipt
+                                Sending</h3>
+                            <p style="color:var(--color-text-secondary); line-height:1.6;">
+                                Automatically send invoices and receipts to customers via WhatsApp for instant
+                                confirmation and improved customer experience.
+                            </p>
+                        </div>
+
+                        <div class="glass-card" style="padding:2rem; animation: fadeInUp 0.8s ease 0.5s both;">
+                            <div style="font-size:2.5rem; margin-bottom:1rem;">⚙️</div>
+                            <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:0.75rem;">Custom Tax Metrics
+                            </h3>
+                            <p style="color:var(--color-text-secondary); line-height:1.6;">
+                                Flexible tax configuration for GST, VAT, and other tax structures. Automatic tax
+                                calculations on all transactions.
+                            </p>
+                        </div>
+
+                        <div class="glass-card" style="padding:2rem; animation: fadeInUp 0.8s ease 0.6s both;">
+                            <div style="font-size:2.5rem; margin-bottom:1rem;">📦</div>
+                            <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:0.75rem;">Inventory Management
+                            </h3>
+                            <p style="color:var(--color-text-secondary); line-height:1.6;">
+                                Track stock levels, set automatic reorder points, manage product variants, and generate
+                                inventory reports.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section style="padding:4rem 0; text-align:center;">
+                <div class="container">
+                    <h2
+                        style="font-size: clamp(2rem, 4vw, 2.5rem); font-weight:800; margin-bottom:1.5rem; animation: fadeInUp 0.8s ease both;">
+                        Simplify Your Billing Today
+                    </h2>
+                    <p
+                        style="color:var(--color-text-secondary); max-width:600px; margin:0 auto 2rem; font-size:1.05rem; animation: fadeInUp 0.8s ease 0.1s both;">
+                        Join thousands of retail and wholesale businesses using BillCraft to streamline operations and
+                        increase efficiency.
+                    </p>
+                    <div
+                        style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; animation: fadeInUp 0.8s ease 0.2s both;">
+                        <a href="./contact.html" class="btn btn-primary">Get Started with BillCraft <i
+                                data-lucide="arrow-right"></i></a>
+                        <a href="./products.html" class="btn btn-secondary">Explore Other Products</a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Built By Amos</h4>
+                    <p>Crafting digital solutions that drive business growth.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="./about.html">About</a>
+                    <a href="./services.html">Services</a>
+                    <a href="./products.html">Products</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <a href="https://github.com/BuiltByAmos-1801" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://linkedin.com/company/builtbyamos" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://wa.me/918757603560" target="_blank" rel="noopener">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Built By Amos. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@0.294.0"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script src="./js/animations.js"></script>
+
+</body>
+
+</html>

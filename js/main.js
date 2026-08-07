@@ -8,47 +8,52 @@ import { initAnimations } from './animations.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const transitionOverlay = document.getElementById('transition-overlay');
-  
-  // 1. Loading Screen Simulation
+
+  // 1. Loading Screen - Fast Load (300ms total)
   const loader = document.getElementById('loading-screen');
   const loaderProgress = document.getElementById('loader-progress');
   const loaderPercentage = document.getElementById('loader-percentage');
-  
+
+  // Quickly animate to 100% in 200ms
   let currentProgress = 0;
   const loadInterval = setInterval(() => {
-    currentProgress += Math.floor(Math.random() * 15) + 5;
+    currentProgress += Math.floor(Math.random() * 25) + 15;
     if (currentProgress >= 100) {
       currentProgress = 100;
       clearInterval(loadInterval);
-      
+
+      // Hide loader immediately after reaching 100%
+      if (loaderProgress) loaderProgress.style.width = '100%';
+      if (loaderPercentage) loaderPercentage.textContent = '100%';
+
       setTimeout(() => {
         if (loader) loader.classList.add('loaded');
         initAppComponents();
-        
-        // Slide away transition overlay once loader fades out
+
+        // Slide away transition overlay
         if (transitionOverlay) {
           setTimeout(() => {
             transitionOverlay.style.transform = 'translateY(-100%)';
-          }, 150);
+          }, 100);
         }
-      }, 350);
+      }, 100);
     }
-    
+
     if (loaderProgress) loaderProgress.style.width = `${currentProgress}%`;
     if (loaderPercentage) loaderPercentage.textContent = `${currentProgress}%`;
-  }, 80);
+  }, 40);
 
   // 2. Intercept local page links for GSAP frosted slide transition Wipes
   const transitionLinks = document.querySelectorAll('a[href^="./"], a[href*=".html"]');
   transitionLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
-      
+
       // Ignore hashes, blank tabs, and generic links
       if (!href || href.startsWith('#') || link.getAttribute('target') === '_blank') return;
-      
+
       e.preventDefault();
-      
+
       if (transitionOverlay) {
         // Slide pane back up
         transitionOverlay.style.transform = 'translateY(0)';
@@ -70,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileToggle.addEventListener('click', () => {
       mobileToggle.classList.toggle('active');
       navMenu.classList.toggle('active');
-      
+
       if (navMenu.classList.contains('active')) {
         document.body.style.overflow = 'hidden';
       } else {
@@ -99,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initForms();
     initAnimations();
     initGoogleRating();
-    
+
     // Initialize SwiperJS Testimonials Slider
     if (typeof Swiper !== 'undefined' && document.querySelector('.testimonials-slider')) {
       new Swiper('.testimonials-slider', {
@@ -135,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Center coordinates: Ranchi Main Road, Ranchi, Jharkhand
     const officeCoords = [23.3441, 85.3096];
-    
+
     const map = L.map('leaflet-map', {
       zoomControl: false,
       scrollWheelZoom: false
@@ -184,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `)
       .openPopup();
-      
+
     // Inject marker animation pulses
     const style = document.createElement('style');
     style.textContent = `
@@ -264,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         const dummyDiv = document.createElement('div');
         const service = new google.maps.places.PlacesService(dummyDiv);
-        
+
         if (placeId) {
           service.getDetails({
             placeId: placeId,

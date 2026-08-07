@@ -242,12 +242,13 @@ body.cursor-hover .custom-cursor-dot {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: opacity var(--transition-slow) ease-in-out, visibility var(--transition-slow);
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .loading-screen.loaded {
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
 }
 
 .loader-logo {
