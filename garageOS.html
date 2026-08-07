@@ -147,9 +147,8 @@
                             style="display:flex; justify-content:center; align-items:center; position:relative; animation: fadeInRight 0.8s ease 0.2s both;">
                             <div
                                 style="width:260px; height:auto; border-radius:36px; border:8px solid #111827; box-shadow:var(--shadow-xl); overflow:hidden; background:#000; position:relative; animation: floatAnim1 6s infinite ease-in-out alternate;">
-                                <div
-                                    style="width:100%; height:500px; background:linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(59,130,246,0.05) 100%); display:flex; align-items:center; justify-content:center; font-size:3rem;">
-                                    🔧</div>
+                                <img src="./images/garageos_mockup.jpg" alt="GarageOS Mobile Dashboard Mockup"
+                                    style="width:100%; height:500px; object-fit:cover; display:block;">
                             </div>
                         </div>
                     </div>
@@ -254,30 +253,145 @@
         </div>
     </main>
 
+    <!-- Sticky Actions (Consultation & WhatsApp) -->
+    <div class="floating-actions" aria-label="Quick contact links">
+        <a href="https://wa.me/918757603560" class="floating-btn floating-whatsapp" target="_blank" rel="noopener"
+            aria-label="Contact us on WhatsApp">
+            <i data-lucide="message-square"></i>
+        </a>
+        <a href="./contact.html" class="floating-btn floating-consultation" aria-label="Book Free Consultation">
+            <i data-lucide="phone-call"></i>
+        </a>
+    </div>
+
     <!-- Footer -->
     <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Built By Amos</h4>
-                    <p>Crafting digital solutions that drive business growth.</p>
+        <div class="footer-glow"></div>
+        <div class="container footer-grid">
+            <div class="footer-brand-column">
+                <a href="./index.html" class="brand" aria-label="Built By Amos Footer Home"
+                    style="display:inline-flex; align-items:center; margin-bottom:1rem;">
+                    <img src="./images/builtbyamos-logo.svg" alt="Built By Amos Logo" style="height: 56px; width: auto;">
+                </a>
+                <p class="footer-brand-desc">
+                    We engineer custom software, fast websites, SaaS systems, and digital designs built to help your business
+                    scale.
+                </p>
+                <div
+                    style="margin-top: 0.5rem; display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--color-text-secondary);">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"
+                        style="vertical-align: middle;">
+                        <path fill="#EA4335"
+                            d="M5.266 9.765A7.077 7.077 0 0 1 12 4.909c1.69 0 3.218.6 4.418 1.582l3.51-3.51C17.842 1.093 15.115 0 12 0 7.354 0 3.307 2.67 1.343 6.555l3.923 3.21z" />
+                        <path fill="#4285F4"
+                            d="M16.04 15.345c-1.077.733-2.433 1.164-4.04 1.164-2.955 0-5.46-1.996-6.355-4.686L1.722 15.03C3.687 18.914 7.734 21.6 12 21.6c3.123 0 5.922-1.036 7.91-2.825l-3.87-3.43z" />
+                        <path fill="#FBBC05"
+                            d="M5.645 11.823A6.744 6.744 0 0 1 5.345 10c0-.627.109-1.23.3-1.823L1.722 4.966A11.902 11.902 0 0 0 0 10c0 1.77.382 3.456 1.073 4.975l4.572-3.152z" />
+                        <path fill="#34A853"
+                            d="M23.52 10.227c.109-.64.18-1.306.18-1.996H12v4.4h6.618a5.71 5.71 0 0 1-2.5 3.75l3.87 3.43c2.264-2.09 3.532-5.176 3.532-8.584z" />
+                    </svg>
+                    <span>Google Live Rating: <strong>5.0/5.0</strong></span>
+                    <span style="color: #F59E0B; display: inline-flex; gap: 1px;">★ ★ ★ ★ ★</span>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <a href="./about.html">About</a>
-                    <a href="./services.html">Services</a>
-                    <a href="./products.html">Products</a>
-                    <a href="./contact.html">Contact</a>
+                <div class="footer-contact-details" style="display:flex; flex-direction:column; gap:10px; margin-top:0.75rem; font-size:0.85rem; color:var(--color-text-secondary);">
+                    <a href="mailto:builtbiamos@gmail.com" style="display:flex; align-items:center; gap:8px; color:inherit; text-decoration:none; transition:color var(--transition-fast);" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='inherit'">
+                        <i data-lucide="mail" style="width:14px; height:14px; color:var(--color-accent);"></i>
+                        <span>builtbiamos@gmail.com</span>
+                    </a>
+                    <a href="tel:8757603560" style="display:flex; align-items:center; gap:8px; color:inherit; text-decoration:none; transition:color var(--transition-fast);" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='inherit'">
+                        <i data-lucide="phone" style="width:14px; height:14px; color:var(--color-accent);"></i>
+                        <span>+91 8757603560</span>
+                    </a>
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <i data-lucide="map-pin" style="width:14px; height:14px; color:var(--color-accent);"></i>
+                        <span>Ranchi, Jharkhand, India</span>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <a href="https://github.com/BuiltByAmos-1801" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://linkedin.com/company/builtbyamos" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="https://wa.me/918757603560" target="_blank" rel="noopener">WhatsApp</a>
+                <div class="footer-socials" style="display:flex; flex-wrap:nowrap; gap:6px; margin-top:1.25rem;">
+                    <a href="https://github.com/BuiltByAmos-1801" class="social-icon-btn" aria-label="GitHub Profile"
+                        target="_blank" rel="noopener"><i data-lucide="github"></i></a>
+                    <a href="https://linkedin.com/company/builtbyamos" class="social-icon-btn" aria-label="LinkedIn Profile"
+                        target="_blank" rel="noopener"><i data-lucide="linkedin"></i></a>
+                    <a href="https://www.instagram.com/me_amos_1807" class="social-icon-btn" aria-label="Instagram Profile"
+                        target="_blank" rel="noopener"><i data-lucide="instagram"></i></a>
+                    <a href="https://facebook.com/builtbyamos" class="social-icon-btn" aria-label="Facebook Profile"
+                        target="_blank" rel="noopener"><i data-lucide="facebook"></i></a>
+                    <a href="https://www.youtube.com/@BuiltByAmos-1801" class="social-icon-btn" aria-label="YouTube Profile"
+                        target="_blank" rel="noopener"><i data-lucide="youtube"></i></a>
+                    <a href="mailto:builtbiamos@gmail.com" class="social-icon-btn" aria-label="Email Contact"><i
+                            data-lucide="mail"></i></a>
+                    <a href="https://wa.me/918757603560" target="_blank" rel="noopener" class="social-icon-btn"
+                        aria-label="WhatsApp Contact" style="color:#25D366; border-color:rgba(37,211,102,0.15);"><i
+                            data-lucide="message-square"></i></a>
+                    <a href="tel:8757603560" class="social-icon-btn" aria-label="Phone Call"><i data-lucide="phone"></i></a>
+                    <a href="./index.html" class="social-icon-btn" aria-label="Website Home"><i data-lucide="globe"></i></a>
+                </div>
+                <div style="margin-top:1.25rem;">
+                    <a href="https://github.com/BuiltByAmos-1801" target="_blank" rel="noopener" class="btn btn-secondary"
+                        style="font-size:0.8rem; padding: 0.5rem 1rem; display:inline-flex; align-items:center; gap:6px;">
+                        <i data-lucide="github" style="width:14px; height:14px;"></i> View Our GitHub
+                    </a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Built By Amos. All rights reserved.</p>
+
+            <div class="footer-column">
+                <h4>Services</h4>
+                <div class="footer-links">
+                    <a href="./services.html" class="footer-link">Web Development</a>
+                    <a href="./services.html" class="footer-link">Mobile Apps</a>
+                    <a href="./services.html" class="footer-link">Custom CRMs</a>
+                    <a href="./services.html" class="footer-link">AI Automation</a>
+                    <a href="./services.html" class="footer-link">UI UX Design</a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Industries</h4>
+                <div class="footer-links">
+                    <a href="./index.html#industries" class="footer-link">Coaching Centers</a>
+                    <a href="./index.html#industries" class="footer-link">Auto Garages</a>
+                    <a href="./index.html#industries" class="footer-link">Medical Stores</a>
+                    <a href="./index.html#industries" class="footer-link">Real Estate</a>
+                    <a href="./index.html#industries" class="footer-link">Startups</a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Products</h4>
+                <div class="footer-links">
+                    <a href="./garageOS.html" class="footer-link">GarageOS</a>
+                    <a href="./billcraft.html" class="footer-link">BillCraft</a>
+                    <a href="./coaching-erp.html" class="footer-link">Coaching ERP</a>
+                    <a href="./products.html" class="footer-link">Built By Amos App</a>
+                    <a href="./loksetu.html" class="footer-link">LokSetu</a>
+                    <a href="./apnadukan.html" class="footer-link">ApnaDukan</a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Company</h4>
+                <div class="footer-links">
+                    <a href="./about.html" class="footer-link">Engineering Blog</a>
+                    <a href="./contact.html" class="footer-link">Careers</a>
+                    <a href="./contact.html" class="footer-link">Partner Program</a>
+                    <a href="./contact.html" class="footer-link">Community</a>
+                    <a href="./about.html" class="footer-link">About Us</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <div class="footer-copy">
+                &copy; 2026 Built By Amos. All rights reserved.
+            </div>
+            <div class="msme-badge" style="display:inline-flex; align-items:center; gap:8px;">
+                <img src="./images/MSME-Logo.png" alt="MSME Logo" style="height: 24px; width: auto; object-fit: contain;">
+                <span>MSME Registered Agency</span>
+            </div>
+            <div class="footer-bottom-links">
+                <a href="./contact.html" class="footer-bottom-link">Privacy Policy</a>
+                <a href="./contact.html" class="footer-bottom-link">Terms & Conditions</a>
+                <a href="./contact.html" class="footer-bottom-link">Refund Policy</a>
             </div>
         </div>
     </footer>
