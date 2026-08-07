@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>LokSetu — Connecting Citizens. Empowering Communities.</title>
+  <meta name="description" content="LokSetu is an upcoming civic-tech platform designed to help citizens report, discover and track local issues while empowering communities to work together.">
+  <meta name="keywords" content="Civic Tech India, Report Local Issues, Community Platform India, Built By Amos, LokSetu">
+  <link rel="canonical" href="https://builtbyamos.in/loksetu.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://builtbyamos.in/loksetu.html">
+  <meta property="og:title" content="LokSetu — Connecting Citizens. Empowering Communities.">
+  <meta property="og:description" content="An independent civic-tech platform developed by Built By Amos to connect citizens, communities, and authorities around local civic issues.">
+  <meta property="og:image" content="https://builtbyamos.in/assets/og-loksetu.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./images/builtbyamos-logo.svg">
+
+  <!-- Custom Modular CSS -->
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/sections.css">
+  <link rel="stylesheet" href="./css/loksetu.css">
+  <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+
+  <!-- Loading Screen Overlay -->
+  <div class="loading-screen" id="loading-screen" aria-hidden="true">
+    <div class="loader-logo" style="display:flex; flex-direction:column; align-items:center; gap:16px;">
+      <img src="./images/builtbyamos-logo.svg" alt="Built By Amos Logo" class="loader-logo-img" style="height: 90px; width: auto;">
+      <span style="font-size: 1.5rem; font-weight:800; letter-spacing:0.05em;">Built By Amos</span>
+    </div>
+    <div class="loader-progress-bar">
+      <div class="loader-progress" id="loader-progress"></div>
+    </div>
+    <div class="loader-percentage" id="loader-percentage">0%</div>
+  </div>
+
+  <!-- Page Transition Panel -->
+  <div class="page-transition-overlay" id="transition-overlay" aria-hidden="true"></div>
+
+  <!-- Custom Animated Cursor Elements -->
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true"></div>
+
+  <!-- Background Orbs Container -->
+  <div class="bg-orbs-container" aria-hidden="true">
+    <div class="bg-orb orb-blue"></div>
+    <div class="bg-orb orb-cyan"></div>
+    <div class="bg-orb orb-purple"></div>
+  </div>
+
+  <!-- Header Sticky Navigation -->
+  <header>
+    <div class="navbar-container">
+      <a href="./index.html" class="brand" aria-label="Built By Amos Home" style="display:flex; align-items:center;">
+        <img src="./images/builtbyamos-logo.svg" alt="Built By Amos Logo" style="height: 52px; width: auto; max-height: 52px;">
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <a href="./index.html" class="nav-link">Home</a>
+        <a href="./about.html" class="nav-link">About</a>
+        <a href="./services.html" class="nav-link">Services</a>
+        <a href="./products.html" class="nav-link">Products</a>
+        <a href="./loksetu.html" class="nav-link active">LokSetu</a>
+        <a href="./contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="nav-social-icons">
+          <a href="https://github.com/BuiltByAmos-1801" target="_blank" rel="noopener" style="color:var(--color-text-primary); opacity:0.75;" aria-label="GitHub"><i data-lucide="github" style="width:16px; height:16px;"></i></a>
+          <a href="https://linkedin.com/company/builtbyamos" target="_blank" rel="noopener" style="color:var(--color-text-primary); opacity:0.75;" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:16px; height:16px;"></i></a>
+          <a href="https://wa.me/918757603560" target="_blank" rel="noopener" style="color:#25D366;" aria-label="WhatsApp"><i data-lucide="message-square" style="width:16px; height:16px;"></i></a>
+        </div>
+        <a href="./contact.html" class="btn btn-primary btn-nav">Book Call</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="scroll-progress-container">
+        <div class="scroll-progress-bar"></div>
+      </div>
+    </div>
+  </header>
+
+  <main id="smooth-wrapper">
+    <div id="smooth-content">
+
+      <!-- Hero Section -->
+      <section class="loksetu-hero">
+        <div class="container">
+          <div class="loksetu-hero-grid">
+            <div class="loksetu-hero-content reveal-fade">
+              <span class="loksetu-badge">Currently in Development</span>
+              <div class="loksetu-flag-badge">
+                <span>🇮🇳</span>
+                <span>LOKSETU</span>
+              </div>
+              <h1>
+                <span class="saffron">Connecting Citizens.</span><br>
+                <span class="blue">Empowering Communities.</span>
+              </h1>
+              <p class="lead-text">
+                A civic platform designed to help communities report, discover and track local issues while creating a more transparent connection between citizens and responsible authorities.
+              </p>
+              <div class="loksetu-cta-group">
+                <a href="#mockup-preview" class="btn btn-saffron">Explore LokSetu <i data-lucide="arrow-down"></i></a>
+                <a href="#early-access" class="btn btn-blue-outline">Join Early Access <i data-lucide="users"></i></a>
+              </div>
+            </div>
+            
+            <div class="loksetu-hero-visual reveal-fade" style="position:relative;">
+              <div class="loksetu-mockup-frame" style="animation: floatAnim1 6s infinite ease-in-out alternate;">
+                <div class="mockup-screen-container">
+                  <div class="mockup-screen active">
+                    <div class="app-header">
+                      <div class="app-header-title">
+                        <span>🇮🇳 LokSetu</span><span class="saffron-dot">.</span>
+                      </div>
+                      <i data-lucide="bell" style="width: 14px; height: 14px;"></i>
+                    </div>
+                    <div class="app-content">
+                      <div class="search-bar-mock">
+                        <i data-lucide="search" style="width: 12px; height: 12px;"></i>
+                        <span>Search reported civic issues...</span>
+                      </div>
+                      <div class="cat-scroll-mock">
+                        <span class="cat-pill-mock active">All</span>
+                        <span class="cat-pill-mock">Roads</span>
+                        <span class="cat-pill-mock">Garbage</span>
+                        <span class="cat-pill-mock">Water</span>
+                      </div>
+                      <div class="issue-card-mock">
+                        <div class="issue-card-header">
+                          <span class="issue-badge-mock investigating">Investigating</span>
+                          <span class="issue-time-mock">2h ago</span>
+                        </div>
+                        <h6>Potholes and broken asphalt on Circular Road</h6>
+                        <div class="issue-card-meta">
+                          <span class="issue-location-mock"><i data-lucide="map-pin" style="width:10px; height:10px;"></i> Lalpur, Ranchi</span>
+                          <span class="issue-upvotes-mock"><i data-lucide="thumbs-up" style="width:10px; height:10px;"></i> 34</span>
+                        </div>
+                      </div>
+                      <div class="issue-card-mock">
+                        <div class="issue-card-header">
+                          <span class="issue-badge-mock reported">Reported</span>
+                          <span class="issue-time-mock">5h ago</span>
+                        </div>
+                        <h6>Garbage pile blocking the public walkway</h6>
+                        <div class="issue-card-meta">
+                          <span class="issue-location-mock"><i data-lucide="map-pin" style="width:10px; height:10px;"></i> Kutchery Road</span>
+                          <span class="issue-upvotes-mock"><i data-lucide="thumbs-up" style="width:10px; height:10px;"></i> 18</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fab-mock"><i data-lucide="plus"></i></div>
+                  </div>
+                </div>
+              </div>
+              <div class="floating-glass-badge" style="top: 15%; left: -5%; animation: floatAnim2 5s infinite ease-in-out alternate;">
+                <i data-lucide="shield-check" style="color: var(--loksetu-green); width: 14px; height: 14px;"></i> Civic Initiative
+              </div>
+              <div class="floating-glass-badge" style="bottom: 15%; right: -5%; animation: floatAnim3 7s infinite ease-in-out alternate;">
+                <i data-lucide="map" style="color: var(--loksetu-blue-light); width: 14px; height: 14px;"></i> Ranchi Pilot
+              </div>
+              <div class="floating-glow-orb glow-saffron"></div>
+              <div class="floating-glow-orb glow-blue"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Problem Section -->
+      <section class="section-bg-alt" id="problems">
+        <div class="container">
+          <div class="section-header reveal-fade">
+            <span class="section-tag" style="background:var(--loksetu-saffron-glow); color:var(--loksetu-saffron); border-color:rgba(255, 153, 51, 0.15);">The Challenge</span>
+            <h2 class="section-title">Your Local Problems Deserve to Be Heard.</h2>
+            <p class="section-subtitle">
+              Reporting a problem is often easy to start but difficult to track, verify and follow through.
+            </p>
+          </div>
+
+          <div class="grid-4 stagger-grid">
+            <div class="problem-card">
+              <div class="problem-icon"><i data-lucide="milestone"></i></div>
+              <h4>Broken Roads</h4>
+              <p>Potholes, open trenches, and broken streets that disrupt daily commutes and affect safety.</p>
+            </div>
+            <div class="problem-card">
+              <div class="problem-icon"><i data-lucide="trash-2"></i></div>
+              <h4>Garbage & Waste</h4>
+              <p>Unattended dumping yards, overflowing neighborhood bins, and unsanitary garbage accumulation.</p>
+            </div>
+            <div class="problem-card">
+              <div class="problem-icon"><i data-lucide="droplet"></i></div>
+              <h4>Water Issues</h4>
+              <p>Burst distribution pipes, polluted water supply, clogged drains, and water logging during rains.</p>
+            </div>
+            <div class="problem-card">
+              <div class="problem-icon"><i data-lucide="lightbulb"></i></div>
+              <h4>Street Lights</h4>
+              <p>Non-functioning street lamps creating dark patches on roads, impacting safety and visibility.</p>
+            </div>
+            <div class="problem-card">
+              <div class="problem-icon"><i data-lucide="git-merge"></i></div>
+              <h4>Traffic Issues</h4>
+              <p>Broken traffic lights, hazardous bottlenecks, missing road dividers, and poor signage.</p>
+            </div>
+            <div class="problem-card">
+              <div class="problem-icon"><i data-lucide="wrench"></i></div>
+              <h4>Public Infrastructure</h4>
+              <p>Damaged community footpaths, broken park benches, and safety hazards in public buildings.</p>
+            </div>
+            <div class="problem-card">
+              <div class="problem-icon"><i data-lucide="trees"></i></div>
+              <h4>Environmental Issues</h4>
+              <p>Unauthorized tree cutting, chemical dumping in local water bodies, and air/noise pollution hotspots.</p>
+            </div>
+            <div class="problem-card">
+              <div class="problem-icon"><i data-lucide="message-square"></i></div>
+              <h4>Other Civic Problems</h4>
+              <p>Any local issues that impact the quality of life and safety in your immediate neighborhood.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section>
+        <div class="container">
+          <div class="section-header reveal-fade">
+            <span class="section-tag" style="background:var(--loksetu-blue-glow); color:var(--loksetu-blue); border-color:rgba(0, 0, 128, 0.15);">Workflow</span>
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">
+              LokSetu is designed to make civic issues more visible, organized and trackable for everyone.
+            </p>
+          </div>
+
+          <div class="how-it-works-grid stagger-grid">
+            <div class="step-card">
+              <div class="step-number">01</div>
+              <h4>Report</h4>
+              <p>Citizens can report local issues using photos/videos, detailed descriptions, and GPS location information.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">02</div>
+              <h4>Community</h4>
+              <p>Nearby citizens can discover, support, upvote, and validate the reported issues to verify their genuineness.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">03</div>
+              <h4>Track</h4>
+              <p>Follow the issue's lifecycle with an interactive timeline, receiving real-time status updates from start to finish.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">04</div>
+              <h4>Action</h4>
+              <p>When responsible authorities or local organizations are active on the platform, issues can be routed directly to them.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="section-bg-alt">
+        <div class="container">
+          <div class="section-header reveal-fade">
+            <span class="section-tag" style="background:var(--loksetu-green-glow); color:var(--loksetu-green); border-color:rgba(19, 136, 8, 0.15);">Features</span>
+            <h2 class="section-title">Built for Modern Civic Engagement</h2>
+            <p class="section-subtitle">A premium set of tools engineered specifically to solve communication gaps in local communities.</p>
+          </div>
+
+          <div class="features-grid-loksetu stagger-grid">
+            <div class="feature-card-loksetu">
+              <div class="feature-icon-loksetu"><i data-lucide="camera"></i></div>
+              <h4>Report Local Issues</h4>
+              <p>Capture civic problems instantly with media uploads and automatic geolocation mapping.</p>
+            </div>
+            <div class="feature-card-loksetu">
+              <div class="feature-icon-loksetu"><i data-lucide="map"></i></div>
+              <h4>Civic Map</h4>
+              <p>Explore an interactive visual map showing all reported problems and resolved cases around your neighborhood.</p>
+            </div>
+            <div class="feature-card-loksetu">
+              <div class="feature-icon-loksetu"><i data-lucide="heart"></i></div>
+              <h4>Community Support</h4>
+              <p>Show support for neighbor-reported issues to highlight urgency and crowdsource validation.</p>
+            </div>
+            <div class="feature-card-loksetu">
+              <div class="feature-icon-loksetu"><i data-lucide="activity"></i></div>
+              <h4>Issue Tracking</h4>
+              <p>Monitor issue history and milestones transparently through a real-time status timeline.</p>
+            </div>
+            <div class="feature-card-loksetu">
+              <div class="feature-icon-loksetu"><i data-lucide="bell"></i></div>
+              <h4>Real-time Updates</h4>
+              <p>Get notified when progress is made on reports you filed or supported in your locality.</p>
+            </div>
+            <div class="feature-card-loksetu">
+              <div class="feature-icon-loksetu"><i data-lucide="shield-check"></i></div>
+              <h4>Verified Profiles</h4>
+              <p>Distinguish profiles of verified community volunteers, active NGOs, and local authorities.</p>
+            </div>
+            <div class="feature-card-loksetu">
+              <div class="feature-icon-loksetu"><i data-lucide="sliders"></i></div>
+              <h4>Search & Filters</h4>
+              <p>Sort through regional issues easily by selecting custom categories, dates, and current statuses.</p>
+            </div>
+            <div class="feature-card-loksetu">
+              <div class="feature-icon-loksetu"><i data-lucide="smartphone"></i></div>
+              <h4>Mobile First</h4>
+              <p>Developed as a robust Android-first civic application, optimized to work seamlessly under low-bandwidth networks.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- User Ecosystem Section -->
+      <section>
+        <div class="container">
+          <div class="section-header reveal-fade">
+            <span class="section-tag" style="background:var(--loksetu-blue-glow); color:var(--loksetu-blue); border-color:rgba(0, 0, 128, 0.15);">Stakeholders</span>
+            <h2 class="section-title">One Platform. Multiple Stakeholders.</h2>
+            <p class="section-subtitle">
+              LokSetu is designed to bring different parts of the local community into one transparent civic ecosystem.
+            </p>
+          </div>
+
+          <div class="ecosystem-container reveal-fade">
+            <div class="ecosystem-diagram">
+              <div class="eco-row">
+                <div class="eco-node">Citizens</div>
+              </div>
+              <div class="eco-arrow-down"><i data-lucide="arrow-down"></i></div>
+              <div class="eco-row">
+                <div class="eco-node primary-node">LokSetu Platform</div>
+              </div>
+              <div class="eco-arrow-down"><i data-lucide="arrow-down"></i></div>
+              <div class="eco-row">
+                <div class="eco-node">Volunteers</div>
+                <div class="eco-node">NGOs</div>
+                <div class="eco-node">Media</div>
+                <div class="eco-node">Businesses</div>
+                <div class="eco-node">Authorities</div>
+              </div>
+            </div>
+            <p style="font-size:0.92rem; color:var(--color-text-muted); text-align:center; max-width:600px; line-height:1.6;">
+              <strong>Note on Onboarding:</strong> LokSetu is an independent product in development. Stakeholder onboarding is planned to take place sequentially during the pilot and launch phases.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trust & Safety Section -->
+      <section class="section-bg-alt">
+        <div class="container">
+          <div class="trust-verification-grid">
+            <div class="trust-content reveal-fade">
+              <span class="section-tag" style="background:var(--loksetu-green-glow); color:var(--loksetu-green); border-color:rgba(19, 136, 8, 0.15);">Platform Security</span>
+              <h2 class="section-title" style="margin-bottom:1rem;">Built Around Trust.</h2>
+              <p class="apnadukan-description" style="margin-bottom:1.5rem;">
+                Trust is central to LokSetu. Verification and role-based permissions are designed to prevent impersonation and misuse of the platform.
+              </p>
+              
+              <div class="trust-check-list">
+                <div class="trust-check-item">
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Phone verification</span>
+                </div>
+                <div class="trust-check-item">
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Secure authentication</span>
+                </div>
+                <div class="trust-check-item">
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Role-based access</span>
+                </div>
+                <div class="trust-check-item">
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Verified profiles</span>
+                </div>
+                <div class="trust-check-item">
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Abuse reporting</span>
+                </div>
+                <div class="trust-check-item">
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Spam protection</span>
+                </div>
+                <div class="trust-check-item">
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Location-based reporting</span>
+                </div>
+                <div class="trust-check-item">
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Transparent issue history</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="verification-showcase reveal-fade" style="text-align:center;">
+              <div class="glass-card" style="padding: 3rem 2rem; display: flex; flex-direction: column; align-items: center; border-color: rgba(234, 179, 8, 0.25);">
+                <div class="badge-golden">
+                  <div class="badge-golden-star">
+                    <i data-lucide="award" style="width:24px; height:24px; color:#EAB308;"></i>
+                  </div>
+                  <span class="badge-golden-text">Government Verified</span>
+                </div>
+                <h3 style="font-size: 1.5rem; font-weight:800; margin-bottom:1rem; color:var(--color-text-primary);">Verified Authorities. Greater Trust.</h3>
+                <p style="font-size:0.92rem; color:var(--color-text-secondary); line-height:1.6; margin-bottom:1.5rem;">
+                  LokSetu is designed to support verified government representatives and responsible authorities in future phases.
+                </p>
+                <div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.15); border-radius: 12px; padding: 1rem; text-align: left;">
+                  <p style="font-size: 0.8rem; color: #EF4444; line-height: 1.5; margin: 0; font-weight: 600;">
+                    <i data-lucide="alert-triangle" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i> Verification Disclaimer
+                  </p>
+                  <p style="font-size: 0.78rem; color: var(--color-text-secondary); line-height: 1.5; margin-top: 4px; margin-bottom: 0;">
+                    Government accounts will not receive verification automatically. Official identity verification will be controlled through LokSetu's verification process.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vision Section -->
+      <section>
+        <div class="container reveal-fade">
+          <div class="vision-block">
+            <span class="section-tag" style="background:var(--loksetu-blue-glow); color:var(--loksetu-blue); border-color:rgba(0, 0, 128, 0.15); margin-bottom: 2rem;">Product Vision</span>
+            <p class="vision-text">
+              "To build India's <span class="highlight">most trusted civic platform</span> where every citizen can report local issues, every community can <span class="highlight">collaborate</span>, and every responsible authority can <span class="highlight">act transparently</span> to create better neighborhoods."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Roadmap / Dev Status Section -->
+      <section class="section-bg-alt">
+        <div class="container">
+          <div class="section-header reveal-fade">
+            <span class="section-tag" style="background:var(--loksetu-saffron-glow); color:var(--loksetu-saffron); border-color:rgba(255, 153, 51, 0.15);">Status Tracker</span>
+            <h2 class="section-title">Development Roadmap</h2>
+            <p class="section-subtitle">Track the current progress milestones of LokSetu as we build towards public launch.</p>
+          </div>
+
+          <div class="roadmap-container reveal-fade">
+            <div class="roadmap-item">
+              <div class="roadmap-marker complete"></div>
+              <div class="roadmap-content">
+                <div class="roadmap-info">
+                  <h4>Product Vision</h4>
+                  <p>Defining civic engagement modules, target issues, and stakeholder interfaces.</p>
+                </div>
+                <span class="roadmap-status complete">Complete</span>
+              </div>
+            </div>
+            <div class="roadmap-item">
+              <div class="roadmap-marker complete"></div>
+              <div class="roadmap-content">
+                <div class="roadmap-info">
+                  <h4>Architecture Design</h4>
+                  <p>Database modeling, routing protocols, and verified access configurations.</p>
+                </div>
+                <span class="roadmap-status complete">In Progress</span>
+              </div>
+            </div>
+            <div class="roadmap-item">
+              <div class="roadmap-marker in-progress"></div>
+              <div class="roadmap-content">
+                <div class="roadmap-info">
+                  <h4>UI/UX Design</h4>
+                  <p>Wireframing Android-first screens, reporting wizards, maps, and status dashboards.</p>
+                </div>
+                <span class="roadmap-status in-progress">In Progress</span>
+              </div>
+            </div>
+            <div class="roadmap-item">
+              <div class="roadmap-marker in-progress"></div>
+              <div class="roadmap-content">
+                <div class="roadmap-info">
+                  <h4>Android Development</h4>
+                  <p>Developing the core mobile client, geolocation triggers, and local DB caching.</p>
+                </div>
+                <span class="roadmap-status in-progress">In Progress</span>
+              </div>
+            </div>
+            <div class="roadmap-item">
+              <div class="roadmap-marker upcoming"></div>
+              <div class="roadmap-content">
+                <div class="roadmap-info">
+                  <h4>Beta Testing</h4>
+                  <p>Private pilot rollout in selected sectors of Ranchi to test real-world reporting loops.</p>
+                </div>
+                <span class="roadmap-status upcoming">Upcoming</span>
+              </div>
+            </div>
+            <div class="roadmap-item">
+              <div class="roadmap-marker upcoming"></div>
+              <div class="roadmap-content">
+                <div class="roadmap-info">
+                  <h4>Public Launch</h4>
+                  <p>Releasing the application on Google Play Store and opening the platform to community NGOs.</p>
+                </div>
+                <span class="roadmap-status upcoming">Upcoming</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- App Mockup Interactive Preview -->
+      <section id="mockup-preview">
+        <div class="container">
+          <div class="section-header reveal-fade">
+            <span class="section-tag" style="background:var(--loksetu-blue-glow); color:var(--loksetu-blue); border-color:rgba(0, 0, 128, 0.15);">Interface Preview</span>
+            <h2 class="section-title">Application Interface Preview</h2>
+            <p class="section-subtitle">Explore conceptual interface mockups demonstrating LokSetu's core features.</p>
+          </div>
+
+          <div class="mockup-showcase-container">
+            <div class="mockup-selector-tabs reveal-fade">
+              <button class="mockup-tab-btn active" data-target="screen-home">
+                <div class="mockup-tab-icon"><i data-lucide="home"></i></div>
+                <div class="mockup-tab-info">
+                  <h5>Home Feed</h5>
+                  <p>List of local issues sorted by distance, timeline, and supports.</p>
+                </div>
+              </button>
+              
+              <button class="mockup-tab-btn" data-target="screen-report">
+                <div class="mockup-tab-icon"><i data-lucide="plus-circle"></i></div>
+                <div class="mockup-tab-info">
+                  <h5>Report Issue</h5>
+                  <p>Sleek form showing photo attachments and GPS pinning.</p>
+                </div>
+              </button>
+
+              <button class="mockup-tab-btn" data-target="screen-details">
+                <div class="mockup-tab-icon"><i data-lucide="info"></i></div>
+                <div class="mockup-tab-info">
+                  <h5>Issue Details</h5>
+                  <p>Detailed tracking timeline and community upvote panel.</p>
+                </div>
+              </button>
+
+              <button class="mockup-tab-btn" data-target="screen-map">
+                <div class="mockup-tab-icon"><i data-lucide="map-pin"></i></div>
+                <div class="mockup-tab-info">
+                  <h5>Civic Map View</h5>
+                  <p>Geographical distribution of issues with color-coded pins.</p>
+                </div>
+              </button>
+            </div>
+
+            <div class="mockup-visual-panel reveal-fade" style="position:relative;">
+              <div class="loksetu-mockup-frame">
+                <div class="mockup-screen-container">
+                  
+                  <!-- SCREEN 1: Home Feed -->
+                  <div class="mockup-screen active" id="screen-home">
+                    <div class="app-header">
+                      <div class="app-header-title">
+                        <span>🇮🇳 LokSetu</span><span class="saffron-dot">.</span>
+                      </div>
+                      <i data-lucide="bell" style="width: 14px; height: 14px;"></i>
+                    </div>
+                    <div class="app-content">
+                      <div class="search-bar-mock">
+                        <i data-lucide="search" style="width: 12px; height: 12px;"></i>
+                        <span>Search reported civic issues...</span>
+                      </div>
+                      <div class="cat-scroll-mock">
+                        <span class="cat-pill-mock active">All</span>
+                        <span class="cat-pill-mock">Roads</span>
+                        <span class="cat-pill-mock">Garbage</span>
+                        <span class="cat-pill-mock">Water</span>
+                      </div>
+                      <div class="issue-card-mock">
+                        <div class="issue-card-header">
+                          <span class="issue-badge-mock investigating">Investigating</span>
+                          <span class="issue-time-mock">2h ago</span>
+                        </div>
+                        <h6>Potholes and broken asphalt on Circular Road</h6>
+                        <div class="issue-card-meta">
+                          <span class="issue-location-mock"><i data-lucide="map-pin" style="width:10px; height:10px;"></i> Lalpur, Ranchi</span>
+                          <span class="issue-upvotes-mock"><i data-lucide="thumbs-up" style="width:10px; height:10px;"></i> 34</span>
+                        </div>
+                      </div>
+                      <div class="issue-card-mock">
+                        <div class="issue-card-header">
+                          <span class="issue-badge-mock reported">Reported</span>
+                          <span class="issue-time-mock">5h ago</span>
+                        </div>
+                        <h6>Garbage pile blocking the public walkway</h6>
+                        <div class="issue-card-meta">
+                          <span class="issue-location-mock"><i data-lucide="map-pin" style="width:10px; height:10px;"></i> Kutchery Road</span>
+                          <span class="issue-upvotes-mock"><i data-lucide="thumbs-up" style="width:10px; height:10px;"></i> 18</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fab-mock"><i data-lucide="plus"></i></div>
+                  </div>
+
+                  <!-- SCREEN 2: Report Issue -->
+                  <div class="mockup-screen" id="screen-report">
+                    <div class="app-header">
+                      <div class="app-header-title">
+                        <span><i data-lucide="arrow-left" style="width:14px; height:14px; vertical-align:middle; margin-right:4px;"></i> Report Issue</span>
+                      </div>
+                    </div>
+                    <div class="app-content">
+                      <div class="mock-form-group">
+                        <span class="mock-form-label">Attach Media</span>
+                        <div class="mock-image-upload">
+                          <i data-lucide="camera" style="width: 20px; height: 20px; color: var(--loksetu-saffron);"></i>
+                          <span>Tap to upload photo or video</span>
+                        </div>
+                      </div>
+                      <div class="mock-form-group">
+                        <span class="mock-form-label">Title</span>
+                        <input type="text" class="mock-input" value="Water leak on main pipeline" readonly>
+                      </div>
+                      <div class="mock-form-group">
+                        <span class="mock-form-label">Category</span>
+                        <input type="text" class="mock-input" value="Water Supply" readonly>
+                      </div>
+                      <div class="mock-form-group">
+                        <span class="mock-form-label">Select GPS Pin</span>
+                        <div class="mock-map-select">
+                          <div class="map-canvas-mock">
+                            <div class="map-pin-mock saffron" style="top:45%; left:48%;"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="mock-submit-btn" disabled>Submit Report</button>
+                    </div>
+                  </div>
+
+                  <!-- SCREEN 3: Issue Details -->
+                  <div class="mockup-screen" id="screen-details">
+                    <div class="app-header">
+                      <div class="app-header-title">
+                        <span><i data-lucide="arrow-left" style="width:14px; height:14px; vertical-align:middle; margin-right:4px;"></i> Issue Tracking</span>
+                      </div>
+                      <i data-lucide="share-2" style="width: 14px; height: 14px;"></i>
+                    </div>
+                    <div class="app-content">
+                      <div class="issue-card-mock" style="box-shadow:none; border:none; padding:0;">
+                        <div class="issue-card-header">
+                          <span class="issue-badge-mock investigating">Investigating</span>
+                          <span class="issue-time-mock">ID #LK-840</span>
+                        </div>
+                        <h6 style="font-size:0.9rem;">Broken water pipe flooding street</h6>
+                        <div class="detail-meta-item" style="margin-top:4px;">
+                          <i data-lucide="map-pin" style="width: 12px; height: 12px;"></i>
+                          <span>Kanke Road, Ranchi</span>
+                        </div>
+                      </div>
+                      
+                      <div style="background:#FFFFFF; border: 1px solid rgba(0,0,80,0.06); border-radius:12px; padding:10px; margin-top:4px;">
+                        <span style="font-size:0.65rem; font-weight:700; color:var(--color-text-primary); display:block; margin-bottom:6px;">Status Timeline</span>
+                        <div class="timeline-mock">
+                          <div class="timeline-step-mock active">
+                            <div class="timeline-dot-mock"></div>
+                            <h7>NGO Assigned</h7>
+                            <span>10:30 AM · Invested Ranchi NGO</span>
+                          </div>
+                          <div class="timeline-step-mock active">
+                            <div class="timeline-dot-mock"></div>
+                            <h7>Verified by Community</h7>
+                            <span>Yesterday · 24 citizens supported</span>
+                          </div>
+                          <div class="timeline-step-mock active">
+                            <div class="timeline-dot-mock"></div>
+                            <h7>Report Created</h7>
+                            <span>2 days ago · Filed by Amit K.</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button class="mock-submit-btn" style="background:var(--loksetu-blue-gradient); margin-top:auto;" disabled>
+                        <i data-lucide="thumbs-up" style="width:12px; height:12px; vertical-align:middle; margin-right:4px;"></i> Support Issue (42)
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- SCREEN 4: Map View -->
+                  <div class="mockup-screen" id="screen-map">
+                    <div class="app-header">
+                      <div class="app-header-title">
+                        <span>🗺️ Civic Map</span>
+                      </div>
+                      <i data-lucide="sliders" style="width: 14px; height: 14px;"></i>
+                    </div>
+                    <div style="flex-grow:1; position:relative;">
+                      <div class="map-canvas-mock">
+                        <div class="map-pin-mock saffron"></div>
+                        <div class="map-pin-mock blue"></div>
+                        <div class="map-pin-mock green"></div>
+                        
+                        <div class="map-popup-mock">
+                          <h8>Water pipeline leak</h8>
+                          <p><i data-lucide="map-pin" style="width:8px; height:8px; vertical-align:middle;"></i> Albert Ekka Chowk</p>
+                          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:2px;">
+                            <span style="font-size:0.55rem; color:var(--loksetu-green); font-weight:700;">Milestone 2/4</span>
+                            <span style="font-size:0.55rem; color:var(--color-text-muted);">24 supports</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="floating-glow-orb glow-saffron"></div>
+              <div class="floating-glow-orb glow-blue"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Early Access Section -->
+      <section class="section-bg-alt" id="early-access">
+        <div class="container-narrow">
+          <div class="glass-card waitlist-panel mouse-glow-card reveal-fade" style="padding:4rem 3rem;">
+            <div style="text-align:center; margin-bottom: 3rem;">
+              <span class="section-tag" style="background:var(--loksetu-saffron-glow); color:var(--loksetu-saffron); border-color:rgba(255, 153, 51, 0.15);">Early Access</span>
+              <h2 style="font-size: 2.2rem; font-weight:800; margin-bottom:1rem; background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Help Shape LokSetu</h2>
+              <p style="color:var(--color-text-secondary); max-width:550px; margin: 0 auto; line-height: 1.6;">
+                We're building LokSetu with real community needs in mind. Join the early access list and help shape the platform before launch.
+              </p>
+            </div>
+
+            <!-- Early Access Form -->
+            <form id="loksetu-earlyaccess-form" class="waitlist-form" aria-label="LokSetu early access form">
+              <div class="grid-2" style="gap: 1.5rem; margin-bottom: 0;">
+                <div class="form-group">
+                  <input type="text" id="loksetu-name" name="name" class="form-input" placeholder=" " required>
+                  <label for="loksetu-name" class="form-label">Full Name</label>
+                </div>
+                <div class="form-group">
+                  <input type="email" id="loksetu-email" name="email" class="form-input" placeholder=" " required>
+                  <label for="loksetu-email" class="form-label">Email Address</label>
+                </div>
+              </div>
+              <div class="grid-2" style="gap: 1.5rem; margin-bottom: 0;">
+                <div class="form-group">
+                  <input type="text" id="loksetu-city" name="city" class="form-input" placeholder=" " required>
+                  <label for="loksetu-city" class="form-label">City</label>
+                </div>
+                <div class="form-group">
+                  <input type="text" id="loksetu-state" name="state" class="form-input" placeholder=" " required>
+                  <label for="loksetu-state" class="form-label">State</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea id="loksetu-problem" name="problem" class="form-input" placeholder=" " style="min-height:100px; resize:vertical;"></textarea>
+                <label for="loksetu-problem" class="form-label">What civic problem matters most to you? (Optional)</label>
+              </div>
+              
+              <button type="submit" class="btn btn-saffron form-btn" style="padding: 1rem 2rem;">Join Early Access <i data-lucide="arrow-right"></i></button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Founder Section -->
+      <section>
+        <div class="container reveal-fade">
+          <div class="founder-card glass-card" style="padding: 4rem; text-align: center;">
+            <div style="max-width:700px; margin:0 auto;">
+              <span class="section-tag" style="background:rgba(6,182,212,0.05); color:var(--color-highlight); border-color:rgba(6,182,212,0.1);">Developed By</span>
+              <h2 style="font-size: 2.2rem; font-weight:800; margin-bottom:1.5rem;">Built By Amos</h2>
+              <p style="color:var(--color-text-secondary); margin-bottom: 2.5rem; line-height:1.75; font-size: 1.05rem;">
+                LokSetu is an independent civic-tech initiative being developed by **Built By Amos** with a vision to make local civic participation more accessible, transparent and community-driven.
+              </p>
+              <a href="./index.html" class="btn btn-primary" style="display:inline-flex;">
+                <i data-lucide="globe" style="width:16px; height:16px; margin-right:4px;"></i> Return to Built By Amos Home
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Sticky Actions (Consultation & WhatsApp) -->
+  <div class="floating-actions" aria-label="Quick contact links">
+    <a href="https://wa.me/918757603560" class="floating-btn floating-whatsapp" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+      <i data-lucide="message-square"></i>
+    </a>
+    <a href="./contact.html" class="floating-btn floating-consultation" aria-label="Book Free Consultation">
+      <i data-lucide="phone-call"></i>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-glow"></div>
+    <div class="container footer-grid">
+      <div class="footer-brand-column">
+        <a href="./index.html" class="brand" aria-label="Built By Amos Footer Home" style="display:inline-flex; align-items:center; margin-bottom:1rem;">
+          <img src="./images/builtbyamos-logo.svg" alt="Built By Amos Logo" style="height: 56px; width: auto;">
+        </a>
+        <p class="footer-brand-desc">
+          We engineer custom software, fast websites, SaaS systems, and digital designs built to help your business scale.
+        </p>
+        <div style="margin-top: 1rem; display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--color-text-secondary);">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" style="vertical-align: middle;"><path fill="#EA4335" d="M5.266 9.765A7.077 7.077 0 0 1 12 4.909c1.69 0 3.218.6 4.418 1.582l3.51-3.51C17.842 1.093 15.115 0 12 0 7.354 0 3.307 2.67 1.343 6.555l3.923 3.21z"/><path fill="#4285F4" d="M16.04 15.345c-1.077.733-2.433 1.164-4.04 1.164-2.955 0-5.46-1.996-6.355-4.686L1.722 15.03C3.687 18.914 7.734 21.6 12 21.6c3.123 0 5.922-1.036 7.91-2.825l-3.87-3.43z"/><path fill="#FBBC05" d="M5.645 11.823A6.744 6.744 0 0 1 5.345 10c0-.627.109-1.23.3-1.823L1.722 4.966A11.902 11.902 0 0 0 0 10c0 1.77.382 3.456 1.073 4.975l4.572-3.152z"/><path fill="#34A853" d="M23.52 10.227c.109-.64.18-1.306.18-1.996H12v4.4h6.618a5.71 5.71 0 0 1-2.5 3.75l3.87 3.43c2.264-2.09 3.532-5.176 3.532-8.584z"/></svg>
+          <span>Google Live Rating: <strong>5.0/5.0</strong></span>
+          <span style="color: #F59E0B; display: inline-flex; gap: 1px;">★ ★ ★ ★ ★</span>
+        </div>
+        <div class="footer-socials" style="display:flex; flex-wrap:nowrap; gap:6px; margin-top:1.5rem;">
+          <a href="https://github.com/BuiltByAmos-1801" class="social-icon-btn" aria-label="GitHub Profile" target="_blank" rel="noopener"><i data-lucide="github"></i></a>
+          <a href="https://linkedin.com/company/builtbyamos" class="social-icon-btn" aria-label="LinkedIn Profile" target="_blank" rel="noopener"><i data-lucide="linkedin"></i></a>
+          <a href="https://www.instagram.com/me_amos_1807" class="social-icon-btn" aria-label="Instagram Profile" target="_blank" rel="noopener"><i data-lucide="instagram"></i></a>
+          <a href="https://facebook.com/builtbyamos" class="social-icon-btn" aria-label="Facebook Profile" target="_blank" rel="noopener"><i data-lucide="facebook"></i></a>
+          <a href="https://www.youtube.com/@BuiltByAmos-1801" class="social-icon-btn" aria-label="YouTube Profile" target="_blank" rel="noopener"><i data-lucide="youtube"></i></a>
+          <a href="mailto:builtbiamos@gmail.com" class="social-icon-btn" aria-label="Email Contact"><i data-lucide="mail"></i></a>
+          <a href="https://wa.me/918757603560" target="_blank" rel="noopener" class="social-icon-btn" aria-label="WhatsApp Contact" style="color:#25D366; border-color:rgba(37,211,102,0.15);"><i data-lucide="message-square"></i></a>
+          <a href="tel:8757603560" class="social-icon-btn" aria-label="Phone Call"><i data-lucide="phone"></i></a>
+          <a href="./index.html" class="social-icon-btn" aria-label="Website Home"><i data-lucide="globe"></i></a>
+        </div>
+        <div style="margin-top:1.5rem;">
+          <a href="https://github.com/BuiltByAmos-1801" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size:0.8rem; padding: 0.5rem 1rem; display:inline-flex; align-items:center; gap:6px;">
+            <i data-lucide="github" style="width:14px; height:14px;"></i> View Our GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="./services.html" class="footer-link">Web Development</a>
+          <a href="./services.html" class="footer-link">Mobile Apps</a>
+          <a href="./services.html" class="footer-link">Custom CRMs</a>
+          <a href="./services.html" class="footer-link">AI Automation</a>
+          <a href="./services.html" class="footer-link">UI UX Design</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Industries</h4>
+        <div class="footer-links">
+          <a href="./index.html#industries" class="footer-link">Coaching Centers</a>
+          <a href="./index.html#industries" class="footer-link">Auto Garages</a>
+          <a href="./index.html#industries" class="footer-link">Medical Stores</a>
+          <a href="./index.html#industries" class="footer-link">Real Estate</a>
+          <a href="./index.html#industries" class="footer-link">Startups</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Products</h4>
+        <div class="footer-links">
+          <a href="./products.html" class="footer-link">GarageOS</a>
+          <a href="./products.html" class="footer-link">BillCraft</a>
+          <a href="./products.html" class="footer-link">Coaching ERP</a>
+          <a href="./products.html" class="footer-link">Built By Amos App</a>
+          <a href="./loksetu.html" class="footer-link">LokSetu</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Company</h4>
+        <div class="footer-links">
+          <a href="./about.html" class="footer-link">Engineering Blog</a>
+          <a href="./contact.html" class="footer-link">Careers</a>
+          <a href="./contact.html" class="footer-link">Partner Program</a>
+          <a href="./contact.html" class="footer-link">Community</a>
+          <a href="./about.html" class="footer-link">About Us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="footer-copy">
+        &copy; 2026 Built By Amos. All rights reserved.
+      </div>
+      <div class="msme-badge" style="display:inline-flex; align-items:center; gap:8px;">
+        <img src="./images/MSME-Logo.png" alt="MSME Logo" style="height: 24px; width: auto; object-fit: contain;">
+        <span>MSME Registered Agency</span>
+      </div>
+      <div class="footer-bottom-links">
+        <a href="./contact.html" class="footer-bottom-link">Privacy Policy</a>
+        <a href="./contact.html" class="footer-bottom-link">Terms & Conditions</a>
+        <a href="./contact.html" class="footer-bottom-link">Refund Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Imports -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+  <script src="https://unpkg.com/lucide@0.294.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script type="module" src="./js/main.js"></script>
+
+  <!-- Local Interactivity Script for Phone Mockup tabs -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabBtns = document.querySelectorAll('.mockup-tab-btn');
+      const screens = document.querySelectorAll('.mockup-screen');
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-target');
+          
+          // Set active tab button
+          tabBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          // Transition screen visibility
+          screens.forEach(screen => {
+            if (screen.id === targetId) {
+              screen.classList.add('active');
+            } else {
+              screen.classList.remove('active');
+            }
+          });
+
+          // Refresh ScrollTrigger to recalculate alignment
+          if (typeof ScrollTrigger !== 'undefined') {
+            ScrollTrigger.refresh();
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1156 @@
+/* loksetu.css - Dedicated styling for LokSetu Civic-Tech platform integration */
+
+:root {
+  /* LokSetu Modern Flag-Inspired Color System */
+  --loksetu-saffron: #FF9933;
+  --loksetu-saffron-light: #FFB366;
+  --loksetu-saffron-glow: rgba(255, 153, 51, 0.12);
+  --loksetu-saffron-gradient: linear-gradient(135deg, #FF9933 0%, #FF7A00 100%);
+  
+  --loksetu-green: #138808;
+  --loksetu-green-light: #1fb912;
+  --loksetu-green-glow: rgba(19, 136, 8, 0.08);
+  --loksetu-green-gradient: linear-gradient(135deg, #138808 0%, #107206 100%);
+
+  --loksetu-blue: #000080;
+  --loksetu-blue-light: #2563eb;
+  --loksetu-blue-glow: rgba(0, 0, 128, 0.08);
+  --loksetu-blue-gradient: linear-gradient(135deg, #000080 0%, #1e40af 100%);
+
+  --loksetu-white: #FFFFFF;
+  --loksetu-card-bg: rgba(255, 255, 255, 0.7);
+  --loksetu-card-border: 1px solid rgba(0, 0, 128, 0.08);
+  --loksetu-card-hover-border: 1px solid rgba(0, 0, 128, 0.18);
+  --loksetu-shadow: 0 15px 35px -10px rgba(0, 0, 128, 0.06), 0 0 0 1px rgba(0, 0, 128, 0.02);
+  --loksetu-shadow-hover: 0 25px 45px -15px rgba(0, 0, 128, 0.12), 0 0 0 1px rgba(0, 0, 128, 0.04);
+}
+
+/* Base LokSetu Layout Styles */
+.loksetu-hero {
+  padding-top: 11rem;
+  padding-bottom: 7rem;
+  background-color: var(--color-bg-primary);
+  position: relative;
+}
+
+.loksetu-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.loksetu-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.6rem 1.25rem;
+  background: var(--loksetu-saffron-glow);
+  border: 1px solid rgba(255, 153, 51, 0.2);
+  color: #c26100;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.82rem;
+  border-radius: 99px;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.loksetu-flag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--loksetu-blue);
+  background: var(--loksetu-blue-glow);
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(0, 0, 128, 0.1);
+}
+
+.loksetu-hero-content h1 {
+  font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+}
+
+.loksetu-hero-content h1 span.saffron {
+  background: var(--loksetu-saffron-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.loksetu-hero-content h1 span.blue {
+  background: var(--loksetu-blue-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.loksetu-hero-content .lead-text {
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: 2.5rem;
+}
+
+.loksetu-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-saffron {
+  background: var(--loksetu-saffron-gradient);
+  color: #FFFFFF;
+  box-shadow: 0 10px 25px -5px rgba(255, 153, 51, 0.4);
+}
+
+.btn-saffron:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 30px -8px rgba(255, 153, 51, 0.6);
+  color: #FFFFFF;
+}
+
+.btn-blue-outline {
+  background: transparent;
+  border: 2px solid var(--loksetu-blue);
+  color: var(--loksetu-blue);
+}
+
+.btn-blue-outline:hover {
+  background: var(--loksetu-blue);
+  color: #FFFFFF;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 128, 0.25);
+}
+
+/* Problems Grid Layout */
+.problem-card {
+  padding: 2.25rem 2rem;
+  border-radius: var(--glass-radius);
+  background: var(--loksetu-card-bg);
+  border: var(--loksetu-card-border);
+  box-shadow: var(--loksetu-shadow);
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.problem-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--loksetu-card-hover-border);
+  box-shadow: var(--loksetu-shadow-hover);
+}
+
+.problem-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: var(--loksetu-saffron-glow);
+  color: var(--loksetu-saffron);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  border: 1px solid rgba(255, 153, 51, 0.15);
+  transition: transform var(--transition-spring);
+}
+
+.problem-card:hover .problem-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.problem-card h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-primary);
+}
+
+.problem-card p {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* How It Works Section */
+.how-it-works-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+
+.step-card {
+  position: relative;
+  padding: 2.5rem 2rem;
+  border-radius: var(--glass-radius);
+  background: var(--loksetu-white);
+  border: var(--loksetu-card-border);
+  box-shadow: var(--loksetu-shadow);
+  transition: transform var(--transition-smooth);
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+}
+
+.step-number {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, rgba(0, 0, 128, 0.1) 0%, rgba(255, 153, 51, 0.1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.step-card h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.step-card p {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Premium Features Grid */
+.features-grid-loksetu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.feature-card-loksetu {
+  padding: 2rem 1.75rem;
+  border-radius: var(--glass-radius-sm);
+  background: var(--loksetu-card-bg);
+  border: var(--loksetu-card-border);
+  box-shadow: var(--loksetu-shadow);
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.feature-card-loksetu:hover {
+  transform: translateY(-6px);
+  border-color: var(--loksetu-card-hover-border);
+  box-shadow: var(--loksetu-shadow-hover);
+}
+
+.feature-icon-loksetu {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--loksetu-blue-glow);
+  color: var(--loksetu-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  font-size: 1.15rem;
+  border: 1px solid rgba(0, 0, 128, 0.12);
+}
+
+.feature-card-loksetu:hover .feature-icon-loksetu {
+  background: var(--loksetu-blue-gradient);
+  color: #FFFFFF;
+  border-color: transparent;
+}
+
+.feature-card-loksetu h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-primary);
+}
+
+.feature-card-loksetu p {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+
+/* Ecosystem Section */
+.ecosystem-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ecosystem-diagram {
+  width: 100%;
+  padding: 3rem;
+  border-radius: var(--glass-radius);
+  background: var(--loksetu-card-bg);
+  border: var(--loksetu-card-border);
+  box-shadow: var(--loksetu-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.eco-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.eco-node {
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 128, 0.1);
+  box-shadow: var(--shadow-sm);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+  color: var(--color-text-primary);
+  min-width: 140px;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.eco-node:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+  border-color: var(--loksetu-blue);
+}
+
+.eco-node.primary-node {
+  background: var(--loksetu-blue-gradient);
+  color: #FFFFFF;
+  border: none;
+  font-size: 1.1rem;
+  padding: 1.25rem 2.25rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 80, 0.2);
+}
+
+.eco-node.primary-node:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 80, 0.3);
+}
+
+.eco-arrow-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--loksetu-blue-light);
+  height: 40px;
+  position: relative;
+}
+
+.eco-arrow-down::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: dashed rgba(0, 0, 128, 0.2);
+}
+
+/* Trust Section & Government verification */
+.trust-verification-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.badge-golden {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #FFFDF0 0%, #FFF9C4 100%);
+  border: 1px solid #EAB308;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(234, 179, 8, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+}
+
+.badge-golden-star {
+  color: #EAB308;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotateBadge 12s infinite linear;
+}
+
+.badge-golden-text {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  color: #854D0E;
+  text-transform: uppercase;
+}
+
+@keyframes rotateBadge {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.trust-check-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.trust-check-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.trust-check-item i {
+  color: var(--loksetu-green);
+  flex-shrink: 0;
+}
+
+/* Vision Block */
+.vision-block {
+  padding: 5rem 3rem;
+  border-radius: var(--glass-radius);
+  background: radial-gradient(circle at 10% 20%, rgba(255, 153, 51, 0.04) 0%, rgba(0, 0, 128, 0.03) 90%);
+  border: var(--loksetu-card-border);
+  box-shadow: var(--loksetu-shadow);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-block::before {
+  content: '"';
+  position: absolute;
+  top: -1rem;
+  left: 2rem;
+  font-size: 15rem;
+  font-family: Georgia, serif;
+  color: rgba(0, 0, 128, 0.04);
+  line-height: 1;
+}
+
+.vision-text {
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.vision-text span.highlight {
+  color: var(--loksetu-blue);
+  border-bottom: 2px solid var(--loksetu-saffron);
+  padding-bottom: 2px;
+}
+
+/* Development Roadmap Section */
+.roadmap-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.roadmap-container::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--loksetu-green) 40%, var(--loksetu-saffron) 60%, rgba(0, 0, 128, 0.1) 100%);
+}
+
+.roadmap-item {
+  position: relative;
+  margin-bottom: 2.25rem;
+}
+
+.roadmap-item:last-child {
+  margin-bottom: 0;
+}
+
+.roadmap-marker {
+  position: absolute;
+  left: -2rem;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 3px solid #FFFFFF;
+  box-shadow: var(--shadow-md);
+  z-index: 2;
+}
+
+.roadmap-marker.complete {
+  background-color: var(--loksetu-green);
+  box-shadow: 0 0 10px rgba(19, 136, 8, 0.4);
+}
+
+.roadmap-marker.in-progress {
+  background-color: var(--loksetu-saffron);
+  box-shadow: 0 0 10px rgba(255, 153, 51, 0.4);
+  animation: pulseRoadmap 1.5s infinite alternate;
+}
+
+.roadmap-marker.upcoming {
+  background-color: #D1D5DB;
+  border-color: #F3F4F6;
+}
+
+@keyframes pulseRoadmap {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  100% { transform: scale(1.15); opacity: 1; }
+}
+
+.roadmap-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  border-radius: 20px;
+  background: var(--loksetu-card-bg);
+  border: var(--loksetu-card-border);
+  box-shadow: var(--loksetu-shadow);
+}
+
+.roadmap-info h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.roadmap-info p {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+}
+
+.roadmap-status {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  border-radius: 99px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.roadmap-status.complete {
+  background: var(--loksetu-green-glow);
+  color: var(--loksetu-green);
+  border: 1px solid rgba(19, 136, 8, 0.15);
+}
+
+.roadmap-status.in-progress {
+  background: var(--loksetu-saffron-glow);
+  color: #c26100;
+  border: 1px solid rgba(255, 153, 51, 0.15);
+}
+
+.roadmap-status.upcoming {
+  background: rgba(107, 114, 128, 0.05);
+  color: var(--color-text-muted);
+  border: 1px solid rgba(107, 114, 128, 0.1);
+}
+
+/* Interactive App Mockup Section */
+.mockup-showcase-container {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.mockup-selector-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mockup-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 18px;
+  background: var(--glass-bg);
+  border: var(--glass-border);
+  text-align: left;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.mockup-tab-btn:hover {
+  transform: translateX(5px);
+  border-color: rgba(0, 0, 128, 0.15);
+}
+
+.mockup-tab-btn.active {
+  background: #FFFFFF;
+  border-color: var(--loksetu-blue);
+  box-shadow: var(--loksetu-shadow-hover);
+  transform: translateX(8px);
+}
+
+.mockup-tab-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--loksetu-blue-glow);
+  color: var(--loksetu-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+.mockup-tab-btn.active .mockup-tab-icon {
+  background: var(--loksetu-blue-gradient);
+  color: #FFFFFF;
+}
+
+.mockup-tab-info h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.mockup-tab-info p {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+}
+
+/* Phone Frame Styling override for static/relative positioning */
+.loksetu-mockup-frame {
+  width: 290px;
+  height: 570px;
+  background: #111827;
+  border: 12px solid #111827;
+  border-radius: 40px;
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 128, 0.15), 0 0 0 1px rgba(0, 0, 128, 0.05);
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.loksetu-mockup-frame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 25px;
+  background: #111827;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  z-index: 10;
+}
+
+/* Screen Transitions */
+.mockup-screen-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #F8FAFC;
+}
+
+.mockup-screen {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  z-index: 1;
+}
+
+.mockup-screen.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+/* Android Application Layout Mockups */
+.app-header {
+  background: var(--loksetu-blue-gradient);
+  color: #FFFFFF;
+  padding: 1.8rem 1rem 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 80, 0.08);
+}
+
+.app-header-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.app-header-title span.saffron-dot {
+  color: var(--loksetu-saffron);
+}
+
+.app-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Hide scrollbar in mockup */
+.app-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* UI Elements inside mockups */
+.search-bar-mock {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 128, 0.06);
+  border-radius: 12px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  box-shadow: var(--shadow-sm);
+}
+
+.cat-scroll-mock {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.cat-pill-mock {
+  padding: 6px 12px;
+  border-radius: 99px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 128, 0.05);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.cat-pill-mock.active {
+  background: var(--loksetu-blue-gradient);
+  color: #FFFFFF;
+  border: none;
+}
+
+.issue-card-mock {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 128, 0.06);
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.issue-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.issue-badge-mock {
+  font-size: 0.58rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.issue-badge-mock.reported {
+  background: rgba(255, 153, 51, 0.1);
+  color: #d66a00;
+}
+
+.issue-badge-mock.investigating {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+}
+
+.issue-badge-mock.resolved {
+  background: rgba(19, 136, 8, 0.1);
+  color: var(--loksetu-green);
+}
+
+.issue-time-mock {
+  font-size: 0.58rem;
+  color: var(--color-text-muted);
+}
+
+.issue-card-mock h6 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.issue-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+  border-top: 1px solid rgba(0, 0, 0, 0.03);
+  padding-top: 6px;
+}
+
+.issue-location-mock {
+  font-size: 0.62rem;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.issue-upvotes-mock {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: var(--loksetu-blue);
+  background: var(--loksetu-blue-glow);
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.fab-mock {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--loksetu-saffron-gradient);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 15px rgba(255, 153, 51, 0.35);
+  font-size: 1.1rem;
+  z-index: 5;
+}
+
+/* Report Issue Form Mock */
+.mock-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mock-form-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.mock-image-upload {
+  height: 90px;
+  border: 1px dashed rgba(0, 0, 80, 0.2);
+  border-radius: 10px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.mock-image-upload span {
+  font-size: 0.58rem;
+  color: var(--color-text-muted);
+}
+
+.mock-input {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 80, 0.08);
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 0.7rem;
+  color: var(--color-text-primary);
+}
+
+.mock-map-select {
+  height: 80px;
+  border-radius: 10px;
+  background-color: #E2E8F0;
+  border: 1px solid rgba(0, 0, 80, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.mock-submit-btn {
+  background: var(--loksetu-saffron-gradient);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 0.72rem;
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* Issue Details Mock UI */
+.detail-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.68rem;
+  color: var(--color-text-secondary);
+}
+
+.detail-meta-item i {
+  color: var(--loksetu-blue-light);
+}
+
+.timeline-mock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+  position: relative;
+  padding-left: 12px;
+}
+
+.timeline-mock::before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 4px;
+  bottom: 4px;
+  width: 1px;
+  background-color: rgba(0, 0, 80, 0.1);
+}
+
+.timeline-step-mock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.timeline-dot-mock {
+  position: absolute;
+  left: -12px;
+  top: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #D1D5DB;
+}
+
+.timeline-step-mock.active .timeline-dot-mock {
+  background: var(--loksetu-green);
+  box-shadow: 0 0 6px rgba(19, 136, 8, 0.4);
+}
+
+.timeline-step-mock h7 {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.timeline-step-mock span {
+  font-size: 0.58rem;
+  color: var(--color-text-muted);
+}
+
+/* Map Screen Mock UI */
+.map-canvas-mock {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #E2E8F0;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 0);
+  background-size: 20px 20px;
+  overflow: hidden;
+}
+
+.map-pin-mock {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.map-pin-mock::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #FFFFFF;
+  border-radius: 50%;
+}
+
+.map-pin-mock.saffron {
+  background-color: var(--loksetu-saffron);
+  top: 35%;
+  left: 28%;
+}
+
+.map-pin-mock.blue {
+  background-color: var(--loksetu-blue-light);
+  top: 55%;
+  left: 65%;
+}
+
+.map-pin-mock.green {
+  background-color: var(--loksetu-green);
+  top: 20%;
+  left: 55%;
+}
+
+.map-popup-mock {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 8px 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,80,0.06);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.map-popup-mock h8 {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.map-popup-mock p {
+  font-size: 0.58rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Custom Floating Badges for LokSetu mockup visual */
+.floating-glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.25;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glow-saffron {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, var(--loksetu-saffron) 0%, transparent 70%);
+  top: 10%;
+  left: -5%;
+}
+
+.glow-blue {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, var(--loksetu-blue-light) 0%, transparent 70%);
+  bottom: 10%;
+  right: -5%;
+}
+
+/* Responsive adjustments for LokSetu custom layout styles */
+@media (max-width: 1024px) {
+  .loksetu-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .how-it-works-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-grid-loksetu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mockup-showcase-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .trust-verification-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-it-works-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid-loksetu {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-check-list {
+    grid-template-columns: 1fr;
+  }
+
+  .eco-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .eco-arrow-down {
+    height: 30px;
+  }
+
+  .ecosystem-diagram {
+    padding: 2rem 1rem;
+  }
+}
